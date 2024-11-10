@@ -1,197 +1,448 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Webpage Example</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="urbantopia/Urban_Topia_3D_FB_Insta.jpg">
+    <title>Urbantopia</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
-            background-image: url('/urbantopia/bg.png'); /* URL to a furniture image */
+        /* Background image with gradient overlay */
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
-            color: white;
+            background-repeat: no-repeat;
+            color: #fff;
+            padding: 100px 0;
         }
+
+        /* Contact form */
+        .contact-form {
+            background-color: #2f3a5c;
+            padding: 20px;
+            border-radius: 8px;
+            color: #fff;
+        }
+
+        .contact-form button {
+            background-color: #f1c40f;
+            border: none;
+        }
+
+        /* Package cards */
+        .package-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            color: #2f3a5c;
+        }
+
+        .package-card.highlight {
+            background-color: #f1c40f;
+            color: #fff;
+        }
+
+        .package-card h4 {
+            font-size: 1.2rem;
+        }
+
+        .package-card button {
+            background-color: #2f3a5c;
+            color: #fff;
+            border: none;
+        }
+
+        /* Navbar */
+        .navbar-custom {
+            background-color: #2f3a5c;
+            color: #fff;
+        }
+
+        .navbar-custom a {
+            color: #fff;
+        }
+
+        .client-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #2f3a5c;
+        }
+
+        .client-card h4 {
+            color: #b79722; /* Gold color for the title */
+        }
+
+        .clients-section-wrapper {
+            background-color: #304766;
+            padding: 50px 0; /* Adds padding for top and bottom spacing */
+        }
+        
+
+        section h2 {
+            color: #fff;
+            padding: 20px 0;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .service-card {
+            background-color: #2f3a5c; /* Dark blue background for cards */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #fff;
+        }
+
+        .service-card h4 {
+            color: #b79722; /* Gold color for titles */
+        }
+
+
+        .footer {
+            position: relative;
+            color: white;
+            padding: 50px 0;
+            background-image: url('https://images.pexels.com/photos/189333/pexels-photo-189333.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
         .overlay {
             position: absolute;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.6);
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
             z-index: 1;
         }
+        
         .content {
             position: relative;
             z-index: 2;
         }
-        .navbar {
-            background-color: #2c3e50;
+        
+        .services-carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 0px;
+            padding: 10px;
+            background-color: #F4F4F4;
         }
-        .navbar a {
-            color: white;
-        }
-        .form-container {
-            background-color: rgba(44, 62, 80, 0.8);
+
+        .service-card {
+            flex: 0 0 100%; /* Each card takes full width on mobile */
+            scroll-snap-align: center;
+            background: #304766;
             padding: 20px;
-            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            margin: auto;
         }
-        .form-control, .btn {
-            border-radius: 5px;
+
+        .services-section {
+            background-color: #F4F4F4;
         }
-        .package {
-            background-color: #3a506b;
-            padding: 40px;
-            font-size: 1.2em;
-            text-align: center;
-            border-radius: 8px;
-            color: white;
-            min-height: 150px;
+
+        .services-section h2 {
+            color: #2f3a5c;
         }
-        .clients-section {
-            text-align: center;
-            max-width: 800px;
-            color: black;
-            margin: 40px auto;
+
+        @media (min-width: 768px) {
+            /* For larger screens, use grid layout instead */
+            .services-carousel {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+            .service-card {
+                flex: none;
+                scroll-snap-align: none;
+            }
         }
-        .clients-section h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
+
+        .hidden {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
-        .clients-section p {
-            color: #ddd;
-            margin-bottom: 30px;
+
+        .show {
+            opacity: 1;
+            transform: translateY(0);
         }
-        .card {
-            background-color: white;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            transition: box-shadow 0.3s, transform 0.3s;
-            cursor: pointer;
-        }
-        .card:hover {
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            transform: scale(1.05);
-        }
-        .card img {
-            max-width: 50px;
-            margin-bottom: 15px;
-        }
-        .card h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-        .card p {
-            font-size: 14px;
-            color: #666;
-        }
+
+
     </style>
 </head>
 <body>
-    <!-- Overlay for dimming background -->
-    <div class="overlay"></div>
 
-    <!-- Content -->
-    <div class="content">
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="urbantopia/Urban_Topia.png" alt="Logo" width="40"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="#">Naši Klijenti</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Usluge</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">O Nama</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                    </ul>
-                </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="assets/urbantopia/urbantopia_bijeli.png" alt="Logo" style="height: 50px;"> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Naši klijenti</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Usluge</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">O nama</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Kontakt</a></li>
+                    <li class="nav-item">
+                        <button id="languageToggle" class="btn btn-secondary">English</button>
+                    </li>
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <!-- Main Content -->
-        <div class="container my-5">
-            <h2 class="text-center mb-4">Jednostavnije do veceg profita i odmora</h2>
-            <div class="row">
-                <!-- Contact Form -->
-                <div class="col-md-5">
-                    <div class="form-container">
-                        <h4>Kontaktirajte Nas</h4>
-                        <form>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="Ime i Prezime">
-                            </div>
-                            <div class="mb-3">
-                                <input type="email" class="form-control" placeholder="E-mail">
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="Kontakt Telefon">
-                            </div>
-                            <div class="mb-3">
-                                <textarea class="form-control" rows="4" placeholder="Vaša Poruka"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100">Pošalji</button>
-                        </form>
-                    </div>
-                </div>
-                
-                <!-- Packages -->
-                <div class="col-md-7">
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                            <div class="package">START PAKET<br><small>Klikni da saznaš više</small></div>
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 data-bs="Jednostavnije do većeg profita i odmora" data-en="Simpler Path to Higher Profits and Relaxation">Jednostavnije do većeg profita i odmora</h1>
+            <button class="btn btn-warning mt-3">POZOVITE NAS NA +387 61 611 911</button>
+        </div>
+
+        <!-- Content Section -->
+    <section class="container my-5">
+        <div class="row">
+            <!-- Contact Form -->
+            <div class="col-md-4">
+                <div class="contact-form hidden">
+                    <h4>KONTAKTIRAJTE NAS</h4>
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Ime i prezime">
                         </div>
-                        <div class="col-md-6">
-                            <div class="package">POSTOTAK PAKET<br><small>Klikni da saznaš više</small></div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="E-mail">
                         </div>
-                        <div class="col-md-6">
-                            <div class="package">MEGA PAKET<br><small>Klikni da saznaš više</small></div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control" placeholder="Kontakt telefon">
                         </div>
-                        <div class="col-md-6">
-                            <div class="package">PERSONAL PAKET<br><small>Klikni da saznaš više</small></div>
+                        <div class="mb-3">
+                            <textarea class="form-control" placeholder="Vaša poruka" rows="3"></textarea>
                         </div>
-                    </div>
+                        <button type="submit" class="btn btn-warning w-100">POŠALJI</button>
+                    </form>
                 </div>
             </div>
 
-            <!-- Our Clients Section -->
-            <div class="clients-section">
-                <h2>Our Clients</h2>
-                <p>Our data-driven, customized rental strategies allow our clients to achieve premium returns on their property.</p>
-                
-                <div class="row g-3">
-                    <div class="col-md-4 col-sm-6">
-                        <div class="card">
-                            <img src="https://via.placeholder.com/50" alt="House icon">
-                            <h3>Hosts with 1 or more unit</h3>
-                            <p>We recognize that it takes time and effort to optimize prices, book quality guests, and provide support.</p>
+            <!-- Packages Section -->
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-6 mb-4 hidden">
+                        <div class="package-card">
+                            <h4>START PAKET</h4>
+                            <p>Veći broj klijenata</p>
+                            <button class="btn">SAZNAJ VIŠE</button>
                         </div>
                     </div>
-                    
-                    <div class="col-md-4 col-sm-6">
-                        <div class="card">
-                            <img src="https://via.placeholder.com/50" alt="Building icon">
-                            <h3>Building Owners</h3>
-                            <p>Leverage the short-term rental market to earn premium returns with no operational headaches.</p>
+                    <div class="col-md-6 mb-4 hidden">
+                        <div class="package-card">
+                            <h4>BONUS PAKET</h4>
+                            <p>Veći broj klijenata<br>Bonus marketing</p>
+                            <button class="btn">SAZNAJ VIŠE</button>
                         </div>
                     </div>
-                    
-                    <div class="col-md-4 col-sm-6">
-                        <div class="card">
-                            <img src="https://via.placeholder.com/50" alt="Construction icon">
-                            <h3>Developers</h3>
-                            <p>Work with senior members of our management team to optimize space for your next project.</p>
+                    <div class="col-md-6 mb-4 hidden">
+                        <div class="package-card">
+                            <h4>MEGA PAKET</h4>
+                            <p>Veći broj klijenata<br>Bonus marketing<br>Dodatno čišćenje</p>
+                            <button class="btn">SAZNAJ VIŠE</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4 hidden">
+                        <div class="package-card highlight">
+                            <h4>PERSONAL PAKET</h4>
+                            <p>Paket po vašim zahtjevima</p>
+                            <button class="btn">SAZNAJ VIŠE</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    </section>
+
+    <!-- "Naši klijenti" Section -->
+    <div class="clients-section-wrapper">
+        <section class="container my-5 clients-section">
+            <h2 class="text-center">Naši klijenti</h2>
+            <div class="row justify-content-center">
+                <!-- Card 1 -->
+                <div class="col-md-4 mb-4 hidden">
+                    <div class="client-card text-center p-4">
+                        <img src="assets/icons/home.png" alt="House Icon" style="width: 50px;">
+                        <h4 class="mt-3">VLASNICI MANJIH SMJEŠTAJA</h4>
+                        <p>Za vlasnike jednih ili više smještajnih jedinica</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-4 mb-4 hidden">
+                    <div class="client-card text-center p-4">
+                        <img src="assets/icons/flat.png" alt="Building Icon" style="width: 50px;">
+                        <h4 class="mt-3">VLASNICI ZGRADA</h4>
+                        <p>Iskoristite pogodnosti kratkoročnog najma kako biste zaradili vrhunski povrat na svoju zgradu</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-4 mb-4 hidden">
+                    <div class="client-card text-center p-4">
+                        <img src="assets/icons/construction.png" alt="Construction Icon" style="width: 50px;">
+                        <h4 class="mt-3">GRAĐEVINSKE KOMPANIJE</h4>
+                        <p>Smišljamo vaš sljedeći projekat kako biste optimizirali prostor za što bolje izdavanje</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
+    <!-- "Zašto naše usluge?" Section -->
+    <section class="my-5 services-section">
+        <h2 class="text-center">Zašto naše usluge?</h2>
+        <div class="row justify-content-center">
+            <div class="services-carousel">
+                <!-- Card 1 -->
+                <div class="service-card text-center p-4">
+                    <img src="assets/icons/people.png" alt="Chart Icon" style="width: 50px;">
+                    <h4 class="mt-3">Transparentnost</h4>
+                    <p>Mjesečna ili sedmična izvještavanja po vašoj želji</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="service-card text-center p-4">
+                    <img src="assets/icons/peoples.png" alt="People Icon" style="width: 50px;">
+                    <h4 class="mt-3">Iskustvo sa gostima</h4>
+                    <p>Jednostavan check-in / check-out, te odlična komunikacija</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="service-card text-center p-4">
+                    <img src="assets/icons/cleaning.png" alt="Broom Icon" style="width: 50px;">
+                    <h4 class="mt-3">Održavanje smještaja</h4>
+                    <p>Profesionalno čišćenje prije dolaska i poslije odlaska gostiju</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="service-card text-center p-4">
+                    <img src="assets/icons/marketing.png" alt="Marketing Icon" style="width: 50px;">
+                    <h4 class="mt-3">Marketing</h4>
+                    <p>Naš marketing stavlja vas na najbolje pozicije</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="service-card text-center p-4">
+                    <img src="assets/icons/livingroom.png" alt="Optimization Icon" style="width: 50px;">
+                    <h4 class="mt-3">Optimizacija smještaja</h4>
+                    <p>Optimiziramo vaš prostor za maksimalan profit</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="service-card text-center p-4">
+                    <img src="assets/icons/prices.png" alt="Pricing Icon" style="width: 50px;">
+                    <h4 class="mt-3">Optimizovane cijene</h4>
+                    <p>Naši iskusni analitičari stvaraju cijene za vrhunski profit</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+     <!-- Footer -->
+     <footer class="footer">
+        <div class="overlay"></div>
+        <div class="content container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2>ISKUSITE NAŠE POGODNOSTI</h2>
+                    <p>Saznajte kako smo stotinama naših klijenata pomogli da dobiju najviše od svojih nekretnina</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="contact-form">
+                        <h4>Kontaktirajte nas</h4>
+                        <form>
+                            <div class="mb-2">
+                                <input type="text" class="form-control" placeholder="Ime i prezime">
+                            </div>
+                            <div class="mb-2">
+                                <input type="email" class="form-control" placeholder="E-mail">
+                            </div>
+                            <div class="mb-2">
+                                <input type="text" class="form-control" placeholder="Kontakt telefon">
+                            </div>
+                            <div class="mb-2">
+                                <textarea class="form-control" rows="3" placeholder="Vaša poruka"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Pošalji</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <p>ILI NAS POZOVITE</p>
+                    <a href="tel:+38761611911" class="btn-call"><button type="submit" class="btn btn-primary w-100">Pošalji</button></a>
+                </div>
+            </div>
+            <hr class="text-white">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 copyright">© Copyright apartmanija <span>Made by Orhan Huseinbegović</span></p>
+                </div>
+                <div class="col-md-6 text-md-end social-icons">
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="tel:+38761611911" class="ms-3">+387 61 611 911</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--SLIKA: https://images.pexels.com/photos/189333/pexels-photo-189333.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 -->
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.js"></script>
+    <script>
+        // Language toggle function
+        const languageToggle = document.getElementById('languageToggle');
+        let currentLang = 'bs';
+
+        function toggleLanguage() {
+            const elements = document.querySelectorAll('[data-bs][data-en]');
+            elements.forEach(el => {
+                if (currentLang === 'bs') {
+                    el.textContent = el.getAttribute('data-en');
+                } else {
+                    el.textContent = el.getAttribute('data-bs');
+                }
+            });
+            currentLang = currentLang === 'bs' ? 'en' : 'bs';
+            languageToggle.textContent = currentLang === 'bs' ? 'English' : 'Bosanski';
+        }
+
+        languageToggle.addEventListener('click', toggleLanguage);
+
+
+        const elements = document.querySelectorAll('.hidden');
+
+        function scrollHandler() {
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (elementTop < windowHeight - 50) {
+                    element.classList.add('show');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', scrollHandler);
+
+    </script>
 </body>
 </html>
