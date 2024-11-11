@@ -19,7 +19,7 @@
 
         /* Contact form */
         .contact-form {
-            background-color: #2f3a5c;
+            background-color: #1C567E;
             padding: 20px;
             border-radius: 8px;
             color: #fff;
@@ -37,7 +37,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 20px;
             text-align: center;
-            color: #2f3a5c;
+            color: #1C567E;
         }
 
         .package-card.highlight {
@@ -50,14 +50,14 @@
         }
 
         .package-card button {
-            background-color: #2f3a5c;
+            background-color: #1C567E;
             color: #fff;
             border: none;
         }
 
         /* Navbar */
         .navbar-custom {
-            background-color: #2f3a5c;
+            background-color: #1C567E;
             color: #fff;
         }
 
@@ -72,12 +72,23 @@
             color: #2f3a5c;
         }
 
+        
+
         .client-card h4 {
             color: #b79722; /* Gold color for the title */
         }
 
+        .client-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .client-card:hover {
+            transform: translateY(-10px); /* Move the card up by 10px */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow for more emphasis */
+        }
+
         .clients-section-wrapper {
-            background-color: #304766;
+            background-color: #1C567E;
             padding: 50px 0; /* Adds padding for top and bottom spacing */
         }
         
@@ -90,7 +101,7 @@
         }
 
         .service-card {
-            background-color: #2f3a5c; /* Dark blue background for cards */
+            background-color: #1C567E; /* Dark blue background for cards */
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             color: #fff;
@@ -138,7 +149,7 @@
         .service-card {
             flex: 0 0 100%; /* Each card takes full width on mobile */
             scroll-snap-align: center;
-            background: #304766;
+            background: #1C567E;
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border-radius: 10px;
@@ -169,7 +180,7 @@
         .hidden {
             opacity: 0;
             transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            transition: opacity 1s ease-out, transform 0.6s ease-out;
         }
 
         .show {
@@ -177,37 +188,66 @@
             transform: translateY(0);
         }
 
+        .navbar-custom {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1030; /* Make sure it's on top of other elements */
+        }
+
+        
+                /* Initial style for h4 titles inside client cards */
+        .client-card h4 {
+            color: #b79722; /* Gold color for the title */
+            transition: text-shadow 0.3s ease-in-out; /* Smooth transition */
+        }
+
+        /* Glow effect when hovering over client card */
+        .client-card:hover h4 {
+            text-shadow: 0 0 6px rgba(255, 215, 0, 0.7), 
+                        0 0 12px rgba(255, 215, 0, 0.5), 
+                        0 0 18px rgba(255, 215, 0, 0.3); /* Subtle glow effect */
+        }
+
+
 
     </style>
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-custom">
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="assets/urbantopia/urbantopia_bijeli.png" alt="Logo" style="height: 50px;"> </a>
+            <a class="navbar-brand" href="#"><img src="assets/urbantopia/urbantopia_bijeli.png" alt="Logo" style="height: 50px;"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Naši klijenti</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Usluge</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">O nama</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Kontakt</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-bs="Naši klijenti" data-en="Our clients">Naši klijenti</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-bs="Usluge" data-en="Services">Usluge</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-bs="O nama" data-en="About us">O nama</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-bs="Kontakt" data-en="Contact">Kontakt</a></li>
                     <li class="nav-item">
-                        <button id="languageToggle" class="btn btn-secondary">English</button>
+                        <button id="languageToggle" class="btn btn-secondary">
+                            <i class="fas fa-flag-usa"></i> <span>English</span>
+                        </button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    
+
+    <!-- Add padding to main content to avoid overlap with fixed navbar -->
+    <div style="padding-top: 70px;">
+        <!-- Your main content goes here -->
+    </div>
 
     <!-- Hero Section -->
     <section class="hero-section text-center">
         <div class="container">
             <h1 data-bs="Jednostavnije do većeg profita i odmora" data-en="Simpler Path to Higher Profits and Relaxation">Jednostavnije do većeg profita i odmora</h1>
-            <button class="btn btn-warning mt-3">POZOVITE NAS NA +387 61 611 911</button>
+            <button class="btn btn-warning mt-3" data-bs="Pozovite nas na +387 61 611 911" data-en="Call us on +387 61 611 911">Pozovite nas na +387 61 611 911</button>
         </div>
 
         <!-- Content Section -->
@@ -216,7 +256,7 @@
             <!-- Contact Form -->
             <div class="col-md-4">
                 <div class="contact-form hidden">
-                    <h4>KONTAKTIRAJTE NAS</h4>
+                    <h4 data-bs="Kontaktirajte nas" data-en="Contact us">KONTAKTIRAJTE NAS</h4>
                     <form>
                         <div class="mb-3">
                             <input type="text" class="form-control" placeholder="Ime i prezime">
@@ -435,13 +475,50 @@
                 const elementTop = element.getBoundingClientRect().top;
                 const windowHeight = window.innerHeight;
 
-                if (elementTop < windowHeight - 50) {
+                if (elementTop < windowHeight - 200) {
                     element.classList.add('show');
                 }
             });
         }
 
         window.addEventListener('scroll', scrollHandler);
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const clientCards = document.querySelectorAll(".client-card");
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("pop-up");
+                        observer.unobserve(entry.target); // Stop observing once it’s visible
+                    }
+                });
+            }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
+
+            clientCards.forEach(card => {
+                observer.observe(card);
+            });
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const sectionTitle = document.querySelector(".clients-section h2");
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        sectionTitle.classList.add("glow"); // Apply the glow effect
+                    } else {
+                        sectionTitle.classList.remove("glow"); // Remove the glow effect when out of view
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            observer.observe(sectionTitle);
+        });
+
+        
 
     </script>
 </body>
