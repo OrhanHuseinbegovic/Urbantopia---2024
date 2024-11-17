@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O nama - Urbantopia</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <!--<link rel="stylesheet" href="styles.css">  Vaš CSS fajl -->
+  <style>
+      /* ------------------- NAVBAR START ------------------  */
+      .navbar {
+        background-color: #f8f9fa; /* Light gray background */
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        padding: 10px 0;
+      }
+
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+      }
+
+      /* Adjust logo size */
+      .logo-img {
+        height: 55px; /* Increase logo height */
+        max-width: 140px; /* Ensure it doesn't overflow */
+        object-fit: contain; /* Maintain aspect ratio */
+        margin-right: 15px; /* Space between logo and text */
+      }
+
+      /* Adjust Sarajevo text */
+      .logo-text {
+        font-size: 1.6rem; /* Match size with logo */
+        font-weight: bold;
+        color: #333; /* Dark gray text color */
+        line-height: 1; /* Align vertically */
+      }
+
+      /* Navigation links */
+      .navbar-nav .nav-link {
+        font-size: 1rem;
+        color: #555;
+        margin: 0 10px;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .navbar-nav .nav-link:hover {
+        color: #007bff;
+      }
+
+      /* English option */
+      .navbar-nav .nav-link.english {
+        font-weight: bold;
+        margin-left: 20px;
+        color: #0056b3;
+      }
+
+      .navbar-nav .nav-link.english:hover {
+        color: #ff9900;
+      }
+
+      /* Mobile adjustments */
+      @media (max-width: 768px) {
+        .navbar-brand .logo-img {
+          height: 45px; /* Reduce height for smaller screens */
+        }
+
+        .navbar-nav .nav-link {
+          margin: 5px 0;
+        }
+      }
+    /* ------------------- NAVBAR END ------------------  */
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+      <!-- Logo and Sarajevo -->
+      <a class="navbar-brand d-flex align-items-center" href="novi.html">
+        <img src="assets/urbantopia/Urban_Topia.png" alt="Urban Topia Logo" class="logo-img me-3">
+        <span class="logo-text">Sarajevo</span>
+      </a>
+  
+      <!-- Hamburger Menu for Mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Navigation Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="onama.html" data-bs="O nama" data-en="About us">O nama</a></li>
+          <li class="nav-item"><a class="nav-link" href="pitanja.html" data-bs="Često postavljena pitanja" data-en="FAQ">Često postavljena pitanja</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontakt.html" data-bs="Kontakt" data-en="Contact us">Kontakt</a></li>
+          <li class="nav-item">
+            <button id="languageToggle" class="btn btn-primary rounded-pill" data-bs="English" data-en="Bosanski">
+              English
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero sekcija -->
+  <section class="hero-section bg-primary text-light py-5">
+    <div class="container text-center">
+      <h1 class="display-4">O nama</h1>
+      <p class="lead">Vaš partner za kratkoročni najam nekretnina</p>
+    </div>
+  </section>
+
+  <!-- Sadržaj stranice -->
+  <section class="about-section py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Tekst s lijeve strane -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <h2 class="text-primary">Ko smo mi?</h2>
+          <p>
+            Urbantopia je agencija specijalizovana za kratkoročni najam nekretnina, pružajući sveobuhvatne usluge u oblasti menadžmenta nekretnina, ugostiteljstva, marketinga i analize podataka.
+          </p>
+          <p>
+            Naša misija je omogućiti vlasnicima nekretnina rast profita koji u potpunosti pokriva trošak naše provizije, čime naše usluge postaju besplatne.
+          </p>
+          <p>
+            Od 2016. godine bavimo se upravljanjem nekretninama za kratkoročni najam, obradili smo hiljade rezervacija i stekli neprocjenjivo iskustvo u ovoj industriji.
+          </p>
+        </div>
+
+        <!-- Slika s desne strane -->
+        <div class="col-md-6">
+          <img src="images/about-us.jpg" alt="O nama" class="img-fluid rounded shadow">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Naša vizija -->
+  <section class="vision-section bg-light py-5">
+    <div class="container text-center">
+      <h2 class="text-primary">Naša vizija</h2>
+      <p class="mt-4">
+        Vjerujemo da uspješan kratkoročni najam ne zavisi samo od cijena i popunjenosti, već i od pažnje prema detaljima i stvaranju nezaboravnih iskustava za goste. Naša vizija je kreirati takve doživljaje, uz istovremeno osiguravanje održivih i dugoročnih rješenja koja pomažu našim klijentima da ostvare stabilan i rastući prihod.
+      </p>
+    </div>
+  </section>
+
+  <!-- Usluge -->
+  <section class="services-section py-5">
+    <div class="container">
+      <h2 class="text-primary text-center">Šta nudimo?</h2>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="card border-0 shadow">
+            <div class="card-body text-center">
+              <h5 class="card-title text-primary">Upravljanje nekretninama</h5>
+              <p class="card-text">Sveobuhvatna podrška uključujući održavanje, čišćenje i vođenje svih detalja vašeg smještaja.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow">
+            <div class="card-body text-center">
+              <h5 class="card-title text-primary">Marketing i oglašavanje</h5>
+              <p class="card-text">Optimizacija i oglašavanje na platformama kao što su Airbnb, Booking.com i druge.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow">
+            <div class="card-body text-center">
+              <h5 class="card-title text-primary">Analiza podataka</h5>
+              <p class="card-text">Kontinuirani izvještaji i analize za poboljšanje performansi i maksimizaciju profita.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transparentnost i povjerenje -->
+  <section class="trust-section bg-primary text-light py-5">
+    <div class="container text-center">
+      <h2>Transparentnost i povjerenje</h2>
+      <p class="mt-4">
+        Naš pristup temeljen je na transparentnosti, povjerenju i posvećenosti. Svaki korak u našem poslovanju dizajniran je da obezbijedi najbolji mogući rezultat za Vas i Vaše nekretnine.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-3 bg-dark text-light">
+    <p>© 2024 Urbantopia | Sva prava zadržana.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    /*--------------------- LANGUAGE CHANGE FUNCTION START ------------------------ */
+    const languageToggle = document.getElementById('languageToggle');
+    let currentLang = 'bs';
+
+    function toggleLanguage() {
+      const elements = document.querySelectorAll('[data-bs][data-en]');
+      const heroContent = document.querySelector('.hero-content');
+
+      elements.forEach(el => {
+        if (el.hasAttribute('placeholder')) {
+          el.placeholder = currentLang === 'bs' ? el.getAttribute('data-en') : el.getAttribute('data-bs');
+        } else if (el.tagName.toLowerCase() === 'li' || el.tagName.toLowerCase() === 'h3') {
+          el.innerHTML = currentLang === 'bs' ? el.getAttribute('data-en') : el.getAttribute('data-bs');
+        } else {
+          el.innerHTML = currentLang === 'bs' ? el.getAttribute('data-en') : el.getAttribute('data-bs');
+        }
+      });
+
+      // Adjust text alignment and margin based on language
+      heroContent.setAttribute('data-lang', currentLang);
+
+      // Toggle the language
+      currentLang = currentLang === 'bs' ? 'en' : 'bs';
+    }
+
+    // Attach the event listener
+    languageToggle.addEventListener('click', toggleLanguage);
+    /*--------------------- LANGUAGE CHANGE FUNCTION END ------------------------ */
+  </script>
+</body>
+</html>

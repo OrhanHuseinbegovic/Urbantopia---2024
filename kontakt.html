@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="kontakt.css">
+  <style>
+      /* ------------------- NAVBAR START ------------------  */
+  .navbar {
+    background-color: #f8f9fa; /* Light gray background */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 10px 0;
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Adjust logo size */
+  .logo-img {
+    height: 55px; /* Increase logo height */
+    max-width: 140px; /* Ensure it doesn't overflow */
+    object-fit: contain; /* Maintain aspect ratio */
+    margin-right: 15px; /* Space between logo and text */
+  }
+
+  /* Adjust Sarajevo text */
+  .logo-text {
+    font-size: 1.6rem; /* Match size with logo */
+    font-weight: bold;
+    color: #333; /* Dark gray text color */
+    line-height: 1; /* Align vertically */
+  }
+
+  /* Navigation links */
+  .navbar-nav .nav-link {
+    font-size: 1rem;
+    color: #555;
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #007bff;
+  }
+
+  /* English option */
+  .navbar-nav .nav-link.english {
+    font-weight: bold;
+    margin-left: 20px;
+    color: #0056b3;
+  }
+
+  .navbar-nav .nav-link.english:hover {
+    color: #ff9900;
+  }
+
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .navbar-brand .logo-img {
+      height: 45px; /* Reduce height for smaller screens */
+    }
+
+    .navbar-nav .nav-link {
+      margin: 5px 0;
+    }
+  }
+/* ------------------- NAVBAR END ------------------  */
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+      <!-- Logo and Sarajevo -->
+      <a class="navbar-brand d-flex align-items-center" href="novi.html">
+        <img src="assets/urbantopia/Urban_Topia.png" alt="Urban Topia Logo" class="logo-img me-3">
+        <span class="logo-text">Sarajevo</span>
+      </a>
+  
+      <!-- Hamburger Menu for Mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Navigation Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="onama.html" data-bs="O nama" data-en="About us">O nama</a></li>
+          <li class="nav-item"><a class="nav-link" href="pitanja.html" data-bs="Često postavljena pitanja" data-en="FAQ">Često postavljena pitanja</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontakt.html" data-bs="Kontakt" data-en="Contact us">Kontakt</a></li>
+          <li class="nav-item">
+            <button id="languageToggle" class="btn btn-primary rounded-pill" data-bs="English" data-en="Bosanski">
+              English
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Kontakt Stranica -->
+  <section class="contact py-5 bg-light mt-5">
+    <div class="container">
+      <!-- Kontakt Info -->
+      <div class="text-center mb-4">
+        <h2 class="text-primary">Kontakt</h2>
+        <p>Brza i efikasna dogovor:</p>
+        <ol>
+          <li>Kontaktirate nas</li>
+          <li>Pregledamo Vaš smještaj</li>
+          <li>Ugovaramo detalje saradnje</li>
+        </ol>
+      </div>
+
+      <!-- Kontakt Forma -->
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Kontaktirajte nas</h4>
+          <form action="send-email.php" method="POST">
+            <div class="mb-3">
+              <label for="name" class="form-label">Ime i Prezime</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Poruka</label>
+              <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Pošaljite poruku</button>
+          </form>
+        </div>
+
+        <!-- Kontakt Informacije -->
+        <div class="col-md-6">
+          <h4>Nađite nas na društvenim mrežama</h4>
+          <ul class="list-unstyled">
+            <li><strong>Telefon:</strong> <a href="tel:+123456789" class="text-decoration-none">+123 456 789</a></li>
+            <li><strong>Whatsapp:</strong> <a href="https://wa.me/123456789" class="text-decoration-none">Kliknite za Whatsapp</a></li>
+            <li><strong>Email:</strong> <a href="mailto:info@example.com" class="text-decoration-none">info@example.com</a></li>
+            <li><strong>Instagram:</strong> <a href="https://www.instagram.com/yourprofile" class="text-decoration-none" target="_blank">/yourprofile</a></li>
+            <li><strong>Facebook:</strong> <a href="https://www.facebook.com/yourprofile" class="text-decoration-none" target="_blank">/yourprofile</a></li>
+            <li><strong>Linkedin:</strong> <a href="https://www.linkedin.com/in/yourprofile" class="text-decoration-none" target="_blank">/yourprofile</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    /*--------------------- LANGUAGE CHANGE FUNCTION START ------------------------ */
+    const languageToggle = document.getElementById('languageToggle');
+        let currentLang = 'bs';
+
+        function toggleLanguage() {
+          const elements = document.querySelectorAll('[data-bs][data-en]');
+          const heroContent = document.querySelector('.hero-content');
+
+          elements.forEach(el => {
+            if (el.hasAttribute('placeholder')) {
+              el.placeholder = currentLang === 'bs' ? el.getAttribute('data-en') : el.getAttribute('data-bs');
+            } else if (el.tagName.toLowerCase() === 'li' || el.tagName.toLowerCase() === 'h3') {
+              el.innerHTML = currentLang === 'bs' ? el.getAttribute('data-en') : el.getAttribute('data-bs');
+            } else {
+              el.innerHTML = currentLang === 'bs' ? el.getAttribute('data-en') : el.getAttribute('data-bs');
+            }
+          });
+
+          // Adjust text alignment and margin based on language
+          heroContent.setAttribute('data-lang', currentLang);
+
+          // Toggle the language
+          currentLang = currentLang === 'bs' ? 'en' : 'bs';
+        }
+
+        // Attach the event listener
+        languageToggle.addEventListener('click', toggleLanguage);
+    /*--------------------- LANGUAGE CHANGE FUNCTION END ------------------------ */
+  </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Kontakt sekcija */
+  .contact {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+  }
+  
+  .contact h2 {
+    color: #007bff;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .contact ol {
+    text-align: left;
+    font-size: 18px;
+  }
+  
+  .contact ol li {
+    margin: 10px 0;
+  }
+  
+  .contact h4 {
+    color: #007bff;
+    margin-bottom: 15px;
+  }
+  
+  .contact form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact .form-control {
+    border-radius: 5px;
+  }
+  
+  .contact .btn {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+  }
+  
+  .contact .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .contact .list-unstyled {
+    font-size: 16px;
+  }
+  
+  .contact .list-unstyled li {
+    margin-bottom: 10px;
+  }
+  
+  .contact .list-unstyled a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .contact .list-unstyled a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsivni dizajn */
+  @media (max-width: 768px) {
+    .contact .row {
+      flex-direction: column;
+    }
+  
+    .contact .col-md-6 {
+      margin-bottom: 30px;
+    }
+  }
+  
+

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Često Postavljena Pitanja</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /*------------- QUESTIONS START --------------- */
+    body {
+      font-family: 'Raleway', sans-serif;
+    }
+    .faq-section {
+      padding: 50px 15px;
+    }
+    .faq-item {
+      margin-bottom: 20px;
+    }
+    .faq-item h5 {
+      cursor: pointer;
+      color: #1C567E;
+    }
+    .faq-item h5:hover {
+      text-decoration: underline;
+    }
+    .search-bar {
+      margin-bottom: 30px;
+    }
+
+    /* Apply Roboto to h1 and h2 tags */
+    h1, h2 {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    /* Optional: Adjust font weights and sizes for better style */
+    h1 {
+      font-weight: 700;
+      font-size: 2.5rem; /* Example size */
+    }
+
+    h2 {
+      font-weight: 500;
+      font-size: 2rem; /* Example size */
+    }
+    /*------------- QUESTIONS END --------------- */
+
+
+
+    /* ------------------- NAVBAR START ------------------  */
+    .navbar {
+      background-color: #f8f9fa; /* Light gray background */
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      padding: 10px 0;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+    }
+
+    /* Adjust logo size */
+    .logo-img {
+      height: 55px; /* Increase logo height */
+      max-width: 140px; /* Ensure it doesn't overflow */
+      object-fit: contain; /* Maintain aspect ratio */
+      margin-right: 15px; /* Space between logo and text */
+    }
+
+    /* Adjust Sarajevo text */
+    .logo-text {
+      font-size: 1.6rem; /* Match size with logo */
+      font-weight: bold;
+      color: #333; /* Dark gray text color */
+      line-height: 1; /* Align vertically */
+    }
+
+    /* Navigation links */
+    .navbar-nav .nav-link {
+      font-size: 1rem;
+      color: #555;
+      margin: 0 10px;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #007bff;
+    }
+
+    /* English option */
+    .navbar-nav .nav-link.english {
+      font-weight: bold;
+      margin-left: 20px;
+      color: #0056b3;
+    }
+
+    .navbar-nav .nav-link.english:hover {
+      color: #ff9900;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      .navbar-brand .logo-img {
+        height: 45px; /* Reduce height for smaller screens */
+      }
+
+      .navbar-nav .nav-link {
+        margin: 5px 0;
+      }
+    }
+    /* ------------------- NAVBAR END ------------------  */
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <!-- Logo and Sarajevo -->
+        <a class="navbar-brand d-flex align-items-center" href="novi.html">
+          <img src="assets/urbantopia/Urban_Topia.png" alt="Urban Topia Logo" class="logo-img me-3">
+          <span class="logo-text">Sarajevo</span>
+        </a>
+    
+        <!-- Hamburger Menu for Mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="onama.html" data-bs="O nama" data-en="About us">O nama</a></li>
+            <li class="nav-item"><a class="nav-link" href="pitanja.html" data-bs="Često postavljena pitanja" data-en="FAQ">Često postavljena pitanja</a></li>
+            <li class="nav-item"><a class="nav-link" href="kontakt.html" data-bs="Kontakt" data-en="Contact us">Kontakt</a></li>
+            <li class="nav-item">
+              <button id="languageToggle" class="btn btn-primary rounded-pill" data-bs="English" data-en="Bosanski">
+                English
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="faq py-5 bg-light mt-5">
+        <div class="container">
+          <div class="text-center mb-4">
+            <h2 class="text-primary" data-bs="Često postavljena pitanja" data-en="Frequently asked questions">Često postavljena pitanja</h2>
+          </div>
+      
+          <!-- Search Bar -->
+          <div class="search-bar text-center mb-4">
+            <input type="text" id="search-input" class="form-control" placeholder="Pretraži pitanja..." data-bs="Pretraži pitanja..." data-en="Search questions..." onkeyup="filterFAQs()">
+          </div>
+      
+          <div class="accordion" id="faqAccordion">
+            <!-- Question 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHeading1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1" data-en="Where do you provide your services?" data-bs="Gdje pružate svoje usluge?">
+                  Gdje pružate svoje usluge?
+                </button>
+              </h2>
+              <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-en="We provide all our property management services in Sarajevo, while the services from our START package are available throughout Bosnia and Herzegovina." data-bs="U Sarajevu pružamo sve naše usluge upravljanja nekretninama, dok usluge iz našeg START paketa nudimo na cijelom području Bosne i Hercegovine.">
+                  U Sarajevu pružamo sve naše usluge upravljanja nekretninama, dok usluge iz našeg START paketa nudimo na cijelom području Bosne i Hercegovine.
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHeading2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2" data-en="What exactly does your property management service include?" data-bs="Šta tačno uključuju vaše usluge upravljanja nekretninama?">
+                  Šta tačno uključuju vaše usluge upravljanja nekretninama?
+                </button>
+              </h2>
+              <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-en="Our agency provides comprehensive services, including property management, maintenance, guest communication, optimization of your listings on all relevant platforms, and data analysis to improve the performance of your accommodation." data-bs="Naša agencija pruža sveobuhvatne usluge uključujući upravljanje nekretninama, održavanje, komunikaciju s gostima, optimizaciju vaših oglasa na svim relevantnim platformama kao i analizu podataka za poboljšanje performansi Vašeg smještaja.">
+                  Naša agencija pruža sveobuhvatne usluge uključujući upravljanje nekretninama, održavanje, komunikaciju s gostima, optimizaciju vaših oglasa na svim relevantnim platformama kao i analizu podataka za poboljšanje performansi Vašeg smještaja.
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHeading3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3" data-en="What are the costs of your services?" data-bs="Koji su troškovi vaših usluga?">
+                  Koji su troškovi vaših usluga?
+                </button>
+              </h2>
+              <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-en="Depending on the service package you choose, our commission covers all the services we provide. Our mission is to enable the growth of your profits so that the cost of our commission is fully covered through increased revenue. In this way, our services essentially become free for you." data-bs="U zavisnosti od paketa usluga koje odaberete naša provizija pokriva sve usluge koje pružamo, a naša misija je omogućiti rast vašeg profita tako da trošak naše provizije bude potpuno pokriven kroz povećanje vaših prihoda. Na taj način naše usluge zapravo postaju besplatne za vas.">
+                  U zavisnosti od paketa usluga koje odaberete naša provizija pokriva sve usluge koje pružamo, a naša misija je omogućiti rast vašeg profita tako da trošak naše provizije bude potpuno pokriven kroz povećanje vaših prihoda. Na taj način naše usluge zapravo postaju besplatne za vas.
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHeading4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4" data-en="Can I terminate the service?" data-bs="Mogu li prekinuti uslugu?">
+                  Mogu li prekinuti uslugu?
+                </button>
+              </h2>
+              <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-en="Yes, the service can be terminated with prior notice. The details of the terms and notice period can be agreed upon according to your needs and the contract." data-bs="Da, uslugu je moguće prekinuti uz prethodnu najavu. Detalje o uslovima i periodu obavještenja možemo dogovoriti u skladu sa vašim potrebama i ugovorom.">
+                  Da, uslugu je moguće prekinuti uz prethodnu najavu. Detalje o uslovima i periodu obavještenja možemo dogovoriti u skladu sa vašim potrebama i ugovorom.
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHeading5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5" data-en="How will my property and related decisions be managed?" data-bs="Kako će biti upravljano s mojom nekretninom i odlukama vezanim za nju?">
+                  Kako će biti upravljano s mojom nekretninom i odlukama vezanim za nju?
+                </button>
+              </h2>
+              <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-en="Every decision concerning your property will be made in collaboration with you. Nothing will be done without your explicit approval, as it is important for you as the owner to have control over all aspects of your property management." data-bs="Svaka odluka koja se tiče vaše nekretnine biće donesena u saradnji s Vama. Ništa neće biti preduzeto bez vašeg izričitog odobrenja, jer je važno da vi kao vlasnik imate kontrolu nad svim aspektima upravljanja vašom nekretninom.">
+                  Svaka odluka koja se tiče vaše nekretnine biće donesena u saradnji s Vama. Ništa neće biti preduzeto bez vašeg izričitog odobrenja, jer je važno da vi kao vlasnik imate kontrolu nad svim aspektima upravljanja vašom nekretninom.
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Question 6 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHeading6">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6" data-en="Will there be transparency regarding the management of my property?" data-bs="Will there be transparency regarding the management of my property?">
+                  Da li će biti transparentnosti u vezi s upravljanjem mojom nekretninom?
+                </button>
+              </h2>
+              <div id="faqCollapse6" class="accordion-collapse collapse" aria-labelledby="faqHeading6" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-en="Yes, absolutely. All our processes are completely transparent. Owners will have constant access to the state and performance of their property at any moment. Additional transparency will be provided through regular reports containing information about income and results." data-bs="Da, apsolutno. Svi naši procesi su potpuno transparentni. Vlasnici će imati stalni uvid, u svakom momentu, u stanje i performanse njihove nekretnine. Dodatna transparentnost će biti osigurana i putem redovnih izvještaja koji će sadržavati sve informacije o prihodima i rezultatima.">
+                  Da, apsolutno. Svi naši procesi su potpuno transparentni. Vlasnici će imati stalni uvid, u svakom momentu, u stanje i performanse njihove nekretnine. Dodatna transparentnost će biti osigurana i putem redovnih izvještaja koji će sadržavati sve informacije o prihodima i rezultatima.
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHeading7">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse7" aria-expanded="false" aria-controls="faqCollapse7" data-en="Do I have access to bookings and guest communication?" data-bs="Do I have access to bookings and guest communication?">
+                  Imam li pristup rezervacijama i komunikaciji s gostima?
+                </button>
+              </h2>
+              <div id="faqCollapse7" class="accordion-collapse collapse" aria-labelledby="faqHeading7" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-en="Yes, owners always have access to all bookings, guest conversations, and any relevant information related to the management of their property. This access allows full insight into all aspects of management." data-bs="Da, vlasnici uvijek imaju pristup svim rezervacijama, razgovorima s gostima i svim relevantnim informacijama vezanim za upravljanje njihovom nekretninom. Ovaj pristup omogućava vam potpuni uvid u sve aspekte upravljanja.">
+                  Da, vlasnici uvijek imaju pristup svim rezervacijama, razgovorima s gostima i svim relevantnim informacijama vezanim za upravljanje njihovom nekretninom. Ovaj pristup omogućava vam potpuni uvid u sve aspekte upravljanja.
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHeading8">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse8" aria-expanded="false" aria-controls="faqCollapse8" data-en="How do you optimize advertising on platforms like Airbnb and Booking.com?" data-bs="How do you optimize advertising on platforms like Airbnb and Booking.com?">
+                  Kako optimizujete oglašavanje na platformama kao što su Airbnb i Booking.com i sl.?
+                </button>
+              </h2>
+              <div id="faqCollapse8" class="accordion-collapse collapse" aria-labelledby="faqHeading8" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-en="Optimization involves improving your ads for maximum visibility, correctly setting prices, and continuous performance analysis to ensure maximum occupancy and competitiveness." data-bs="Optimizacija uključuje poboljšanje Vaših oglasa i postizanje makismalne vidljivosti, pravilno postavljanje cijena i stalnu analizu performansi kako bismo osigurali maksimalnu popunjenost i konkurentnost.">
+                  Optimizacija uključuje poboljšanje Vaših oglasa i postizanje makismalne vidljivosti, pravilno postavljanje cijena i stalnu analizu performansi kako bismo osigurali maksimalnu popunjenost i konkurentnost.
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHeading9">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse9" aria-expanded="false" aria-controls="faqCollapse9" data-en="How do you take care of guests?" data-bs="How do you take care of guests?">
+                  Kako se brinete o gostima?
+                </button>
+              </h2>
+              <div id="faqCollapse9" class="accordion-collapse collapse" aria-labelledby="faqHeading9" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-en="We take care of all aspects of hospitality, including coordinating arrivals and departures, ensuring clean and tidy spaces, resolving guest inquiries and issues during their stay, to ensure positive experiences, reviews, and high ratings." data-bs="Brinemo se o svim aspektima gostoprimstva, uključujući koordinaciju dolazaka i odlazaka, obezbjeđivanje čistih i urednih prostora, rješavanje svih upita i problema gostiju tokom njihovog boravka, kako bi se osigurala pozitivna iskustva, recenzije i visoke ocjene.">
+                  Brinemo se o svim aspektima gostoprimstva, uključujući koordinaciju dolazaka i odlazaka, obezbjeđivanje čistih i urednih prostora, rješavanje svih upita i problema gostiju tokom njihovog boravka, kako bi se osigurala pozitivna iskustva, recenzije i visoke ocjene.
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHeading10">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse10" aria-expanded="false" aria-controls="faqCollapse10" data-en="What if there is a problem or damage to my property during a guest's stay?" data-bs="What if there is a problem or damage to my property during a guest's stay?">
+                  Šta ako dođe do problema ili štete u mojoj nekretnini tokom boravka gosta?
+                </button>
+              </h2>
+              <div id="faqCollapse10" class="accordion-collapse collapse" aria-labelledby="faqHeading10" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-en="We have clear procedures for managing such situations. In case of damage, we notify you immediately and act according to your rental conditions." data-bs="Imamo jasne procedure za upravljanje takvim situacijama. U slučaju štete, obavještavamo Vas odmah i postupamo u skladu sa sa Vašim uslovima najma.">
+                  Imamo jasne procedure za upravljanje takvim situacijama. U slučaju štete, obavještavamo Vas odmah i postupamo u skladu sa sa Vašim uslovima najma.
+                </div>
+              </div>
+            </div>
+
+                        <!-- Question 11 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHeading11">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse11" aria-expanded="false" aria-controls="faqCollapse11">
+                  How long does it take to list my property on the market?
+                </button>
+              </h2>
+              <div id="faqCollapse11" class="accordion-collapse collapse" aria-labelledby="faqHeading11" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  The process of listing a property usually takes between a few days to a week, depending on the property's readiness and the number of necessary repairs or improvements.
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 12 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHeading12">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse12" aria-expanded="false" aria-controls="faqCollapse12">
+                  How will you improve my rental income?
+                </button>
+              </h2>
+              <div id="faqCollapse12" class="accordion-collapse collapse" aria-labelledby="faqHeading12" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Based on our experience and market analysis, we optimize prices using analytical software, promote your property on all relevant platforms, increase visibility, and target the right type of guests, resulting in maximum income and occupancy.
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 13 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHeading13">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse13" aria-expanded="false" aria-controls="faqCollapse13">
+                  What if I don’t want my property listed on certain platforms?
+                </button>
+              </h2>
+              <div id="faqCollapse13" class="accordion-collapse collapse" aria-labelledby="faqHeading13" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  We respect your wishes and can limit advertising to specific platforms or choose exclusive channels according to your preferences and business strategy.
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 14 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHeading14">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse14" aria-expanded="false" aria-controls="faqCollapse14">
+                  How can I contact your team?
+                </button>
+              </h2>
+              <div id="faqCollapse14" class="accordion-collapse collapse" aria-labelledby="faqHeading14" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  You can contact us by phone, email, or by filling out the contact form on our website. We will always be there to answer your questions and provide support.
+                </div>
+              </div>
+            </div>
+
+
+
+
+          </div>
+      
+          <div class="text-center mt-4">
+            <a href="novi.html" class="btn btn-primary" data-bs="Vrati me nazad" data-en="Go home">Vrati me nazad</a>
+          </div>
+        </div>
+      </section>
+      
+
+      <script>
+        /*--------------------- FILTER QUESTIONS START ------------------------ */
+        function filterFAQs() {
+          const query = document.getElementById('search-input').value.toLowerCase();
+          const items = document.querySelectorAll('.accordion-item');
+          items.forEach(item => {
+            const question = item.querySelector('.accordion-button').textContent.toLowerCase();
+            item.style.display = question.includes(query) ? '' : 'none';
+          });
+        }
+        /*--------------------- FILTER QUESTIONS END ------------------------ */
+
+
+        /*--------------------- LANGUAGE CHANGE FUNCTION START ------------------------ */
+        const languageToggle = document.getElementById('languageToggle');
+        let currentLang = 'bs';
+
+        function toggleLanguage() {
+          const elements = document.querySelectorAll('[data-bs][data-en]');
+          const heroContent = document.querySelector('.hero-content');
+
+          elements.forEach(el => {
+            if (el.hasAttribute('placeholder')) {
+              el.placeholder = currentLang === 'bs' ? el.getAttribute('data-en') : el.getAttribute('data-bs');
+            } else if (el.tagName.toLowerCase() === 'li' || el.tagName.toLowerCase() === 'h3') {
+              el.innerHTML = currentLang === 'bs' ? el.getAttribute('data-en') : el.getAttribute('data-bs');
+            } else {
+              el.innerHTML = currentLang === 'bs' ? el.getAttribute('data-en') : el.getAttribute('data-bs');
+            }
+          });
+
+          // Adjust text alignment and margin based on language
+          heroContent.setAttribute('data-lang', currentLang);
+
+          // Toggle the language
+          currentLang = currentLang === 'bs' ? 'en' : 'bs';
+        }
+
+        // Attach the event listener
+        languageToggle.addEventListener('click', toggleLanguage);
+    /*--------------------- LANGUAGE CHANGE FUNCTION END ------------------------ */
+      </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -655,6 +655,62 @@
         /*---------------------- SERVICES SECTION END ----------------------- */
 
 
+        /*---------------------- RESPONSE SECTION START ----------------------- */
+                /* Modal overlay styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        /* Hidden initially */
+        .modal-hidden {
+            display: none;
+        }
+
+        /* Content inside the modal overlay */
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            max-width: 90%;
+            width: 400px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+            font-family: Arial, sans-serif;
+        }
+
+        /* Success message text */
+        .modal-content p {
+            font-size: 20px;
+            color: #27a744;
+            margin-bottom: 20px;
+        }
+
+        /* Close button styles */
+        .modal-close-btn {
+            background-color: #27a744;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .modal-close-btn:hover {
+            background-color: #218838;
+        }
+
+        /*---------------------- RESPONSE SECTION  ----------------------- */
+
 
     </style>
 </head>
@@ -871,16 +927,16 @@
                         <h4 data-en="Contact us" data-bs="Kontaktirajte nas">Kontaktirajte nas</h4>
                         <form>
                             <div class="mb-2">
-                                <input type="text" class="form-control" placeholder="Ime i prezime" data-bs="Ime i prezime" data-en="Full name">
+                                <input type="text" class="form-control" placeholder="Ime i prezime" data-bs="Ime i prezime" data-en="Full name" id="fullnametwo" name="fullnametwo">
                             </div>
                             <div class="mb-2">
-                                <input type="email" class="form-control" placeholder="E-mail">
+                                <input type="email" class="form-control" placeholder="E-mail" id="emailtwo" name="emailtwo">
                             </div>
                             <div class="mb-2">
-                                <input type="text" class="form-control" placeholder="Kontakt telefon" data-bs="Kontakt telefon" data-en="Contact number">
+                                <input type="text" class="form-control" placeholder="Kontakt telefon" data-bs="Kontakt telefon" data-en="Contact number" id="contacttwo" name="contacttwo">
                             </div>
                             <div class="mb-2">
-                                <textarea class="form-control" rows="3" placeholder="Vaša poruka" data-en="Your message" data-bs="Vaša poruka"></textarea>
+                                <textarea class="form-control" rows="3" placeholder="Vaša poruka" data-en="Your message" data-bs="Vaša poruka"  id="messagetwo" name="messagetwo"></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary w-100" data-en="Submit" data-bs="Pošalji">Pošalji</button>
                         </form>
@@ -910,6 +966,13 @@
     </footer>
     <!--SLIKA: https://images.pexels.com/photos/189333/pexels-photo-189333.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 -->
 
+    <!-- Success message overlay -->
+    <div id="modal-overlay" class="modal-overlay modal-hidden">
+        <div class="modal-content">
+            <p>Form submitted successfully!</p>
+            <button id="modal-close-btn" class="modal-close-btn">Close</button>
+        </div>
+    </div>
 
 
 
@@ -1023,23 +1086,42 @@
             });
         });
 
-        document.getElementById('formOne').addEventListener('submit', function (event) {
-            event.preventDefault(); // 
+        // Function to show modal message
+        function showModalMessage(message) {
+            const modalOverlay = document.getElementById('modal-overlay');
+            modalOverlay.querySelector('p').innerText = message;
+            modalOverlay.classList.remove('modal-hidden');
+        }
 
-            const formData = new FormData(this);
-
-            fetch('/backend/form.php', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('response-message').innerHTML = data;
-            })
-            .catch(error => {
-                document.getElementById('response-message').innerHTML = 'Došlo je do greške prilikom slanja poruke.';
-            });
+        // Close modal on button click
+        document.getElementById('modal-close-btn').addEventListener('click', function () {
+            document.getElementById('modal-overlay').classList.add('modal-hidden');
         });
+
+        // Function to handle form submission
+        function handleFormSubmit(formId, backendUrl) {
+            document.getElementById(formId).addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const formData = new FormData(this);
+
+                fetch(backendUrl, {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(data => {
+                    showModalMessage("Form submitted successfully!");
+                })
+                .catch(error => {
+                    document.getElementById('response-message').innerHTML = 'Došlo je do greške prilikom slanja poruke.';
+                });
+            });
+        }
+
+        // Initialize form event listeners
+        handleFormSubmit('formOne', '/backend/form.php');
+        handleFormSubmit('formTwo', '/backend/formTwo.php');
     </script>
 </body>
 </html>
