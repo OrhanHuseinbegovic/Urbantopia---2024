@@ -925,6 +925,74 @@ body, html {
   box-sizing: border-box;
 }
 
+/* Scoped styles for the unique-section */
+.unique-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.unique-section .row {
+    justify-content: center;
+}
+
+.unique-section .card {
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-height: 300px;
+}
+
+.unique-section .red-card {
+    background-color: #e74c3c;
+    border-left: 6px solid #e74c3c;
+}
+
+.unique-section .blue-card {
+    background-color: #3498db;
+    border-left: 6px solid #3498db;
+}
+
+.unique-section .card h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.unique-section .icon {
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+
+.unique-section .paragraph {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.unique-section .paragraph.red {
+    color: white;
+}
+
+.unique-section .paragraph.green {
+    color: #2ecc71;
+}
+
+@media (max-width: 768px) {
+    .unique-section .card {
+        padding: 15px;
+    }
+    .unique-section .card h2 {
+        font-size: 1.25rem;
+    }
+    .unique-section .paragraph {
+        font-size: 0.9rem;
+    }
+}
 
 
 
@@ -1033,42 +1101,60 @@ body, html {
   </section>
   
   
-  <section class="challenges-and-tasks py-5">
-    <div class="container">
-      <div class="row">
-        <!-- Vaše poteškoće -->
-        <div class="col-lg-6 mb-4">
-          <div class="p-4 shadow-lg rounded challenge-box" data-bs="Vaše poteškoće" data-en="Your challenges">
-            <h3 class="text-danger mb-3" data-bs="Vaše poteškoće" data-en="Your challenges">Vaše poteškoće</h3>
-            <ul class="list-unstyled">
-              <li class="mb-2" data-bs="Nedostatak vremena" data-en="Lack of time">Nedostatak vremena</li>
-              <li class="mb-2" data-bs="Nedostupnost ili odsutnost" data-en="Inaccessibility or absence">Nedostupnost ili odsutnost</li>
-              <li class="mb-2" data-bs="Slaba popunjenost" data-en="Low occupancy">Slaba popunjenost</li>
-              <li class="mb-2" data-bs="Slaba zarada" data-en="Low earnings">Slaba zarada</li>
-              <li class="mb-2" data-bs="Jezičke barijere" data-en="Language barriers">Jezičke barijere</li>
-              <li class="mb-2" data-bs="Poteškoće u čišćenju i održavanju smještaja" data-en="Difficulties in cleaning and maintaining accommodation">Poteškoće u čišćenju i održavanju smještaja</li>
-            </ul>
-          </div>
-        </div>
   
-        <!-- Naš zadatak -->
-        <div class="col-lg-6">
-          <div class="p-4 shadow-lg rounded task-box" data-bs="Naš zadatak" data-en="Our task">
-            <h3 class="text-success mb-3" data-bs="Naš zadatak" data-en="Our task">Naš zadatak</h3>
-            <ul class="list-unstyled">
-              <li class="mb-2" data-bs="Vaša bezbrižnost" data-en="Your peace of mind">Vaša bezbrižnost</li>
-              <li class="mb-2" data-bs="Zadovoljni gosti" data-en="Happy guests">Zadovoljni gosti</li>
-              <li class="mb-2" data-bs="Maksimalna popunjenost" data-en="Maximum occupancy">Maksimalna popunjenost</li>
-              <li class="mb-2" data-bs="Maksimalni profit" data-en="Maximum profit">Maksimalni profit</li>
-              <li class="mb-2" data-bs="Podrška Vama i gostima 24/7" data-en="Support for you and guests 24/7">Podrška Vama i gostima 24/7</li>
-              <li class="mb-2" data-bs="Besprijekorna briga o Vašem smještaju" data-en="Impeccable care of your accommodation">Besprijekorna briga o Vašem smještaju</li>
-            </ul>
-          </div>
+  <section class="unique-section container">
+    <div class="row">
+        <div class="col-md-5 mb-4 mt-4">
+            <div class="card red-card">
+                <h2 data-bs="Vaše poteškoće" data-en="Your challenges">Vaše poteškoće</h2>
+                <p class="paragraph red" data-bs="✘ Nedostatak vremena" data-en="✘ Lack of time">
+                    <span class="icon">✘</span> Nedostatak vremena
+                </p>
+                <p class="paragraph red" data-bs="✘ Nedostupnost ili odsutnost" data-en="✘ Unavailability or absence">
+                    <span class="icon">✘</span> Nedostupnost ili odsutnost
+                </p>
+                <p class="paragraph red" data-bs="✘ Slaba popunjenost" data-en="✘ Low occupancy">
+                    <span class="icon">✘</span> Slaba popunjenost
+                </p>
+                <p class="paragraph red" data-bs="✘ Slaba zarada" data-en="✘ Low revenue">
+                    <span class="icon">✘</span> Slaba zarada
+                </p>
+                <p class="paragraph red" data-bs="✘ Jezičke barijere" data-en="✘ Language barriers">
+                    <span class="icon">✘</span> Jezičke barijere
+                </p>
+                <p class="paragraph red" data-bs="✘ Poteškoće u čišćenju i održavanju smještaja" data-en="✘ Difficulties in cleaning and maintaining the accommodation">
+                    <span class="icon">✘</span> Poteškoće u čišćenju i održavanju smještaja
+                </p>
+            </div>
         </div>
-      </div>
+        <div class="col-md-5 mb-4 mt-4">
+            <div class="card blue-card">
+                <h2 data-bs="Naš zadatak" data-en="Our task">Naš zadatak</h2>
+                <p class="paragraph green" data-bs="✔ Vaša bezbrižnost" data-en="✔ Your peace of mind">
+                    <span class="icon">✔</span> Vaša bezbrižnost
+                </p>
+                <p class="paragraph green" data-bs="✔ Zadovoljni gosti" data-en="✔ Satisfied guests">
+                    <span class="icon">✔</span> Zadovoljni gosti
+                </p>
+                <p class="paragraph green" data-bs="✔ Maksimalna popunjenost" data-en="✔ Maximum occupancy">
+                    <span class="icon">✔</span> Maksimalna popunjenost
+                </p>
+                <p class="paragraph green" data-bs="✔ Maksimalni profit" data-en="✔ Maximum profit">
+                    <span class="icon">✔</span> Maksimalni profit
+                </p>
+                <p class="paragraph green" data-bs="✔ Podrška Vama i gostima 24/7" data-en="✔ 24/7 support for you and your guests">
+                    <span class="icon">✔</span> Podrška Vama i gostima 24/7
+                </p>
+                <p class="paragraph green" data-bs="✔ Besprijekorna briga o Vašem smještaju" data-en="✔ Impeccable care for your accommodation">
+                    <span class="icon">✔</span> Besprijekorna briga o Vašem smještaju
+                </p>
+            </div>
+        </div>
     </div>
-  </section>
-  
+</section>
+
+
+
   
 
 
