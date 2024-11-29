@@ -3,72 +3,162 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>O nama - Urbantopia</title>
+  <title data-bs="O nama" data-en="About us">O nama</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-  <!--<link rel="stylesheet" href="styles.css">  Vaš CSS fajl -->
+  <link rel="stylesheet" href="styles.css">  
+  <meta name="description" content="Urbantopia - mi upravljamo vašim nekretninama">
+    <meta name="keywords" content="nekretnine, apartmani, sarajevo, izdavanje apartmana, stan na dan, izdavanje nekretnina">
+    <meta name="author" content="Mak Drljević">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="icon" type="image/x-icon" href="urbantopia/Urban_Topia_3D_FB_Insta.jpg">
+    <link rel="icon" href="assets/icons/favicon.png" type="image/x-icon">
+
+
+    <!-- Add Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+
+
+
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Urbantopia">
+    <meta property="og:description" content="Urbantopia vam pomaže da dobijete maksimalno od svoje nekretnine dok se odmarate">
+    <meta property="og:image" content="https://www.urbantopia.ba/ApartmaniMak/assets/urbantopia/Urban_Topia_3D_FB_Insta.jpg">
+    <meta property="og:url" content="https://urbantopia.ba/onama.html">
+    <meta property="og:type" content="website">
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Apartment resselling",
+          "name": "Urbantopia",
+          "url": "https://www.urbantopia.ba",
+          "logo": "https://www.urbantopia.ba/ApartmaniMak/assets/urbantopia/Urban_Topia_3D_FB_Insta.jpg",
+          "sameAs": [
+            "https://www.facebook.com/urbantopia/",
+            "https://www.instagram.com/urbantopia/"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+38761829914",
+            "contactType": "Customer Service"
+          }
+        }
+      </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E1P6V603YQ"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-E1P6V603YQ');
+    </script>
   <style>
-      /* ------------------- NAVBAR START ------------------  */
-      .navbar {
-        background-color: #f8f9fa; /* Light gray background */
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-        padding: 10px 0;
+      /* Navbar */
+  .navbar {
+      background-color: #f8f9fa; /* Light gray background */
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      padding: 10px 0;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+    }
+
+    /* Adjust logo size */
+    .logo-img {
+      height: 55px; /* Increase logo height */
+      max-width: 140px; /* Ensure it doesn't overflow */
+      object-fit: contain; /* Maintain aspect ratio */
+      margin-right: 15px; /* Space between logo and text */
+    }
+
+    /* Adjust Sarajevo text */
+    .logo-text {
+      font-size: 1.6rem; /* Match size with logo */
+      font-weight: bold;
+      color: #122142; /* Dark gray text color */
+      line-height: 1; /* Align vertically */
+    }
+
+    /* Navigation links */
+    .navbar-nav .nav-link {
+      font-size: 1rem;
+      color: #555;
+      margin: 0 10px;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #b79722;
+    }
+
+    /* English option */
+    .navbar-nav .nav-link.english {
+      font-weight: bold;
+      margin-left: 20px;
+      color: #b79722;
+    }
+
+    .navbar-nav .nav-link.english:hover {
+      color: #ff9900;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      .navbar-brand .logo-img {
+        height: 45px; /* Reduce height for smaller screens */
       }
 
-      .navbar-brand {
-        display: flex;
-        align-items: center;
-      }
-
-      /* Adjust logo size */
-      .logo-img {
-        height: 55px; /* Increase logo height */
-        max-width: 140px; /* Ensure it doesn't overflow */
-        object-fit: contain; /* Maintain aspect ratio */
-        margin-right: 15px; /* Space between logo and text */
-      }
-
-      /* Adjust Sarajevo text */
-      .logo-text {
-        font-size: 1.6rem; /* Match size with logo */
-        font-weight: bold;
-        color: #333; /* Dark gray text color */
-        line-height: 1; /* Align vertically */
-      }
-
-      /* Navigation links */
       .navbar-nav .nav-link {
-        font-size: 1rem;
-        color: #555;
-        margin: 0 10px;
-        transition: color 0.3s ease-in-out;
+        margin: 5px 0;
       }
+    }
 
-      .navbar-nav .nav-link:hover {
-        color: #007bff;
-      }
 
-      /* English option */
-      .navbar-nav .nav-link.english {
-        font-weight: bold;
-        margin-left: 20px;
-        color: #0056b3;
-      }
 
-      .navbar-nav .nav-link.english:hover {
-        color: #ff9900;
-      }
 
-      /* Mobile adjustments */
-      @media (max-width: 768px) {
-        .navbar-brand .logo-img {
-          height: 45px; /* Reduce height for smaller screens */
-        }
 
-        .navbar-nav .nav-link {
-          margin: 5px 0;
-        }
-      }
-    /* ------------------- NAVBAR END ------------------  */
+    /*-------------- NAVBAR SECTION START -----------------*/
+
+
+
+    /*-------------- NAVBAR BUTTON START -----------------*/
+
+    /* Centering and styling the button */
+#languageToggle {
+  font-size: 0.9rem; /* Slightly smaller font size for neatness */
+  padding: 8px 20px; /* Adds padding to the button */
+  background-color: #122142; /* Bootstrap primary color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover */
+}
+
+#languageToggle:hover {
+  background-color: #b79722; /* Darker blue on hover */
+  color: #122142; /* Keep text color consistent */
+}
+
+#languageToggle:focus {
+  outline: none; /* Remove focus outline */
+}
+
+/* Center the button with other list items */
+.navbar-nav .nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-item:last-child {
+  margin-left: 10px; /* Add spacing from other links */
+}
+/*-------------- NAVBAR BUTTON END -----------------*/
   </style>
 </head>
 <body>
@@ -102,96 +192,96 @@
   </nav>
 
   <!-- Hero sekcija -->
-  <section class="hero-section bg-primary text-light py-5">
-    <div class="container text-center">
-      <h1 class="display-4">O nama</h1>
-      <p class="lead">Vaš partner za kratkoročni najam nekretnina</p>
-    </div>
-  </section>
+<section class="hero-section text-light py-5">
+  <div class="container text-center">
+    <h1 class="display-4" data-en="About Us" data-bs="O nama">O nama</h1>
+    <p class="lead" data-en="Your partner for short-term property rentals" data-bs="Vaš partner za kratkoročni najam nekretnina">Vaš partner za kratkoročni najam nekretnina</p>
+  </div>
+</section>
 
-  <!-- Sadržaj stranice -->
-  <section class="about-section py-5">
-    <div class="container">
-      <div class="row align-items-center">
-        <!-- Tekst s lijeve strane -->
-        <div class="col-md-6 mb-4 mb-md-0">
-          <h2 class="text-primary">Ko smo mi?</h2>
-          <p>
-            Urbantopia je agencija specijalizovana za kratkoročni najam nekretnina, pružajući sveobuhvatne usluge u oblasti menadžmenta nekretnina, ugostiteljstva, marketinga i analize podataka.
-          </p>
-          <p>
-            Naša misija je omogućiti vlasnicima nekretnina rast profita koji u potpunosti pokriva trošak naše provizije, čime naše usluge postaju besplatne.
-          </p>
-          <p>
-            Od 2016. godine bavimo se upravljanjem nekretninama za kratkoročni najam, obradili smo hiljade rezervacija i stekli neprocjenjivo iskustvo u ovoj industriji.
-          </p>
-        </div>
+<!-- Sadržaj stranice -->
+<section class="about-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Tekst s lijeve strane -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <h2 class="" data-en="Who are we?" data-bs="Ko smo mi?">Ko smo mi?</h2>
+        <p data-en="Urbantopia is an agency specializing in short-term property rental, offering comprehensive services in property management, hospitality, marketing, and data analysis." 
+           data-bs="Urbantopia je agencija specijalizovana za kratkoročni najam nekretnina, pružajući sveobuhvatne usluge u oblasti menadžmenta nekretnina, ugostiteljstva, marketinga i analize podataka.">
+           Urbantopia je agencija specijalizovana za kratkoročni najam nekretnina, pružajući sveobuhvatne usluge u oblasti menadžmenta nekretnina, ugostiteljstva, marketinga i analize podataka.
+        </p>
+        <p data-en="Our mission is to enable property owners to grow their profits, covering the cost of our commission, making our services free." 
+           data-bs="Naša misija je omogućiti vlasnicima nekretnina rast profita koji u potpunosti pokriva trošak naše provizije, čime naše usluge postaju besplatne.">
+           Naša misija je omogućiti vlasnicima nekretnina rast profita koji u potpunosti pokriva trošak naše provizije, čime naše usluge postaju besplatne.
+        </p>
+        <p data-en="Since 2016, we have been managing short-term rental properties, processed thousands of bookings, and gained invaluable experience in this industry." 
+           data-bs="Od 2016. godine bavimo se upravljanjem nekretninama za kratkoročni najam, obradili smo hiljade rezervacija i stekli neprocjenjivo iskustvo u ovoj industriji.">
+           Od 2016. godine bavimo se upravljanjem nekretninama za kratkoročni najam, obradili smo hiljade rezervacija i stekli neprocjenjivo iskustvo u ovoj industriji.
+        </p>
+      </div>
 
-        <!-- Slika s desne strane -->
-        <div class="col-md-6">
-          <img src="images/about-us.jpg" alt="O nama" class="img-fluid rounded shadow">
-        </div>
+      <!-- Naša vizija s desne strane -->
+      <div class="col-md-6">
+        <h2 class="" data-en="Our Vision" data-bs="Naša vizija">Naša vizija</h2>
+        <p data-en="We believe that successful short-term rental depends not only on pricing and occupancy but also on attention to detail and creating unforgettable experiences for guests. Our vision is to create these experiences while ensuring sustainable and long-term solutions that help our clients achieve stable and growing income." 
+           data-bs="Vjerujemo da uspješan kratkoročni najam ne zavisi samo od cijena i popunjenosti, već i od pažnje prema detaljima i stvaranju nezaboravnih iskustava za goste. Naša vizija je kreirati takve doživljaje, uz istovremeno osiguranje održivih i dugoročnih rješenja koja pomažu našim klijentima da ostvare stabilan i rastući prihod.">
+           Vjerujemo da uspješan kratkoročni najam ne zavisi samo od cijena i popunjenosti, već i od pažnje prema detaljima i stvaranju nezaboravnih iskustava za goste. Naša vizija je kreirati takve doživljaje, uz istovremeno osiguranje održivih i dugoročnih rješenja koja pomažu našim klijentima da ostvare stabilan i rastući prihod.
+        </p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Naša vizija -->
-  <section class="vision-section bg-light py-5">
-    <div class="container text-center">
-      <h2 class="text-primary">Naša vizija</h2>
-      <p class="mt-4">
-        Vjerujemo da uspješan kratkoročni najam ne zavisi samo od cijena i popunjenosti, već i od pažnje prema detaljima i stvaranju nezaboravnih iskustava za goste. Naša vizija je kreirati takve doživljaje, uz istovremeno osiguravanje održivih i dugoročnih rješenja koja pomažu našim klijentima da ostvare stabilan i rastući prihod.
-      </p>
-    </div>
-  </section>
 
-  <!-- Usluge -->
-  <section class="services-section py-5">
-    <div class="container">
-      <h2 class="text-primary text-center">Šta nudimo?</h2>
-      <div class="row mt-4">
-        <div class="col-md-4">
-          <div class="card border-0 shadow">
-            <div class="card-body text-center">
-              <h5 class="card-title text-primary">Upravljanje nekretninama</h5>
-              <p class="card-text">Sveobuhvatna podrška uključujući održavanje, čišćenje i vođenje svih detalja vašeg smještaja.</p>
-            </div>
+<!-- Usluge -->
+<section class="services-section py-5">
+  <div class="container">
+    <h2 class=" text-center" data-en="What do we offer?" data-bs="Šta nudimo?">Šta nudimo?</h2>
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <div class="card border-0 shadow">
+          <div class="card-body text-center">
+            <h5 class="card-title" data-en="Property Management" data-bs="Upravljanje nekretninama">Upravljanje nekretninama</h5>
+            <p class="card-text" data-en="Comprehensive support including maintenance, cleaning, and managing all aspects of your accommodation." data-bs="Sveobuhvatna podrška uključujući održavanje, čišćenje i vođenje svih detalja vašeg smještaja.">Sveobuhvatna podrška uključujući održavanje, čišćenje i vođenje svih detalja vašeg smještaja.</p>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card border-0 shadow">
-            <div class="card-body text-center">
-              <h5 class="card-title text-primary">Marketing i oglašavanje</h5>
-              <p class="card-text">Optimizacija i oglašavanje na platformama kao što su Airbnb, Booking.com i druge.</p>
-            </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-0 shadow">
+          <div class="card-body text-center">
+            <h5 class="card-title" data-en="Marketing and Advertising" data-bs="Marketing i oglašavanje">Marketing i oglašavanje</h5>
+            <p class="card-text" data-en="Optimization and advertising on platforms such as Airbnb, Booking.com, and others." data-bs="Optimizacija i oglašavanje na platformama kao što su Airbnb, Booking.com i druge.">Optimizacija i oglašavanje na platformama kao što su Airbnb, Booking.com i druge.</p>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card border-0 shadow">
-            <div class="card-body text-center">
-              <h5 class="card-title text-primary">Analiza podataka</h5>
-              <p class="card-text">Kontinuirani izvještaji i analize za poboljšanje performansi i maksimizaciju profita.</p>
-            </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-0 shadow">
+          <div class="card-body text-center">
+            <h5 class="card-title" data-en="Data Analysis" data-bs="Analiza podataka<">Analiza podataka</h5>
+            <p class="card-text" data-en="Continuous reporting and analysis to improve performance and maximize profit." data-bs="Kontinuirani izvještaji i analize za poboljšanje performansi i maksimizaciju profita.">Kontinuirani izvještaji i analize za poboljšanje performansi i maksimizaciju profita.</p>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Transparentnost i povjerenje -->
-  <section class="trust-section bg-primary text-light py-5">
-    <div class="container text-center">
-      <h2>Transparentnost i povjerenje</h2>
-      <p class="mt-4">
-        Naš pristup temeljen je na transparentnosti, povjerenju i posvećenosti. Svaki korak u našem poslovanju dizajniran je da obezbijedi najbolji mogući rezultat za Vas i Vaše nekretnine.
-      </p>
-    </div>
-  </section>
+<!-- Transparentnost i povjerenje -->
+<section class="trust-section text-light py-5">
+  <div class="container text-center">
+    <h2 data-en="Transparency and Trust" data-bs="Transparentnost i povjerenje">Transparentnost i povjerenje</h2>
+    <p class="mt-4" data-en="Our approach is based on transparency, trust, and commitment. Every step of our business is designed to ensure the best possible result for you and your properties." data-bs="Naš pristup temeljen je na transparentnosti, povjerenju i posvećenosti. Svaki korak u našem poslovanju dizajniran je da obezbijedi najbolji mogući rezultat za Vas i Vaše nekretnine.">
+      Naš pristup temeljen je na transparentnosti, povjerenju i posvećenosti. Svaki korak u našem poslovanju dizajniran je da obezbijedi najbolji mogući rezultat za Vas i Vaše nekretnine.
+    </p>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer class="text-center py-3 bg-dark text-light">
-    <p>© 2024 Urbantopia | Sva prava zadržana.</p>
-  </footer>
+<!-- Footer -->
+<footer class="text-center py-3 text-light">
+  <p class="mb-0" data-en="© 2024 Urbantopia.ba All rights reserved. Made by Orhan Huseinbegović" data-bs="© 2024 Urbantopia.ba Sva prava zadržana. Made by Orhan Huseinbegović">© 2024 Urbantopia.ba Sva prava zadržana. Orhan Huseinbegović</p>
+</footer>
+
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
@@ -201,20 +291,17 @@
 
     function toggleLanguage() {
       const elements = document.querySelectorAll('[data-bs][data-en]');
-      const heroContent = document.querySelector('.hero-content');
-
+      
       elements.forEach(el => {
         if (el.hasAttribute('placeholder')) {
           el.placeholder = currentLang === 'bs' ? el.getAttribute('data-en') : el.getAttribute('data-bs');
-        } else if (el.tagName.toLowerCase() === 'li' || el.tagName.toLowerCase() === 'h3') {
-          el.innerHTML = currentLang === 'bs' ? el.getAttribute('data-en') : el.getAttribute('data-bs');
         } else {
           el.innerHTML = currentLang === 'bs' ? el.getAttribute('data-en') : el.getAttribute('data-bs');
         }
       });
 
-      // Adjust text alignment and margin based on language
-      heroContent.setAttribute('data-lang', currentLang);
+      // Toggle the button text
+      languageToggle.innerHTML = currentLang === 'bs' ? languageToggle.getAttribute('data-en') : languageToggle.getAttribute('data-bs');
 
       // Toggle the language
       currentLang = currentLang === 'bs' ? 'en' : 'bs';

@@ -1,53 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ba">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Često Postavljena Pitanja</title>
+  <title data-bs="Često Postavljena Pitanja" data-en="FAQ">Često Postavljena Pitanja</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="description" content="Urbantopia - mi upravljamo vašim nekretninama">
+    <meta name="keywords" content="nekretnine, apartmani, sarajevo, izdavanje apartmana, stan na dan, izdavanje nekretnina">
+    <meta name="author" content="Mak Drljević">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="icon" type="image/x-icon" href="urbantopia/Urban_Topia_3D_FB_Insta.jpg">
+    <link rel="icon" href="assets/icons/favicon.png" type="image/x-icon">
+
+
+    <!-- Add Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+
+
+
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Urbantopia">
+    <meta property="og:description" content="Urbantopia vam pomaže da dobijete maksimalno od svoje nekretnine dok se odmarate">
+    <meta property="og:image" content="https://www.urbantopia.ba/ApartmaniMak/assets/urbantopia/Urban_Topia_3D_FB_Insta.jpg">
+    <meta property="og:url" content="https://urbantopia.ba/pitanja.hmtl">
+    <meta property="og:type" content="website">
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Apartment resselling",
+          "name": "Urbantopia",
+          "url": "https://www.urbantopia.ba",
+          "logo": "https://www.urbantopia.ba/ApartmaniMak/assets/urbantopia/Urban_Topia_3D_FB_Insta.jpg",
+          "sameAs": [
+            "https://www.facebook.com/urbantopia/",
+            "https://www.instagram.com/urbantopia/"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+38761829914",
+            "contactType": "Customer Service"
+          }
+        }
+      </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E1P6V603YQ"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-E1P6V603YQ');
+    </script>
   <style>
-    /*------------- QUESTIONS START --------------- */
-    body {
-      font-family: 'Raleway', sans-serif;
-    }
-    .faq-section {
-      padding: 50px 15px;
-    }
-    .faq-item {
-      margin-bottom: 20px;
-    }
-    .faq-item h5 {
-      cursor: pointer;
-      color: #1C567E;
-    }
-    .faq-item h5:hover {
-      text-decoration: underline;
-    }
-    .search-bar {
-      margin-bottom: 30px;
+    
+/*---------------- QUESTIONS SECTION START --------------------- */
+
+.faq h2 {
+    font-weight: bold;
+    color: #003366; /* Tamno plava */
     }
 
-    /* Apply Roboto to h1 and h2 tags */
-    h1, h2 {
-      font-family: 'Roboto', sans-serif;
+    .accordion-button {
+    font-weight: bold;
     }
 
-    /* Optional: Adjust font weights and sizes for better style */
-    h1 {
-      font-weight: 700;
-      font-size: 2.5rem; /* Example size */
+    .accordion-body {
+    font-size: 0.95rem;
+    line-height: 1.6;
     }
 
-    h2 {
-      font-weight: 500;
-      font-size: 2rem; /* Example size */
+    .btn-primary {
+    background-color: #122142; /* Tamno plava */
+    border: none;
     }
-    /*------------- QUESTIONS END --------------- */
+
+    .btn-primary:hover {
+    background-color: #00509E; /* Svjetlija plava */
+    }
+
+/*---------------- QUESTIONS SECTION END --------------------- */
 
 
 
-    /* ------------------- NAVBAR START ------------------  */
-    .navbar {
+    /* Navbar */
+  .navbar {
       background-color: #f8f9fa; /* Light gray background */
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
       padding: 10px 0;
@@ -70,7 +110,7 @@
     .logo-text {
       font-size: 1.6rem; /* Match size with logo */
       font-weight: bold;
-      color: #333; /* Dark gray text color */
+      color: #122142; /* Dark gray text color */
       line-height: 1; /* Align vertically */
     }
 
@@ -83,14 +123,14 @@
     }
 
     .navbar-nav .nav-link:hover {
-      color: #007bff;
+      color: #b79722;
     }
 
     /* English option */
     .navbar-nav .nav-link.english {
       font-weight: bold;
       margin-left: 20px;
-      color: #0056b3;
+      color: #b79722;
     }
 
     .navbar-nav .nav-link.english:hover {
@@ -107,43 +147,84 @@
         margin: 5px 0;
       }
     }
-    /* ------------------- NAVBAR END ------------------  */
+
+
+
+
+
+    /*-------------- NAVBAR SECTION START -----------------*/
+
+
+
+    /*-------------- NAVBAR BUTTON START -----------------*/
+
+    /* Centering and styling the button */
+#languageToggle {
+  font-size: 0.9rem; /* Slightly smaller font size for neatness */
+  padding: 8px 20px; /* Adds padding to the button */
+  background-color: #122142; /* Bootstrap primary color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover */
+}
+
+#languageToggle:hover {
+  background-color: #b79722; /* Darker blue on hover */
+  color: #122142; /* Keep text color consistent */
+}
+
+#languageToggle:focus {
+  outline: none; /* Remove focus outline */
+}
+
+/* Center the button with other list items */
+.navbar-nav .nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-item:last-child {
+  margin-left: 10px; /* Add spacing from other links */
+}
+/*-------------- NAVBAR BUTTON END -----------------*/
+
   </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <div class="container">
-        <!-- Logo and Sarajevo -->
-        <a class="navbar-brand d-flex align-items-center" href="novi.html">
-          <img src="assets/urbantopia/Urban_Topia.png" alt="Urban Topia Logo" class="logo-img me-3">
-          <span class="logo-text">Sarajevo</span>
-        </a>
-    
-        <!-- Hamburger Menu for Mobile -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <!-- Navigation Links -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="onama.html" data-bs="O nama" data-en="About us">O nama</a></li>
-            <li class="nav-item"><a class="nav-link" href="pitanja.html" data-bs="Često postavljena pitanja" data-en="FAQ">Često postavljena pitanja</a></li>
-            <li class="nav-item"><a class="nav-link" href="kontakt.html" data-bs="Kontakt" data-en="Contact us">Kontakt</a></li>
-            <li class="nav-item">
-              <button id="languageToggle" class="btn btn-primary rounded-pill" data-bs="English" data-en="Bosanski">
-                English
-              </button>
-            </li>
-          </ul>
-        </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+      <!-- Logo and Sarajevo -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="assets/urbantopia/Urban_Topia.png" alt="Urban Topia Logo" class="logo-img me-3">
+        <span class="logo-text">Sarajevo</span>
+      </a>
+  
+      <!-- Hamburger Menu for Mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Navigation Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="onama.html" data-bs="O nama" data-en="About us">O nama</a></li>
+          <li class="nav-item"><a class="nav-link" href="pitanja.html" data-bs="Često postavljena pitanja" data-en="FAQ">Često postavljena pitanja</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontakt.html" data-bs="Kontakt" data-en="Contact us">Kontakt</a></li>
+          <li class="nav-item">
+            <button id="languageToggle" class="btn btn-primary rounded-pill" data-bs="English" data-en="Bosanski">
+              English
+            </button>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
     <section class="faq py-5 bg-light mt-5">
         <div class="container">
           <div class="text-center mb-4">
-            <h2 class="text-primary" data-bs="Često postavljena pitanja" data-en="Frequently asked questions">Često postavljena pitanja</h2>
+            <h2 class="text-boja" data-bs="Često postavljena pitanja" data-en="Frequently asked questions" style="color: #122142;">Često postavljena pitanja</h2>
           </div>
       
           <!-- Search Bar -->
@@ -361,6 +442,7 @@
       </section>
       
 
+
       <script>
         /*--------------------- FILTER QUESTIONS START ------------------------ */
         function filterFAQs() {
@@ -380,20 +462,17 @@
 
         function toggleLanguage() {
           const elements = document.querySelectorAll('[data-bs][data-en]');
-          const heroContent = document.querySelector('.hero-content');
-
+          
           elements.forEach(el => {
             if (el.hasAttribute('placeholder')) {
               el.placeholder = currentLang === 'bs' ? el.getAttribute('data-en') : el.getAttribute('data-bs');
-            } else if (el.tagName.toLowerCase() === 'li' || el.tagName.toLowerCase() === 'h3') {
-              el.innerHTML = currentLang === 'bs' ? el.getAttribute('data-en') : el.getAttribute('data-bs');
             } else {
               el.innerHTML = currentLang === 'bs' ? el.getAttribute('data-en') : el.getAttribute('data-bs');
             }
           });
 
-          // Adjust text alignment and margin based on language
-          heroContent.setAttribute('data-lang', currentLang);
+          // Toggle the button text
+          languageToggle.innerHTML = currentLang === 'bs' ? languageToggle.getAttribute('data-en') : languageToggle.getAttribute('data-bs');
 
           // Toggle the language
           currentLang = currentLang === 'bs' ? 'en' : 'bs';
@@ -401,7 +480,8 @@
 
         // Attach the event listener
         languageToggle.addEventListener('click', toggleLanguage);
-    /*--------------------- LANGUAGE CHANGE FUNCTION END ------------------------ */
+        /*--------------------- LANGUAGE CHANGE FUNCTION END ------------------------ */
+
       </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

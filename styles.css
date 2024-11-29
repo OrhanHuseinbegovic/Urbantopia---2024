@@ -1,379 +1,216 @@
-/*-------------- NAVBAR SECTION START -----------------*/
-.navbar {
-    background-color: #f8f9fa; /* Svijetlo siva boja */
-    border-bottom: 1px solid #e0e0e0; /* Tanka linija za razdvajanje */
-  }
-  .navbar-brand {
-    font-weight: bold;
-  }
-  .nav-link {
-    font-size: 1rem;
-    color: #333;
-    transition: color 0.2s ease-in-out;
-  }
-  .nav-link:hover {
-    color: #1C567E; /* Dodaj plavu boju pri hoveru */
-  }
-  .lang-switch {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-left: 15px;
-  }
-  /*-------------- NAVBAR SECTION START -----------------*/
-
-
-  /*-------------- HERO SECTION START -----------------*/
-  body {
-    font-family: Arial, sans-serif;
-  }
-
-  .hero-section {
-    position: relative;
-    background: url('assets/pictures/bg.png') center center/cover no-repeat; /* Postavi visoku rezoluciju slike */
-    color: #fff;
-    min-height: 100vh;
-  }
-
-  .hero-overlay {
-    background-color: rgba(0, 0, 51, 0.8); /* Tamno plava s prozirnošću */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    padding: 2rem;
-  }
-
-  .hero-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #f8f9fa;
-  }
-
-  .hero-slogan {
-    font-size: 1.5rem;
-    margin: 1rem 0;
-    color: #ffd700; /* Zlatna za kontrast */
-  }
-
-  .hero-text {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #f8f9fa;
-  }
-
-  .steps {
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    padding: 1.5rem;
-    color: #333;
-  }
-
-  .steps h4 {
-    font-weight: 700;
-    color: #003366;
-  }
-
-  .steps ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .steps ul li {
-    margin: 0.5rem 0;
-    font-size: 1rem;
-  }
-
-  .contact-phone {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-top: 1rem;
-    color: #003366;
-  }
-  /*-------------- HERO SECTION END -----------------*/
-
-
-  .steps {
-      background-color: #f8f9fa;
-      border-radius: 10px;
-      padding: 1.5rem;
-      margin-bottom: 2rem; /* Veći razmak između sekcija */
-  }
-
-  .contact-form {
-      background-color: #ffffff;
-      border-radius: 10px;
-      padding: 1.5rem;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Blagi sjena za formu */
-  }
-
-  .challenges-and-tasks h3 {
-      font-weight: bold;
-  }
-
-  .challenges-and-tasks ul li {
-      font-size: 1.1rem;
-  }
-
-  .bg-light {
-      background-color: #f8f9fa !important; /* Lagana siva */
-  }
-
-  .bg-dark {
-      background-color: #003366 !important; /* Tamno plava */
-  }
-
-  /*---------------- PACKAGES SECTION START --------------------- */
-
-  .packages h2 {
-  font-weight: bold;
-  color: #003366; /* Tamno plava */
-  }
-
-  .card {
-  border-radius: 10px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-
-  .card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  }
-
-  .card h4 {
-  font-weight: bold;
-  }
-
-  .card ul li {
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
-  }
-
-  .text-muted {
-  font-size: 0.9rem;
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
-  }
-/*---------------- PACKAGES SECTION END --------------------- */
+  background-color: #f4f7fa;
+}
 
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+}
 
+.text-primary {
+  color: #122142; /* Dark Blue */
+}
 
-/*---------------- QUESTIONS SECTION START --------------------- */
+.text-light {
+  color: #ffffff;
+}
 
-  .faq h2 {
-  font-weight: bold;
-  color: #003366; /* Tamno plava */
-  }
+.bg-primary {
+  background-color: #122142; /* Dark Blue */
+}
 
-  .accordion-button {
-  font-weight: bold;
-  }
+.bg-light {
+  background-color: #f8f9fa;
+}
 
-  .accordion-body {
-  font-size: 0.95rem;
+.bg-dark {
+  background-color: #343a40;
+}
+
+/* Hero Section */
+.hero-section {
+  background: #122142;
+  background-size: cover;
+  padding: 5rem 0;
+  margin-top: 75px;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+}
+
+/* Sadržaj stranice */
+.about-section .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.about-section .col-md-6 {
+  flex: 1;
+  padding: 1rem;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  color: #122142; /* Dark Blue */
+  font-weight: 700;
+}
+
+.about-section p {
+  font-size: 1rem;
+  color: #555;
   line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Ensuring both sections are aligned in a row */
+@media (max-width: 768px) {
+  .about-section .row {
+    flex-direction: column;
   }
-
-  .btn-primary {
-  background-color: #003366; /* Tamno plava */
-  border: none;
-  }
-
-  .btn-primary:hover {
-  background-color: #00509E; /* Svjetlija plava */
-  }
-
-/*---------------- QUESTIONS SECTION END --------------------- */
-
-
-/*---------------- FOOTER SECTION START --------------------- */
-.footer-section {
-background-color: #003366; /* Tamno plava */
-color: #ffffff;
 }
 
-.footer-section h2, 
-.footer-section h4 {
-color: #f1c40f; /* Žuta sa loga */
-}
-
-.footer-section a {
-color: #f1c40f;
-text-decoration: none;
-}
-
-.footer-section a:hover {
-text-decoration: underline;
-}
-
-.footer-section img {
-filter: brightness(0) invert(1); /* Bijeli efekat na logotipove */
-}
-
-
-/*---------------- FOOTER SECTION END --------------------- */
-
-/*---------------------- SERVICES SECTION START ----------------------- */
-        
-.service-card {
-    background-color: #1C567E; /* Dark blue background for cards */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #fff;
-    padding: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
-    flex: 0 0 auto; /* Prevent cards from stretching */
-    margin-bottom: 20px; /* Spacing between cards */
-    height: 300px; /* Increased height for mobile */
-    width: 100%; /* Full width of the container */
-    scroll-snap-align: center; /* Ensure each card snaps to the center */
-}
-
-/* Hover effect */
-.service-card:hover {
-    background-color: #f2f2f2; /* Dirty white background on hover */
-    color: #b79722; /* Golden text color on hover */
-    transform: translateY(-5px); /* Card lifts up slightly on hover */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
-}
-
-/* Title inside service cards */
-.service-card h4 {
-    color: #b79722; /* Gold color for titles */
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin-top: 15px;
-    margin-bottom: 10px;
-}
-
-/* Carousel Container */
-.services-carousel-container {
-    position: relative; /* To position the buttons */
-    overflow: hidden;
-    width: 100%;
-}
-
-/* Adjusting carousel to show one card at a time */
-.services-carousel {
-    display: flex;
-    overflow-x: auto;
-    gap: 0; /* No space between cards */
-    padding: 10px;
-    background-color: #F4F4F4;
-    justify-content: flex-start;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
-    box-sizing: border-box; /* Prevent overflow */
-    width: 100%;
-    margin: 0;
-}
-
-/* Hide scrollbar */
-.services-carousel::-webkit-scrollbar {
-    display: none;
-}
-
-/* Service Card Image */
-.service-card img {
-    max-width: 60px;
-    height: auto;
-    margin-bottom: 15px;
-}
 
 /* Services Section */
 .services-section {
-    background-color: #F4F4F4;
-    padding: 50px 0;
-    overflow-x: hidden;
+  padding: 5rem 0;
 }
 
 .services-section h2 {
-    color: #2f3a5c;
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 30px;
-    text-align: center;
+  font-size: 2rem;
+  color: #122142;
+  font-weight: 700;
 }
 
-/* Left and Right Scroll Buttons */
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #b79722; /* Golden background */
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+.services-section .card {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-.carousel-btn:hover {
-    background-color: #a67c1f; /* Darker golden on hover */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+.services-section .card:hover {
+  transform: translateY(-10px);
 }
 
-/* Position the left button */
-.left-btn {
-    left: 10px;
+.services-section .card-title {
+  color: #122142;
+  font-weight: 600;
 }
 
-/* Position the right button */
-.right-btn {
-    right: 10px;
+.services-section .card-text {
+  font-size: 1rem;
+  color: #555;
 }
 
-/* Make sure buttons only appear on mobile */
+/* Trust Section */
+.trust-section {
+  background-color: #122142;
+  padding: 5rem 0;
+}
+
+.trust-section h2 {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.trust-section p {
+  font-size: 1rem;
+  color: #f1f1f1;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Footer Section */
+footer {
+  background-color: #343a40;
+  color: #f1f1f1;
+  padding: 1rem 0;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .carousel-btn {
-        display: block; /* Show buttons on mobile only */
-    }
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
 
-    /* Adjust button size and position */
-    .carousel-btn {
-        padding: 12px 20px;
-        font-size: 1.25rem;
-    }
+  .hero-section p {
+    font-size: 1rem;
+  }
 
-    /* Adjust card width and height for mobile */
-    .service-card {
-        width: 100vw; /* Full width of the viewport */
-        height: 350px; /* Taller cards */
-        margin-right: 0; /* Remove margin between cards */
-    }
+  .about-section, .vision-section, .services-section, .trust-section {
+    padding: 3rem 0;
+  }
 
-    /* Avoid overlapping the carousel */
-    .services-carousel-container {
-        margin-left: 40px; /* Provide space for the left button */
-        margin-right: 40px; /* Provide space for the right button */
-    }
+  .services-section .card {
+    margin-bottom: 1rem;
+  }
+
+  .services-section .card-body {
+    padding: 1.5rem;
+  }
+
+  .about-section p {
+    font-size: 0.9rem;
+  }
+
+  .vision-section p {
+    font-size: 0.9rem;
+  }
 }
 
-/* For larger screens, use grid layout instead */
-@media (min-width: 768px) {
-    .services-carousel {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
-
-    .service-card {
-        flex: none;
-        scroll-snap-align: none;
-    }
-
-    /* Hide scroll buttons on desktop */
-    .carousel-btn {
-        display: none;
-    }
+/* Buttons */
+.btn-primary {
+  background-color: #f1c40f; /* Yellow */
+  border-color: #f1c40f;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/*---------------------- SERVICES SECTION END ----------------------- */
+.btn-primary:hover {
+  background-color: #e1b40e;
+  transform: translateY(-2px);
+}
+
+/* Card Hover Effect */
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+
+/* Scroll Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInUp {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+
+
+

@@ -4,6 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Urbantopia</title>
+  <meta name="description" content="Urbantopia - mi upravljamo vašim nekretninama">
+    <meta name="keywords" content="nekretnine, apartmani, sarajevo, izdavanje apartmana, stan na dan, izdavanje nekretnina">
+    <meta name="author" content="Mak Drljević">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="icon" type="image/x-icon" href="urbantopia/Urban_Topia_3D_FB_Insta.jpg">
+    <link rel="icon" href="assets/icons/favicon.png" type="image/x-icon">
+
+
+    <!-- Add Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+
+
+
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Urbantopia">
+    <meta property="og:description" content="Urbantopia vam pomaže da dobijete maksimalno od svoje nekretnine dok se odmarate">
+    <meta property="og:image" content="https://www.urbantopia.ba/ApartmaniMak/assets/urbantopia/Urban_Topia_3D_FB_Insta.jpg">
+    <meta property="og:url" content="https://urbantopia.ba">
+    <meta property="og:type" content="website">
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Apartment resselling",
+          "name": "Urbantopia",
+          "url": "https://www.urbantopia.ba",
+          "logo": "https://www.urbantopia.ba/ApartmaniMak/assets/urbantopia/Urban_Topia_3D_FB_Insta.jpg",
+          "sameAs": [
+            "https://www.facebook.com/urbantopia/",
+            "https://www.instagram.com/urbantopia/"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+38761829914",
+            "contactType": "Customer Service"
+          }
+        }
+      </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E1P6V603YQ"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-E1P6V603YQ');
+    </script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     .text-plava{
@@ -13,6 +63,7 @@
     /* Apply Raleway to the body (everything else by default) */
     body {
       font-family: 'Raleway', sans-serif;
+      background-color: #f8f9fa;
     }
 
     /* Apply Roboto to h1 and h2 tags */
@@ -57,7 +108,7 @@
     .logo-text {
       font-size: 1.6rem; /* Match size with logo */
       font-weight: bold;
-      color: #333; /* Dark gray text color */
+      color: #122142; /* Dark gray text color */
       line-height: 1; /* Align vertically */
     }
 
@@ -70,14 +121,14 @@
     }
 
     .navbar-nav .nav-link:hover {
-      color: #007bff;
+      color: #b79722;
     }
 
     /* English option */
     .navbar-nav .nav-link.english {
       font-weight: bold;
       margin-left: 20px;
-      color: #0056b3;
+      color: #b79722;
     }
 
     .navbar-nav .nav-link.english:hover {
@@ -117,8 +168,8 @@
 }
 
 #languageToggle:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-  color: white; /* Keep text color consistent */
+  background-color: #b79722; /* Darker blue on hover */
+  color: #122142; /* Keep text color consistent */
 }
 
 #languageToggle:focus {
@@ -183,7 +234,7 @@ body {
 .hero-title {
   font-size: 2.8rem;
   font-weight: 700;
-  color: #ffd700; /* Golden for contrast */
+  color: #b79722; /* Golden for contrast */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-bottom: 1rem;
 }
@@ -203,7 +254,7 @@ body {
 }
 
 .hero-text b {
-  color: #ffd700; /* Highlight key text in gold */
+  color: #b79722; /* Highlight key text in gold */
 }
 
 .hero-text[data-lang="bs"] {
@@ -221,7 +272,7 @@ body {
   background: #f8f9fa;
   border-radius: 15px;
   padding: 2rem;
-  color: #003366;
+  color: #122142;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
   position: relative;
   margin-top: 2rem;
@@ -238,7 +289,7 @@ body {
   font-weight: 700;
   margin-bottom: 1.5rem;
   text-align: center;
-  color: #ffd700;
+  color: #b79722;
 }
 
 .steps ul {
@@ -256,7 +307,7 @@ body {
 .steps ul li::before {
   content: "✔";
   font-size: 1.3rem;
-  color: #ffd700;
+  color: #b79722;
   margin-right: 0.8rem;
 }
 
@@ -264,13 +315,13 @@ body {
   font-size: 1.3rem;
   font-weight: bold;
   margin-top: 1.5rem;
-  color: #ffd700;
+  color: #b79722;
   text-align: center;
 }
 
 /* Contact Form */
 .contact-form {
-  background: #ffffff;
+  background: #f8f9fa;
   border-radius: 15px;
   padding: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -317,8 +368,8 @@ body {
 }
 
 .contact-form button:hover {
-  background: #ffd700;
-  color: #003366;
+  background: #b79722;
+  color: #122142;
   transform: scale(1.05);
 }
 
@@ -342,48 +393,77 @@ body {
   }
 }
 
-/* Center Call Button */
-.hero-call-button {
-  margin-top: 2rem; /* Dodajte razmak ispod svih elemenata */
+
+/* HERO SECTION START */
+.hero-section {
+  position: relative;
+  background: url('assets/pictures/bg.png') center center/cover no-repeat;
+  color: #fff;
+  min-height: 100vh;
+  padding-top: 5rem;
   display: flex;
-  justify-content: center; /* Centriranje horizontalno */
+  flex-direction: column;
+  justify-content: space-between; /* Space between top content and bottom button */
+}
+
+.hero-overlay {
+  background: linear-gradient(0deg, #505050 0%, rgba(102, 102, 102, 0.50) 91.7%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.hero-call-button-wrapper {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-top: auto;
+  padding-bottom: 2rem;
 }
 
 .btn-call {
-  background: linear-gradient(90deg, #ffd700, #ff8c00);
-  color: #003366;
+  background: #b79722;
+  color: #b79722;
   font-size: 1.2rem;
   font-weight: bold;
   padding: 0.8rem 2rem;
   border-radius: 8px;
   text-decoration: none;
   position: relative;
-  overflow: hidden;
   transition: all 0.3s ease;
-}
-
-/* Shine Effect */
-.btn-call::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.3);
-  transform: skewX(-45deg);
-  transition: left 0.5s ease-in-out;
-  z-index: 1;
-}
-
-.btn-call:hover::before {
-  left: 100%; /* Prolazi preko dugmeta */
+  display: inline-block;
 }
 
 .btn-call:hover {
-  transform: scale(1.05); /* Blago povećanje */
-  background: linear-gradient(90deg, #ff8c00, #ffd700);
+  transform: scale(1.05);
+  background: #b79722;
 }
+
+@media (max-width: 768px) {
+  .hero-call-button-wrapper {
+    padding-bottom: 1rem;
+  }
+}
+
+.herobutton{
+  color: #b79722;
+}
+
+
 
 /*-------------- HERO SECTION END -----------------*/
 
@@ -396,13 +476,13 @@ body {
     }
 
     .bg-dark {
-        background-color: #003366 !important; /* Tamno plava */
+        background-color: #122142 !important; /* Tamno plava */
     }
 
     /*---------------- PACKAGES SECTION START --------------------- */
 
 .packages {
-  background-color: #ffffff; /* White background for the section */
+  background-color: #f8f9fa; /* White background for the section */
 }
 
 .packages h2 {
@@ -415,10 +495,10 @@ body {
 }
 
 .card {
-  background-color: #003366; /* Dark blue for the cards */
+  background-color: #122142; /* Dark blue for the cards */
   border-radius: 15px;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-  color: #ffffff;
+  color: #f8f9fa;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
@@ -569,7 +649,7 @@ body {
 
 /* Unikatna forma */
 .unique-contact-form {
-  background-color: #003366;
+  background-color: #122142;
   border-radius: 8px;
   color: #ffffff;
   padding: 20px;
@@ -592,9 +672,9 @@ body {
 
 /* Unikatno dugme */
 .unique-submit-btn {
-  background-color: #ffffff;
-  color: #003366;
-  border: 1px solid #003366;
+  background-color: #b79722;
+  color: #f8f9fa;
+  border: 1px solid #b79722;
   font-weight: bold;
   transition: background-color 0.3s ease, color 0.3s ease;
   border-radius: 10px;
@@ -603,7 +683,7 @@ body {
 
 .unique-submit-btn:hover {
   background-color: #f1c40f;
-  color: #003366;
+  color: #f8f9fa;
 }
 
 /* Kontakt info */
@@ -635,7 +715,7 @@ footer .border-top {
 /*---------------------- SERVICES SECTION START ----------------------- */
         
 .service-card {
-            background-color: #1C567E; /* Dark blue background for cards */
+            background-color: #122142; /* Dark blue background for cards */
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             color: #fff;
@@ -650,7 +730,7 @@ footer .border-top {
 
         /* Hover effect */
         .service-card:hover {
-            background-color: #f2f2f2; /* Dirty white background on hover */
+            background-color: #f8f9fa; /* Dirty white background on hover */
             color: #b79722; /* Golden text color on hover */
             transform: translateY(-5px); /* Card lifts up slightly on hover */
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
@@ -678,7 +758,7 @@ footer .border-top {
             overflow-x: auto;
             gap: 0; /* No space between cards */
             padding: 10px;
-            background-color: #F4F4F4;
+            background-color: #f8f9fa;
             justify-content: flex-start;
             scroll-snap-type: x mandatory;
             -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
@@ -701,13 +781,13 @@ footer .border-top {
 
         /* Services Section */
         .services-section {
-            background-color: #F4F4F4;
+            background-color: #f8f9fa;
             padding: 50px 0;
             overflow-x: hidden;
         }
 
         .services-section h2 {
-            color: #2f3a5c;
+            color: #122142;
             font-size: 2.5rem;
             font-weight: bold;
             margin-bottom: 30px;
@@ -720,7 +800,7 @@ footer .border-top {
             top: 50%;
             transform: translateY(-50%);
             background-color: #b79722; /* Golden background */
-            color: #fff;
+            color: #f8f9fa;
             border: none;
             padding: 10px 15px;
             font-size: 1.5rem;
@@ -805,7 +885,7 @@ footer .border-top {
 
 /* Style for the phone call button */
 .btn-call {
-  background-color: #122142; /* Dark blue color */
+  background-color: #b79722; /* Dark blue color */
   color: white; /* White text */
   padding: 15px 30px; /* Add padding for better button size */
   font-size: 16px; /* Adjust font size */
@@ -816,7 +896,8 @@ footer .border-top {
 
 /* Hover effect for the button */
 .btn-call:hover {
-  background-color: #0a1e36; /* Darker shade of the button on hover */
+  background-color: #122142; /* Darker shade of the button on hover */
+  color: #f8f9fa;
   transform: translateY(-5px); /* Slightly lift the button */
 }
 
@@ -934,6 +1015,7 @@ body, html {
 
 .unique-section .row {
     justify-content: center;
+    background-color: #f8f9fa;
 }
 
 .unique-section .card {
@@ -945,13 +1027,13 @@ body, html {
 }
 
 .unique-section .red-card {
-    background-color: #e74c3c;
-    border-left: 6px solid #e74c3c;
+    background-color: #122142;
+    border-left: 6px solid #122142;
 }
 
 .unique-section .blue-card {
-    background-color: #3498db;
-    border-left: 6px solid #3498db;
+    background-color: #b79722;
+    border-left: 6px solid #b79722;
 }
 
 .unique-section .card h2 {
@@ -975,11 +1057,11 @@ body, html {
 }
 
 .unique-section .paragraph.red {
-    color: white;
+    color: #f8f9fa;
 }
 
 .unique-section .paragraph.green {
-    color: #2ecc71;
+    color: #122142;
 }
 
 @media (max-width: 768px) {
@@ -994,6 +1076,17 @@ body, html {
     }
 }
 
+.text-color-unique{
+  color: #122142;
+}
+
+.h2goldsection{
+  color: #122142;
+}
+
+.buttoncolorinform{
+  background-color: #122142;
+}
 
 
 
@@ -1032,10 +1125,13 @@ body, html {
       </div>
     </div>
   </nav>
-  
+    
   
   <section class="hero-section">
+    <!-- Overlay -->
     <div class="hero-overlay"></div>
+
+    <!-- Hero Content -->
     <div class="container hero-content d-flex flex-column flex-lg-row justify-content-between align-items-center">
       <!-- Left Side -->
       <div class="text-white">
@@ -1058,100 +1154,43 @@ body, html {
           <b>Naša vizija</b> je kreiranje nezaboravnih doživljaja za goste, uz istovremeno osiguravanje održivih i dugoročnih rješenja za naše klijente.
         </p>
       </div>
-  
+
       <!-- Right Side -->
       <div class="text-dark mt-4 mt-lg-0">
-        <!-- Quick and efficient process -->
-        <!-- Steps Section -->
-          <div class="steps mb-4">
-            <h4 data-en="Fast and efficient deal" data-bs="Brz i efikasan dogovor">Brz i efikasan dogovor</h4>
-            <ul>
-              <li data-en="Contact us" data-bs="Kontaktirate nas">Kontaktirate nas</li>
-              <li data-en="We check your apartment" data-bs="Pregledamo Vaš smještaj">Pregledamo Vaš smještaj</li>
-              <li data-en="We are negotiating the details of cooperation." data-bs="Ugovaramo detalje saradnje">Ugovaramo detalje saradnje</li>
-            </ul>
-          </div>
-
-          <!-- Contact Form -->
-          <div class="contact-form">
-            <h3 class="contact-heading" data-bs="Kontaktirajte nas" data-en="Contact us">Kontaktirajte nas</h3> <!-- Add this heading above the form -->
-            <form action="submit-form.php" method="POST">
-              <div class="mb-2">
-                <input type="text" class="form-control" placeholder="Ime i prezime" data-bs="Ime i prezime" data-en="Full name" id="fullnametwo" name="fullnametwo">
+        <div class="steps mb-4">
+          <h4 data-en="Fast and efficient deal" data-bs="Brz i efikasan dogovor">Brz i efikasan dogovor</h4>
+          <ul>
+            <li data-en="Contact us" data-bs="Kontaktirate nas">Kontaktirate nas</li>
+            <li data-en="We check your apartment" data-bs="Pregledamo Vaš smještaj">Pregledamo Vaš smještaj</li>
+            <li data-en="We are negotiating the details of cooperation" data-bs="Ugovaramo detalje saradnje">Ugovaramo detalje saradnje</li>
+          </ul>
+        </div>
+        <div class="contact-form">
+          <h3 class="contact-heading" data-bs="Kontaktirajte nas" data-en="Contact us">Kontaktirajte nas</h3>
+          <form action="submit-form.php" method="POST">
+            <div class="mb-2">
+              <input type="text" class="form-control" placeholder="Ime i prezime" data-bs="Ime i prezime" data-en="Full name" id="fullnametwo" name="fullnametwo">
             </div>
             <div class="mb-2">
-                <input type="email" class="form-control" placeholder="E-mail" id="emailtwo" name="emailtwo">
+              <input type="email" class="form-control" placeholder="E-mail" id="emailtwo" name="emailtwo">
             </div>
             <div class="mb-2">
-                <input type="text" class="form-control" placeholder="Kontakt telefon" data-bs="Kontakt telefon" data-en="Contact number" id="contacttwo" name="contacttwo">
+              <input type="text" class="form-control" placeholder="Kontakt telefon" data-bs="Kontakt telefon" data-en="Contact number" id="contacttwo" name="contacttwo">
             </div>
             <div class="mb-2">
-                <textarea class="form-control" rows="3" placeholder="Vaša poruka" data-en="Your message" data-bs="Vaša poruka"  id="messagetwo" name="messagetwo"></textarea>
+              <textarea class="form-control" rows="3" placeholder="Vaša poruka" data-en="Your message" data-bs="Vaša poruka" id="messagetwo" name="messagetwo"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary w-100" data-en="Submit" data-bs="Pošalji">Pošalji</button>
-            </form>
-          </div>
-          <div class="hero-call-button text-center">
-            <a href="tel:+387xxxxxxxxx" class="btn btn-call">
-              Pozovite nas na ... <!-- You can replace with your actual phone number -->
-            </a>
-          </div>
+            <button type="submit" class="btn btn-primary w-100 buttoncolorinform" data-en="Submit" data-bs="Pošalji">Pošalji</button>
+          </form>
+        </div>
       </div>
     </div>
-  </section>
-  
-  
-  
-  <section class="unique-section container">
-    <div class="row">
-        <div class="col-md-5 mb-4 mt-4">
-            <div class="card red-card">
-                <h2 data-bs="Vaše poteškoće" data-en="Your challenges">Vaše poteškoće</h2>
-                <p class="paragraph red" data-bs="✘ Nedostatak vremena" data-en="✘ Lack of time">
-                    <span class="icon">✘</span> Nedostatak vremena
-                </p>
-                <p class="paragraph red" data-bs="✘ Nedostupnost ili odsutnost" data-en="✘ Unavailability or absence">
-                    <span class="icon">✘</span> Nedostupnost ili odsutnost
-                </p>
-                <p class="paragraph red" data-bs="✘ Slaba popunjenost" data-en="✘ Low occupancy">
-                    <span class="icon">✘</span> Slaba popunjenost
-                </p>
-                <p class="paragraph red" data-bs="✘ Slaba zarada" data-en="✘ Low revenue">
-                    <span class="icon">✘</span> Slaba zarada
-                </p>
-                <p class="paragraph red" data-bs="✘ Jezičke barijere" data-en="✘ Language barriers">
-                    <span class="icon">✘</span> Jezičke barijere
-                </p>
-                <p class="paragraph red" data-bs="✘ Poteškoće u čišćenju i održavanju smještaja" data-en="✘ Difficulties in cleaning and maintaining the accommodation">
-                    <span class="icon">✘</span> Poteškoće u čišćenju i održavanju smještaja
-                </p>
-            </div>
-        </div>
-        <div class="col-md-5 mb-4 mt-4">
-            <div class="card blue-card">
-                <h2 data-bs="Naš zadatak" data-en="Our task">Naš zadatak</h2>
-                <p class="paragraph green" data-bs="✔ Vaša bezbrižnost" data-en="✔ Your peace of mind">
-                    <span class="icon">✔</span> Vaša bezbrižnost
-                </p>
-                <p class="paragraph green" data-bs="✔ Zadovoljni gosti" data-en="✔ Satisfied guests">
-                    <span class="icon">✔</span> Zadovoljni gosti
-                </p>
-                <p class="paragraph green" data-bs="✔ Maksimalna popunjenost" data-en="✔ Maximum occupancy">
-                    <span class="icon">✔</span> Maksimalna popunjenost
-                </p>
-                <p class="paragraph green" data-bs="✔ Maksimalni profit" data-en="✔ Maximum profit">
-                    <span class="icon">✔</span> Maksimalni profit
-                </p>
-                <p class="paragraph green" data-bs="✔ Podrška Vama i gostima 24/7" data-en="✔ 24/7 support for you and your guests">
-                    <span class="icon">✔</span> Podrška Vama i gostima 24/7
-                </p>
-                <p class="paragraph green" data-bs="✔ Besprijekorna briga o Vašem smještaju" data-en="✔ Impeccable care for your accommodation">
-                    <span class="icon">✔</span> Besprijekorna briga o Vašem smještaju
-                </p>
-            </div>
-        </div>
+
+    <!-- Call Button Below -->
+    <div class="hero-call-button-wrapper">
+      <a href="tel:+38761829914" class="btn btn-call herobutton w-100" data-en="Call us on +38761829914" data-bs="Pozovite nas na +38761829914">Pozovite nas na +38761829914</a>
     </div>
-</section>
+  </section>
 
 
 
@@ -1231,7 +1270,7 @@ body, html {
     <section class="packages py-5">
       <div class="container">
         <div class="text-center mb-5">
-          <h2 class="text-primary" data-bs="Paketi" data-en="Packages">Paketi</h2>
+          <h2 class="text-color-unique" data-bs="Paketi" data-en="Packages">Paketi</h2>
         </div>
         <div class="row">
           <!-- Start Paket -->
@@ -1293,8 +1332,8 @@ body, html {
           </div>
         </div>
         <div class="mt-4 text-center">
-          <p class="text-muted" data-bs="Vlasnik smještaja zadržava pravo konačne odluke u svim pitanjima vezanim za upravljanje njegovom imovinom, a nijedna odluka neće biti donesena bez njegovog izričitog odobrenja." data-en="The property owner reserves the final decision on all matters regarding the management of their property, and no decision will be made without their explicit consent.">
-            Vlasnik smještaja zadržava pravo konačne odluke u svim pitanjima vezanim za upravljanje njegovom imovinom, a nijedna odluka neće biti donesena bez njegovog izričitog odobrenja.
+          <p class="text-muted" data-bs="⚠️ Vlasnik smještaja zadržava pravo konačne odluke u svim pitanjima vezanim za upravljanje njegovom imovinom, a nijedna odluka neće biti donesena bez njegovog izričitog odobrenja." data-en="⚠️ The property owner reserves the final decision on all matters regarding the management of their property, and no decision will be made without their explicit consent.">
+            ⚠️ Vlasnik smještaja zadržava pravo konačne odluke u svim pitanjima vezanim za upravljanje njegovom imovinom, a nijedna odluka neće biti donesena bez njegovog izričitog odobrenja.
           </p>
         </div>
       </div>
@@ -1427,10 +1466,10 @@ body, html {
   
           <!-- Kontakt podaci -->
           <div class="contact-info mt-4 d-flex justify-content-between flex-wrap gap-3">
-            <a href="tel:+123456789" class="text-light text-decoration-none" data-en="Phone" data-bs="Telefon">
+            <a href="tel:+38761829914" class="text-light text-decoration-none" data-en="Phone" data-bs="Telefon">
               <i class="bi bi-telephone-fill"></i> Telefon
             </a>
-            <a href="https://wa.me/123456789" target="_blank" class="text-light text-decoration-none" data-en="WhatsApp">
+            <a href="https://wa.me/38761829914" target="_blank" class="text-light text-decoration-none" data-en="WhatsApp">
               <i class="bi bi-whatsapp"></i> WhatsApp
             </a>
             <a href="mailto:info@urbantopia.ba" class="text-light text-decoration-none" data-en="Email">
