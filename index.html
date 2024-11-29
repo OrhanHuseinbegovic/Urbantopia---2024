@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="bs">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="Urbantopia - mi upravljamo vašim nekretninama">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urbantopia</title>
+  <meta name="description" content="Urbantopia - mi upravljamo vašim nekretninama">
     <meta name="keywords" content="nekretnine, apartmani, sarajevo, izdavanje apartmana, stan na dan, izdavanje nekretnina">
     <meta name="author" content="Mak Drljević">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="icon" type="image/x-icon" href="urbantopia/Urban_Topia_3D_FB_Insta.jpg">
-    <link rel="icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="assets/icons/favicon.png" type="image/x-icon">
 
 
     <!-- Add Google Fonts -->
@@ -54,449 +54,668 @@
 
     gtag('config', 'G-E1P6V603YQ');
     </script>
-  
-    <title>Urbantopia</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .text-plava{
+      color: #122142;
+    }
 
-        .h1{
-            font-family: 'Roboto', sans-serif;
-        }
+    /* Apply Raleway to the body (everything else by default) */
+    body {
+      font-family: 'Raleway', sans-serif;
+      background-color: #f8f9fa;
+    }
 
-        .p{
-            font-family: 'Raleway', sans-serif;
-        }
+    /* Apply Roboto to h1 and h2 tags */
+    h1, h2 {
+      font-family: 'Roboto', sans-serif;
+    }
 
-        .hero-section {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: #fff;
-            padding: 100px 0;
-        }
+    /* Optional: Adjust font weights and sizes for better style */
+    h1 {
+      font-weight: 700;
+      font-size: 2.5rem; /* Example size */
+    }
 
-        /* Contact form */
-        .contact-form {
-            background-color: #1C567E;
-            padding: 20px;
-            border-radius: 8px;
-            color: #fff;
-        }
+    h2 {
+      font-weight: 500;
+      font-size: 2rem; /* Example size */
+    }
 
+
+
+    /* Navbar */
+    .navbar {
+      background-color: #f8f9fa; /* Light gray background */
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      padding: 10px 0;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+    }
+
+    /* Adjust logo size */
+    .logo-img {
+      height: 55px; /* Increase logo height */
+      max-width: 140px; /* Ensure it doesn't overflow */
+      object-fit: contain; /* Maintain aspect ratio */
+      margin-right: 15px; /* Space between logo and text */
+    }
+
+    /* Adjust Sarajevo text */
+    .logo-text {
+      font-size: 1.6rem; /* Match size with logo */
+      font-weight: bold;
+      color: #122142; /* Dark gray text color */
+      line-height: 1; /* Align vertically */
+    }
+
+    /* Navigation links */
+    .navbar-nav .nav-link {
+      font-size: 1rem;
+      color: #555;
+      margin: 0 10px;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #b79722;
+    }
+
+    /* English option */
+    .navbar-nav .nav-link.english {
+      font-weight: bold;
+      margin-left: 20px;
+      color: #b79722;
+    }
+
+    .navbar-nav .nav-link.english:hover {
+      color: #ff9900;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      .navbar-brand .logo-img {
+        height: 45px; /* Reduce height for smaller screens */
+      }
+
+      .navbar-nav .nav-link {
+        margin: 5px 0;
+      }
+    }
+
+
+
+
+
+    /*-------------- NAVBAR SECTION START -----------------*/
+
+
+
+    /*-------------- NAVBAR BUTTON START -----------------*/
+
+    /* Centering and styling the button */
+#languageToggle {
+  font-size: 0.9rem; /* Slightly smaller font size for neatness */
+  padding: 8px 20px; /* Adds padding to the button */
+  background-color: #122142; /* Bootstrap primary color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover */
+}
+
+#languageToggle:hover {
+  background-color: #b79722; /* Darker blue on hover */
+  color: #122142; /* Keep text color consistent */
+}
+
+#languageToggle:focus {
+  outline: none; /* Remove focus outline */
+}
+
+/* Center the button with other list items */
+.navbar-nav .nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-item:last-child {
+  margin-left: 10px; /* Add spacing from other links */
+}
+/*-------------- NAVBAR BUTTON END -----------------*/
+
+
+
+    /*-------------- HERO SECTION START -----------------*/
+/* General Reset */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hero Section Styling */
+.hero-section {
+  position: relative;
+  background: url('assets/pictures/bg.png') center center/cover no-repeat;
+  color: #fff;
+  min-height: 100vh;
+  padding-top: 5rem; /* Prevent overlap from navbar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background: linear-gradient(0deg, #505050 0%, rgba(102, 102, 102, 0.50) 91.7%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  max-width: 1200px; /* Restrict max width for readability */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #b79722; /* Golden for contrast */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+}
+
+.hero-slogan {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+  color: #f8f9fa; /* White for softer readability */
+  font-style: italic;
+}
+
+.hero-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #f8f9fa;
+  margin-bottom: 1.5rem;
+}
+
+.hero-text b {
+  color: #b79722; /* Highlight key text in gold */
+}
+
+.hero-text[data-lang="bs"] {
+  margin-left: 2rem; /* Slight left adjustment for Bosnian */
+  text-align: left;
+}
+
+.hero-text[data-lang="en"] {
+  text-align: center;
+  margin-left: 0;
+}
+
+/* Steps Section */
+.steps {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 2rem;
+  color: #122142;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin-top: 2rem;
+}
+
+.steps, .contact-form {
+  max-width: 1000px;  /* Increased max-width for wider sections */
+  margin: 0 auto;     /* Center the content */
+  padding: 20px;      /* Padding inside the container */
+}
+
+.steps h4 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #b79722;
+}
+
+.steps ul {
+  list-style: none;
+  padding: 0;
+}
+
+.steps ul li {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.steps ul li::before {
+  content: "✔";
+  font-size: 1.3rem;
+  color: #b79722;
+  margin-right: 0.8rem;
+}
+
+.contact-phone {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  color: #b79722;
+  text-align: center;
+}
+
+/* Contact Form */
+.contact-form {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin-top: 2rem;
+  width: 100%;  /* Ensures the form takes full width */
+  max-width: 1000px;  /* Increase max-width for a wider form */
+}
+
+/* Style the "Kontakt us" heading */
+.contact-heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #003366; /* Dark color for contrast */
+  margin-bottom: 1.5rem;
+  text-align: center;  /* Center the heading */
+}
+
+.contact-form .form-control {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: border 0.3s ease;
+  width: 100%;  /* Ensures the form fields take full width */
+  box-sizing: border-box;  /* Includes padding in the width calculation */
+}
+
+.contact-form .form-control:focus {
+  border: 2px solid #003366;
+  outline: none;
+}
+
+.contact-form button {
+  background: #003366;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.contact-form button:hover {
+  background: #b79722;
+  color: #122142;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content {
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-slogan {
+    font-size: 1.4rem;
+  }
+
+  .hero-text {
+    font-size: 1rem;
+  }
+}
+
+
+/* HERO SECTION START */
+.hero-section {
+  position: relative;
+  background: url('assets/pictures/bg.png') center center/cover no-repeat;
+  color: #fff;
+  min-height: 100vh;
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space between top content and bottom button */
+}
+
+.hero-overlay {
+  background: linear-gradient(0deg, #505050 0%, rgba(102, 102, 102, 0.50) 91.7%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.hero-call-button-wrapper {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-top: auto;
+  padding-bottom: 2rem;
+}
+
+.btn-call {
+  background: #b79722;
+  color: #b79722;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-call:hover {
+  transform: scale(1.05);
+  background: #b79722;
+}
+
+@media (max-width: 768px) {
+  .hero-call-button-wrapper {
+    padding-bottom: 1rem;
+  }
+}
+
+.herobutton{
+  color: #b79722;
+}
+
+
+
+/*-------------- HERO SECTION END -----------------*/
+
+
+
+   
+
+    .bg-light {
+        background-color: #f8f9fa !important; /* Lagana siva */
+    }
+
+    .bg-dark {
+        background-color: #122142 !important; /* Tamno plava */
+    }
+
+    /*---------------- PACKAGES SECTION START --------------------- */
+
+.packages {
+  background-color: #f8f9fa; /* White background for the section */
+}
+
+.packages h2 {
+  font-weight: bold;
+  color: #003366; /* Dark blue color */
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card {
+  background-color: #122142; /* Dark blue for the cards */
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  color: #f8f9fa;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.card h4 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #dbc621; /* Gold for titles */
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.card h4:hover {
+  color: #ffffff; /* White on hover */
+}
+
+.card ul {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.card ul li {
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 1.5rem;
+  color: #ffffff;
+}
+
+.card ul li::before {
+  content: "\2713"; /* Checkmark icon */
+  color: #dbc621; /* Gold color */
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.text-muted {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #6c757d;
+  margin-top: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-body {
+    padding: 1.5rem;
+  }
+
+  .card h4 {
+    font-size: 1.3rem;
+  }
+
+  .card ul li {
+    font-size: 0.95rem;
+  }
+
+  .text-muted {
+    font-size: 0.9rem;
+  }
+}
+
+/*---------------- PACKAGES SECTION END --------------------- */
+
+
+
+
+/*---------------- QUESTIONS SECTION START --------------------- */
+
+    .faq h2 {
+    font-weight: bold;
+    color: #003366; /* Tamno plava */
+    }
+
+    .accordion-button {
+    font-weight: bold;
+    }
+
+    .accordion-body {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    }
+
+    .btn-primary {
+    background-color: #122142; /* Tamno plava */
+    border: none;
+    }
+
+    .btn-primary:hover {
+    background-color: #00509E; /* Svjetlija plava */
+    }
+
+/*---------------- QUESTIONS SECTION END --------------------- */
+
+
+/*---------------- FOOTER SECTION START --------------------- */
+.footer-section {
+  background: linear-gradient(0deg, #505050 0%, rgba(102, 102, 102, 0.50) 91.7%),
+    url('https://images.pexels.com/photos/189333/pexels-photo-189333.jpeg'); /* URL pozadinske slike */
+  background-size: cover; /* Pokriva cijeli footer */
+  background-position: center; /* Fokusira sliku na sredinu */
+  background-repeat: no-repeat; /* Onemogućava ponavljanje slike */
+  color: #ffffff; /* Bijela boja za tekst radi kontrasta */
+}
+
+.footer-section h2, 
+.footer-section h4 {
+  color: #f1c40f;
+}
+
+
+.footer-section a {
+  color: #f1c40f;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.partner-logos img {
+  width: auto;
+  height: 80px;
+  transition: transform 0.3s ease;
+}
+
+.partner-logos img:hover {
+  transform: scale(1.1);
+}
+
+/* Unikatna forma */
+.unique-contact-form {
+  background-color: #122142;
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.unique-contact-form h4 {
+  color: #ffffff;
+}
+
+.unique-contact-form input,
+.unique-contact-form textarea {
+  border: 1px solid #003366;
+  color: #003366;
+}
+
+.unique-contact-form input::placeholder,
+.unique-contact-form textarea::placeholder {
+  color: #999999;
+}
+
+/* Unikatno dugme */
+.unique-submit-btn {
+  background-color: #b79722;
+  color: #f8f9fa;
+  border: 1px solid #b79722;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 10px;
+  height: 50px;
+}
+
+.unique-submit-btn:hover {
+  background-color: #f1c40f;
+  color: #f8f9fa;
+}
+
+/* Kontakt info */
+.contact-info a {
+  color: #003366;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.contact-info i {
+  font-size: 18px;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Copyright */
+footer .border-top {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/*---------------- FOOTER SECTION END --------------------- */
+
+
+
+/*---------------------- SERVICES SECTION START ----------------------- */
         
-        /*---------------------- BUTTON SECTION START ---------------------------*/
-        /* Contact Form Button */
-        .contact-form button {
-            background-color: #f1c40f;
-            color: #fff;
-            border: none;
-            border-radius: 8px; /* Rounded corners */
-            padding: 10px 20px;
-            font-weight: bold;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-            transition: transform 0.2s ease, background-color 0.3s ease; /* Smooth transition */
-        }
-
-        .contact-form button:hover {
-            background-color: #e1b30e; /* Slightly darker yellow on hover */
-            transform: translateY(-2px); /* Lift on hover */
-        }
-
-
-        /* Call Button Styling */
-        .btn-call-action {
-            background-color: #f1c40f; /* Green background */
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            padding: 12px 20px;
-            font-weight: bold;
-            font-size: 1.1em;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px; /* Space for icon */
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-            transition: transform 0.2s ease, background-color 0.3s ease;
-        }
-
-        .btn-call-action i {
-            font-size: 1.2em; /* Icon size */
-        }
-
-        .btn-call-action:hover {
-            background-color: #f1c40f; /* Darker green on hover */
-            transform: translateY(-2px);
-        }
-
-        .btn-call-action:focus {
-            outline: none;
-            box-shadow: 0 0 8px #f1c40f; /* Focus outline for accessibility */
-        }
-
-        /*---------------------- BUTTON SECTION END ---------------------------*/
-
-
-        .client-card {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            color: #2f3a5c;
-        }
-
-        .client-card h4 {
-            color: #b79722; /* Gold color for the title */
-        }
-
-        .client-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .client-card:hover {
-            transform: translateY(-10px); /* Move the card up by 10px */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow for more emphasis */
-        }
-
-        .clients-section-wrapper {
-            background-color: #1C567E;
-            padding: 50px 0; /* Adds padding for top and bottom spacing */
-        }
-        
-        
-
-        section h2 {
-            color: #fff;
-            padding: 20px 0;
-            margin-bottom: 20px;
-            border-radius: 8px;
-        }
-
-
-
-        .footer {
-            position: relative;
-            color: white;
-            padding: 50px 0;
-            background-image: url('https://images.pexels.com/photos/189333/pexels-photo-189333.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
-            z-index: 1;
-        }
-
-        .whiteoverlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(0deg, #505050 0%, rgba(102, 102, 102, 0.50) 91.7%);
-            z-index: 1;
-        }
-        
-        .content {
-            position: relative;
-            z-index: 2;
-        }
-
-
-        .hidden {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1s ease-out, transform 0.6s ease-out;
-        }
-
-        .show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-
-        /* Navbar */
-        .navbar-custom {
-            background-color: #1C567E;
-            color: #fff;
-            transition: background-color 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-        }
-
-        .navbar-custom.scrolled {
-            background-color: #14456a; /* Darker shade on scroll */
-        }
-
-        /* Navbar Brand Logo */
-        .navbar-brand img {
-            height: 50px;
-            transition: transform 0.3s ease;
-        }
-
-        .navbar-brand img:hover {
-            transform: scale(1.1); /* Slight zoom effect */
-        }
-
-        /* Navbar Links */
-        .navbar-custom .nav-link {
-            color: #ffffff;
-            padding: 0.75rem 1rem;
-            font-weight: 500;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-
-        .navbar-custom .nav-link:hover {
-            color: #D1E9F2; /* Light blue color on hover */
-            transform: translateY(-2px); /* Lift effect */
-        }
-
-        /* Navbar Toggle Button */
-        .navbar-toggler {
-            border: none;
-        }
-
-        .navbar-toggler-icon {
-            background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%28255, 255, 255, 0.7%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
-        }
-
-        /* Language Toggle Button */
-        #languageToggle {
-            background-color: #f8f9fa; /* Light gray */
-            color: #1C567E;
-            border: none;
-            padding: 0.7rem 0.8rem;
-            font-size: 0.9rem;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            display: flex;
-            align-items: center;
-        }
-
-        #languageToggle:hover {
-            background-color: #e0e0e0;
-            transform: translateY(-2px);
-        }
-
-        #languageToggle i {
-            margin-right: 5px;
-            color: #1C567E;
-        }
-
-        /* Scroll Effect */
-        .navbar-custom.scrolled .nav-link {
-            color: #ffffff;
-        }
-
-        /* Smooth transition for background and link colors */
-        .navbar-custom a {
-            color: #fff;
-            transition: color 0.3s ease;
-        }
-
-        #languageToggle img {
-            margin-right: 5px;
-            vertical-align: middle;
-        }
-
-
-        /* Initial style for h4 titles inside client cards */
-        .client-card h4 {
-            color: #b79722; /* Gold color for the title */
-            transition: text-shadow 0.3s ease-in-out; /* Smooth transition */
-        }
-
-        /* Glow effect when hovering over client card */
-        .client-card:hover h4 {
-            text-shadow: 0 0 6px rgba(255, 215, 0, 0.7), 
-                        0 0 12px rgba(255, 215, 0, 0.5), 
-                        0 0 18px rgba(255, 215, 0, 0.3); /* Subtle glow effect */
-        }
-
-        .social-icons i {
-            font-size: 30px; /* Adjust size */
-            color: #f4f4f4; /* Set icon color */
-        }
-
-        .social-icons a {
-            margin-right: 15px;
-        }
-
-        /*---------------------- PACKAGE CARD START ----------------------- */
-        /* Package cards */
-        .package-card {
-            background-color: #fff;
-            border-radius: 10px; /* Slightly rounded corners */
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Deeper shadow for more depth */
-            padding: 25px;
-            text-align: center;
-            color: #1C567E;
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-            height: 100%;
-        }
-
-        .package-card:hover {
-            transform: translateY(-10px); /* Subtle lift effect on hover */
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
-        }
-
-        /* Highlighted package */
-        .package-card.highlight {
-            background-color: #f1c40f;
-            color: #fff;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Lighter shadow for highlight */
-        }
-
-        /* Package Card Titles */
-        .package-card h4 {
-            font-size: 1.4rem;
-            font-weight: 600; /* Slightly bolder text */
-            margin-bottom: 15px;
-            color: inherit;
-        }
-
-        /* Package Card Paragraphs */
-        .package-card p {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #555; /* Soft color for text */
-            margin-bottom: 20px;
-        }
-
-        /* Package Card Button */
-        .package-card button {
-            background-color: #1C567E;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            padding: 12px 25px;
-            font-weight: bold;
-            text-transform: uppercase; /* Uppercase for button text */
-            letter-spacing: 1px; /* Slight spacing for button text */
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        /* Button Hover Effects */
-        .package-card button:hover {
-            background-color: #f1c40f; /* Change to yellow on hover */
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15); /* Shadow change on hover */
-            transform: translateY(-3px); /* Lift effect */
-        }
-
-        /* Highlighted Button in Highlighted Package */
-        .package-card.highlight button {
-            background-color: #f39c12; /* Darker yellow for the highlighted package button */
-        }
-
-        .package-card.highlight button:hover {
-            background-color: #e67e22; /* Even darker yellow on hover */
-        }
-
-        /* Responsive for mobile */
-        @media (max-width: 768px) {
-            .package-card {
-                padding: 20px;
-            }
-            .package-card h4 {
-                font-size: 1.3rem;
-            }
-            .package-card p {
-                font-size: 0.95rem;
-            }
-            .package-card button {
-                padding: 10px 20px;
-            }
-        }
-        /*---------------------- PACKAGE CARD END ----------------------- */
-
-
-
-
-
-        /*---------------------- CONTACT FORM START ----------------------- */
-
-                /* Contact Form */
-        .contact-form {
-            background-color: #1C567E; /* Keep the blue color */
-            padding: 20px;
-            border-radius: 8px;
-            color: #fff; /* White text for contrast */
-        }
-
-        /* Input and Textarea Styles */
-        .contact-form input,
-        .contact-form textarea {
-            background-color: #fff; /* White background for inputs */
-            color: #333; /* Dark text for readability */
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 10px;
-            width: 100%;
-            margin-bottom: 15px;
-            transition: border-color 0.3s ease;
-        }
-
-        /* Input and Textarea focus styles */
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            border-color: #f1c40f; /* Golden yellow border on focus */
-            outline: none;
-        }
-
-        /* Button Styles */
-        .contact-form button {
-            background-color: #f1c40f; /* Golden yellow button */
-            color: #1C567E; /* Blue text for contrast */
-            border: none;
-            border-radius: 5px;
-            padding: 12px;
-            font-weight: bold;
-            width: 100%;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-        /* Button Hover Effect */
-        .contact-form button:hover {
-            background-color: #a18710; /* Slightly darker golden on hover */
-            transform: translateY(-2px);
-        }
-
-        /* Title */
-        .contact-form h4 {
-            font-size: 1.5rem;
-            color: #fff;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-                /* Add spacing between form and packages on mobile devices */
-        @media (max-width: 767px) {
-            .contact-form {
-                margin-bottom: 30px; /* Space below the contact form */
-            }
-
-            .package-card {
-                margin-top: 20px; /* Space above each package card */
-            }
-        }
-
-        /*---------------------- CONTACT FORM END ----------------------- */
-
-
-
-
-        /*---------------------- SERVICES SECTION START ----------------------- */
-        
-        .service-card {
-            background-color: #1C567E; /* Dark blue background for cards */
+.service-card {
+            background-color: #122142; /* Dark blue background for cards */
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             color: #fff;
@@ -511,7 +730,7 @@
 
         /* Hover effect */
         .service-card:hover {
-            background-color: #f2f2f2; /* Dirty white background on hover */
+            background-color: #f8f9fa; /* Dirty white background on hover */
             color: #b79722; /* Golden text color on hover */
             transform: translateY(-5px); /* Card lifts up slightly on hover */
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
@@ -539,7 +758,7 @@
             overflow-x: auto;
             gap: 0; /* No space between cards */
             padding: 10px;
-            background-color: #F4F4F4;
+            background-color: #f8f9fa;
             justify-content: flex-start;
             scroll-snap-type: x mandatory;
             -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
@@ -562,13 +781,13 @@
 
         /* Services Section */
         .services-section {
-            background-color: #F4F4F4;
+            background-color: #f8f9fa;
             padding: 50px 0;
             overflow-x: hidden;
         }
 
         .services-section h2 {
-            color: #2f3a5c;
+            color: #122142;
             font-size: 2.5rem;
             font-weight: bold;
             margin-bottom: 30px;
@@ -581,7 +800,7 @@
             top: 50%;
             transform: translateY(-50%);
             background-color: #b79722; /* Golden background */
-            color: #fff;
+            color: #f8f9fa;
             border: none;
             padding: 10px 15px;
             font-size: 1.5rem;
@@ -655,206 +874,332 @@
         /*---------------------- SERVICES SECTION END ----------------------- */
 
 
-        /*---------------------- RESPONSE SECTION START ----------------------- */
-                /* Modal overlay styles */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-        }
+        /*---------------------- BUTTON HERO SECTION START ----------------------- */
+        /* Center the button below all elements */
+.text-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
 
-        /* Hidden initially */
-        .modal-hidden {
-            display: none;
-        }
+/* Style for the phone call button */
+.btn-call {
+  background-color: #b79722; /* Dark blue color */
+  color: white; /* White text */
+  padding: 15px 30px; /* Add padding for better button size */
+  font-size: 16px; /* Adjust font size */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
 
-        /* Content inside the modal overlay */
-        .modal-content {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            text-align: center;
-            max-width: 90%;
-            width: 400px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-            font-family: Arial, sans-serif;
-        }
+/* Hover effect for the button */
+.btn-call:hover {
+  background-color: #122142; /* Darker shade of the button on hover */
+  color: #f8f9fa;
+  transform: translateY(-5px); /* Slightly lift the button */
+}
 
-        /* Success message text */
-        .modal-content p {
-            font-size: 20px;
-            color: #27a744;
-            margin-bottom: 20px;
-        }
-
-        /* Close button styles */
-        .modal-close-btn {
-            background-color: #27a744;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .modal-close-btn:hover {
-            background-color: #218838;
-        }
-
-        /*---------------------- RESPONSE SECTION  ----------------------- */
+/* Focus effect for accessibility */
+.btn-call:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(18, 33, 66, 0.5);
+}
+        /*---------------------- BUTTON HERO SECTION END ----------------------- */
 
 
-    </style>
+        /*-----------------------CHALLENGES SECTION ----------------------- */
+        /* General styling for both boxes */
+.challenge-box, .task-box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff; /* White background for both */
+}
+
+.challenge-box:hover, .task-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+}
+
+/* Styling for "Vaše poteškoće" */
+.challenge-box {
+  background-color: #f8f9fa; /* Light gray background */
+  border: 1px solid #ddd;
+}
+
+.challenge-box h3 {
+  color: #dc3545; /* Red for emphasis */
+}
+
+.challenge-box li {
+  position: relative;
+  font-size: 1rem;
+  padding-left: 2rem;
+  color: #6c757d; /* Muted gray text */
+}
+
+.challenge-box li::before {
+  content: "\2716"; /* X symbol */
+  position: absolute;
+  left: 0;
+  font-size: 1.5rem;
+  color: #dc3545; /* Red icon for challenges */
+}
+
+/* Styling for "Naš zadatak" */
+.task-box {
+  background-color: #122142; /* Blue background */
+  border: 1px solid #0056b3;
+}
+
+.task-box h3 {
+  color: #ffffff; /* Green for success */
+}
+
+.task-box li {
+  position: relative;
+  font-size: 1rem;
+  padding-left: 2rem;
+  color: #ffffff; /* White text */
+}
+
+.task-box li::before {
+  content: "\2714"; /* Checkmark symbol */
+  position: absolute;
+  left: 0;
+  font-size: 1.5rem;
+  color: #28a745; /* Green icon for tasks */
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .challenges-and-tasks .row {
+    flex-direction: column;
+  }
+
+  .challenge-box, .task-box {
+    margin-bottom: 20px;
+  }
+}
+/*-----------------------CHALLENGES SECTION END----------------------- */
+
+
+/* Sprečavanje horizontalnog prelijevanja */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Osiguravanje elemenata da ne prelaze okvir */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Specifična ispravka za hero sekciju */
+.hero-section {
+  overflow: hidden;
+}
+
+/* Sprečavanje širine većih elemenata */
+.steps, .contact-form {
+  box-sizing: border-box;
+}
+
+/* Scoped styles for the unique-section */
+.unique-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.unique-section .row {
+    justify-content: center;
+    background-color: #f8f9fa;
+}
+
+.unique-section .card {
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-height: 300px;
+}
+
+.unique-section .red-card {
+    background-color: #122142;
+    border-left: 6px solid #122142;
+}
+
+.unique-section .blue-card {
+    background-color: #b79722;
+    border-left: 6px solid #b79722;
+}
+
+.unique-section .card h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.unique-section .icon {
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+
+.unique-section .paragraph {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.unique-section .paragraph.red {
+    color: #f8f9fa;
+}
+
+.unique-section .paragraph.green {
+    color: #122142;
+}
+
+@media (max-width: 768px) {
+    .unique-section .card {
+        padding: 15px;
+    }
+    .unique-section .card h2 {
+        font-size: 1.25rem;
+    }
+    .unique-section .paragraph {
+        font-size: 0.9rem;
+    }
+}
+
+.text-color-unique{
+  color: #122142;
+}
+
+.h2goldsection{
+  color: #122142;
+}
+
+.buttoncolorinform{
+  background-color: #122142;
+}
+
+
+
+
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#top"><img src="assets/urbantopia/urbantopia_bijeli.png" alt="Logo" style="height: 50px;"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+      <!-- Logo and Sarajevo -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="assets/urbantopia/Urban_Topia.png" alt="Urban Topia Logo" class="logo-img me-3">
+        <span class="logo-text">Sarajevo</span>
+      </a>
+  
+      <!-- Hamburger Menu for Mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Navigation Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="onama.html" data-bs="O nama" data-en="About us">O nama</a></li>
+          <li class="nav-item"><a class="nav-link" href="pitanja.html" data-bs="Često postavljena pitanja" data-en="FAQ">Često postavljena pitanja</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontakt.html" data-bs="Kontakt" data-en="Contact us">Kontakt</a></li>
+          <li class="nav-item">
+            <button id="languageToggle" class="btn btn-primary rounded-pill" data-bs="English" data-en="Bosanski">
+              English
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#nasiklijenti" data-bs="Naši klijenti" data-en="Our clients">Naši klijenti</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#usluge" data-bs="Usluge" data-en="Services">Usluge</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#kontakt" data-bs="Kontakt" data-en="Contact">Kontakt</a></li>
-                    <li class="nav-item">
-                        <button id="languageToggle" class="btn btn-secondary">
-                            <img src="assets/icons/usa.png" alt="English"  id="flagIcon">
-                            <span>English</span>
-                        </button>                        
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
     
+  
+  <section class="hero-section">
+    <!-- Overlay -->
+    <div class="hero-overlay"></div>
 
-    <!-- Add padding to main content to avoid overlap with fixed navbar -->
-    <div style="padding-top: 70px;">
-        <!-- Your main content goes here -->
+    <!-- Hero Content -->
+    <div class="container hero-content d-flex flex-column flex-lg-row justify-content-between align-items-center">
+      <!-- Left Side -->
+      <div class="text-white">
+        <h1 class="hero-title" data-bs="Urbantopia - Agencija za kratkoročni najam" data-en="Urbantopia - Short-term Rental Agency">
+          Urbantopia - Agencija za kratkoročni najam
+        </h1>
+        <p class="hero-slogan" data-bs="Povećajte prihod, smanjite obaveze" data-en="Increase income, reduce obligations">
+          Povećajte prihod, smanjite obaveze
+        </p>
+        <p class="hero-text" data-bs="<b>Urbantopia</b> je agencija specijalizirana za kratkoročni najam nekretnina, pružajući sveobuhvatne usluge iz oblasti menadžmenta nekretnina, ugostiteljstva, marketinga i analize podataka."
+          data-en="<b>Urbantopia</b> is an agency specializing in short-term property rentals, offering comprehensive services in property management, hospitality, marketing, and data analysis.">
+          <b>Urbantopia</b> je agencija specijalizirana za kratkoročni najam nekretnina, pružajući sveobuhvatne usluge iz oblasti menadžmenta nekretnina, ugostiteljstva, marketinga i analize podataka.
+        </p>
+        <p class="hero-text" data-bs="<b>Naša misija</b> je omogućiti rast Vašeg profita koji u potpunosti pokriva trošak naše provizije, čime naše usluge postaju besplatne."
+          data-en="<b>Our mission</b> is to enable the growth of your profit, fully covering our commission cost, making our services essentially free.">
+          <b>Naša misija</b> je omogućiti rast Vašeg profita koji u potpunosti pokriva trošak naše provizije, čime naše usluge postaju besplatne.
+        </p>
+        <p class="hero-text" data-bs="<b>Naša vizija</b> je kreiranje nezaboravnih doživljaja za goste, uz istovremeno osiguravanje održivih i dugoročnih rješenja za naše klijente."
+          data-en="<b>Our vision</b> is to create unforgettable experiences for guests while ensuring sustainable and long-term solutions for our clients.">
+          <b>Naša vizija</b> je kreiranje nezaboravnih doživljaja za goste, uz istovremeno osiguravanje održivih i dugoročnih rješenja za naše klijente.
+        </p>
+      </div>
+
+      <!-- Right Side -->
+      <div class="text-dark mt-4 mt-lg-0">
+        <div class="steps mb-4">
+          <h4 data-en="Fast and efficient deal" data-bs="Brz i efikasan dogovor">Brz i efikasan dogovor</h4>
+          <ul>
+            <li data-en="Contact us" data-bs="Kontaktirate nas">Kontaktirate nas</li>
+            <li data-en="We check your apartment" data-bs="Pregledamo Vaš smještaj">Pregledamo Vaš smještaj</li>
+            <li data-en="We are negotiating the details of cooperation" data-bs="Ugovaramo detalje saradnje">Ugovaramo detalje saradnje</li>
+          </ul>
+        </div>
+        <div class="contact-form">
+          <h3 class="contact-heading" data-bs="Kontaktirajte nas" data-en="Contact us">Kontaktirajte nas</h3>
+          <form action="submit-form.php" method="POST">
+            <div class="mb-2">
+              <input type="text" class="form-control" placeholder="Ime i prezime" data-bs="Ime i prezime" data-en="Full name" id="fullnametwo" name="fullnametwo">
+            </div>
+            <div class="mb-2">
+              <input type="email" class="form-control" placeholder="E-mail" id="emailtwo" name="emailtwo">
+            </div>
+            <div class="mb-2">
+              <input type="text" class="form-control" placeholder="Kontakt telefon" data-bs="Kontakt telefon" data-en="Contact number" id="contacttwo" name="contacttwo">
+            </div>
+            <div class="mb-2">
+              <textarea class="form-control" rows="3" placeholder="Vaša poruka" data-en="Your message" data-bs="Vaša poruka" id="messagetwo" name="messagetwo"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100 buttoncolorinform" data-en="Submit" data-bs="Pošalji">Pošalji</button>
+          </form>
+        </div>
+      </div>
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero-section text-center" id="top">
-        <div class="container">
-            <h1 data-bs="Jednostavnije do većeg profita i odmora" data-en="Simpler Path to Higher Profits and Relaxation">Jednostavnije do većeg profita i odmora</h1>
-            <a href="tel:+38761829914" class="btn-call">
-                <button class="btn btn-call-action mt-3" data-bs="Pozovite nas na +387 61 829 914" data-en="Call us on +387 61 829 914">
-                    <i class="fas fa-phone-alt"></i> Pozovite nas na +387 61 829 914
-                </button>
-            </a>
-        </div>
-
-        <!-- Content Section -->
-    <section class="container my-5">
-        <div class="row">
-            <!-- Contact Form -->
-            <div class="col-md-4">
-                <div class="contact-form hidden">
-                    <h4 data-bs="Kontaktirajte nas" data-en="Contact us">KONTAKTIRAJTE NAS</h4>
-                    <form id="formOne" method="POST">
-                        <div class="mb-3">
-                            <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Ime i prezime" data-bs="Ime i prezime" data-en="Full name">
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="E-mail" id="email" name="email">
-                        </div>
-                        <div class="mb-3">
-                            <input type="tel" class="form-control" placeholder="Kontakt telefon" data-bs="Kontakt telefon" data-en="Contact number" id="phone" name="phone">
-                        </div>
-                        <div class="mb-3">
-                            <textarea  class="form-control" placeholder="Vaša poruka" rows="3" data-bs="Vaša poruka" data-en="Your message" id="message" name="message"></textarea>
-                        </div>
-                        <button id="sendbtn" name="sendbtn" type="submit" class="btn btn-warning w-100" data-bs="Pošalji" data-en="Send">Pošalji</button>
-                    </form>
-                </div>
-            </div>
-
-            <!-- Packages Section -->
-            <div class="col-md-8">
-                <div class="row">
-                    <div class="col-md-6 mb-4 hidden">
-                        <div class="package-card">
-                            <h4 data-bs="START PAKET" data-en="START PACKAGE">START PAKET</h4>
-                            <p data-bs="Veći broj klijenata" data-en="Bigger number of clients">Veći broj klijenata</p>
-                            <a href="tel:+38761829914" class="btn-call"><button class="btn" data-en="Click for more" data-bs="SAZNAJ VIŠE">SAZNAJ VIŠE</button></a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4 hidden">
-                        <div class="package-card">
-                            <h4 data-bs="BONUS PAKET" data-en="BONUS PACKAGE">BONUS PAKET</h4>
-                            <p data-bs="Veći broj klijenata<br>Bonus marketing<br>Dodatno čišćenje" data-en="Bigger number of clients<br>Bonus Marketing">Veći broj klijenata<br>Bonus marketing</p>
-                            <a href="tel:+38761829914" class="btn-call"><button class="btn" data-en="Click for more" data-bs="SAZNAJ VIŠE">SAZNAJ VIŠE</button></a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4 hidden">
-                        <div class="package-card">
-                            <h4 data-en="MEGA PACKAGE" data-bs="MEGA PAKET">MEGA PAKET</h4>
-                            <p data-bs="Veći broj klijenata<br>Bonus marketing<br>Dodatno čišćenje" data-en="Bigger number of clients<br>Bonus Marketing<br>Bonus cleaning">Veći broj klijenata<br>Bonus marketing<br>Dodatno čišćenje</p>
-                            <a href="tel:+38761829914" class="btn-call"><button class="btn" data-en="Click for more" data-bs="SAZNAJ VIŠE">SAZNAJ VIŠE</button></a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4 hidden">
-                        <div class="package-card highlight">
-                            <h4 data-en="PERSONAL PACKAGE" data-bs="PERSONAL PAKET">PERSONAL PAKET</h4>
-                            <p data-bs="Paket po vašim zahtjevima" data-en="Package based on your needs">Paket po vašim zahtjevima</p>
-                            <a href="tel:+38761829914" class="btn-call"><button class="btn" data-en="Click for more" data-bs="SAZNAJ VIŠE">SAZNAJ VIŠE</button></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    </section>
-
-    <!-- "Naši klijenti" Section -->
-    <div class="clients-section-wrapper" id="nasiklijenti">
-        <section class="container my-5 clients-section">
-            <h2 class="text-center" data-bs="Naši klijenti" data-en="Our clients">Naši klijenti</h2>
-            <div class="row justify-content-center">
-                <!-- Card 1 -->
-                <div class="col-md-4 mb-4 hidden">
-                    <div class="client-card text-center p-4">
-                        <img src="assets/icons/home.png" alt="House Icon" style="width: 50px;">
-                        <h4 class="mt-3" data-en="OWNERS OF SMALLER ACCOMMODATION" data-bs="VLASNICI MANJIH SMJEŠTAJA">VLASNICI MANJIH SMJEŠTAJA</h4>
-                        <p data-bs="Za vlasnike jednih ili više smještajnih jedinica" data-en="For owners of one or more accommodation unit">Za vlasnike jednih ili više smještajnih jedinica</p>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="col-md-4 mb-4 hidden">
-                    <div class="client-card text-center p-4">
-                        <img src="assets/icons/flat.png" alt="Building Icon" style="width: 50px;">
-                        <h4 class="mt-3" data-en="BUILDING OWNERS" data-bs="VLASNICI ZGRADA">VLASNICI ZGRADA</h4>
-                        <p data-en="Take advantage of short-term rentals to earn a superior return on your building" data-bs="Iskoristite pogodnosti kratkoročnog najma kako biste zaradili vrhunski povrat na svoju zgradu">Iskoristite pogodnosti kratkoročnog najma kako biste zaradili vrhunski povrat na svoju zgradu</p>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="col-md-4 mb-4 hidden">
-                    <div class="client-card text-center p-4">
-                        <img src="assets/icons/construction.png" alt="Construction Icon" style="width: 50px;">
-                        <h4 class="mt-3" data-en="CONSTRUCTION COMPANIES" data-bs="GRAĐEVINSKE KOMPANIJE">GRAĐEVINSKE KOMPANIJE</h4>
-                        <p data-en="We plan your next project in order to optimize the space for the best possible release" data-bs="Smišljamo vaš sljedeći projekat kako biste optimizirali prostor za što bolje izdavanje">Smišljamo vaš sljedeći projekat kako biste optimizirali prostor za što bolje izdavanje</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- Call Button Below -->
+    <div class="hero-call-button-wrapper">
+      <a href="tel:+38761829914" class="btn btn-call herobutton w-100" data-en="Call us on +38761829914" data-bs="Pozovite nas na +38761829914">Pozovite nas na +38761829914</a>
     </div>
+  </section>
+
+
 
   
 
-        <!-- "Zašto naše usluge?" Section -->
-    <section class="services-section" id="usluge">
+
+  <!--OVJDE IDU USLUGE-->
+      <!-- "Zašto naše usluge?" Section -->
+      <section class="services-section" id="usluge">
         <h2 class="text-center mt-5" data-en="Why our services?" data-bs="Zašto naše usluge?">Zašto naše usluge?</h2>
         <div class="row justify-content-center my-5">
             <div class="services-carousel-container">
@@ -863,38 +1208,50 @@
                     <div class="service-card text-center p-4">
                         <img src="assets/icons/people.png" alt="Chart Icon" style="width: 50px;">
                         <h4 class="mt-3" data-en="Transparency" data-bs="Transparentnost">Transparentnost</h4>
-                        <p data-bs="Mjesečna ili sedmična izvještavanja po vašoj želji" data-en="Monthly or weekly reports as you wish">Mjesečna ili sedmična izvještavanja po vašoj želji</p>
+                        <p data-bs="Pravovremeno vas informišemo o svim poslovnim aktivnostima i pružamo jasne, detaljne
+                        izvještaje o prihodima i rezultatima." data-en="Monthly or weekly reports as you wish">Pravovremeno vas informišemo o svim poslovnim aktivnostima i pružamo jasne, detaljne
+                        izvještaje o prihodima i rezultatima.</p>
                     </div>
                     <!-- Add other cards here... -->
                     <!-- Card 2 -->
                     <div class="service-card text-center p-4">
                         <img src="assets/icons/peoples.png" alt="People Icon" style="width: 50px;">
-                        <h4 class="mt-3" data-en="Experience with guests" data-bs="Iskustvo sa gostima">Iskustvo sa gostima</h4>
-                        <p data-en="Easy check-in / check-out, and excellent communication" data-bs="Jednostavan check-in / check-out, te odlična komunikacija">Jednostavan check-in / check-out, te odlična komunikacija</p>
+                        <h4 class="mt-3" data-en="Experience with guests" data-bs="Iskustvo sa gostima">Briga o gostima</h4>
+                        <p data-en="Easy check-in / check-out, and excellent communication" data-bs="Komuniciramo s gostima, organizujemo dolaske i odlakse, te brzo rješavamo sve eventualne
+                        probleme kako bi gosti imali ugodan boravak.">Komuniciramo s gostima, organizujemo dolaske i odlakse, te brzo rješavamo sve eventualne
+                        probleme kako bi gosti imali ugodan boravak.</p>
                     </div>
                     <!-- Card 3 -->
                     <div class="service-card text-center p-4">
                         <img src="assets/icons/cleaning.png" alt="Broom Icon" style="width: 50px;">
-                        <h4 class="mt-3" data-en="Accommodation maintenance" data-bs="Održavanje smještaja">Održavanje smještaja</h4>
-                        <p data-en="Professional cleaning before the arrival and after the departure of guests" data-bs="Profesionalno čišćenje prije dolaska i poslije odlaska gostiju">Profesionalno čišćenje prije dolaska i poslije odlaska gostiju</p>
+                        <h4 class="mt-3" data-en="Accommodation maintenance" data-bs="Održavanje smještaja">Čišćenje i održavanje</h4>
+                        <p data-en="Professional cleaning before the arrival and after the departure of guests" data-bs="Brinemo o besprijekornoj čistoći i redovnom održavanju Vašeg smještaja i njegove okoline,
+                        osiguravajući da svaki gost doživi vrhunsko iskustvo boravka.">Brinemo o besprijekornoj čistoći i redovnom održavanju Vašeg smještaja i njegove okoline,
+                        osiguravajući da svaki gost doživi vrhunsko iskustvo boravka.</p>
                     </div>
                     <!-- Card 4 -->
                     <div class="service-card text-center p-4">
                         <img src="assets/icons/marketing.png" alt="Marketing Icon" style="width: 50px;">
                         <h4 class="mt-3">Marketing</h4>
-                        <p data-en="Our marketing puts you in the best positions" data-bs="Naš marketing stavlja vas na najbolje pozicije">Naš marketing stavlja vas na najbolje pozicije</p>
+                        <p data-en="Our marketing puts you in the best positions" data-bs="Kreiramo profesionalne i privlačne oglase na svim relevantnim platformama, kako bismo Vaš
+                        smještaj pozicionirali među najboljima i privukli veći broj gostiju.">Kreiramo profesionalne i privlačne oglase na svim relevantnim platformama, kako bismo Vaš
+                        smještaj pozicionirali među najboljima i privukli veći broj gostiju.</p>
                     </div>
                     <!-- Card 5 -->
                     <div class="service-card text-center p-4">
                         <img src="assets/icons/livingroom.png" alt="Optimization Icon" style="width: 50px;">
-                        <h4 class="mt-3" data-en="Optimization of accommodation" data-bs="Optimizacija smještaja">Optimizacija smještaja</h4>
-                        <p data-en="We optimize your space for maximum profit" data-bs="Optimiziramo vaš prostor za maksimalan profit">Optimiziramo vaš prostor za maksimalan profit</p>
+                        <h4 class="mt-3" data-en="Optimization of accommodation" data-bs="Optimizacija smještaja">Inovacije i trendovi</h4>
+                        <p data-en="We optimize your space for maximum profit" data-bs="Pratimo najnovije trendove i primjenjujemo inovativna rješenja za poboljšanje
+                        konkurentnosti i profitabilnosti Vašeg smještaja.">Pratimo najnovije trendove i primjenjujemo inovativna rješenja za poboljšanje
+                            konkurentnosti i profitabilnosti Vašeg smještaja.</p>
                     </div>
                     <!-- Card 6 -->
                     <div class="service-card text-center p-4">
                         <img src="assets/icons/prices.png" alt="Pricing Icon" style="width: 50px;">
-                        <h4 class="mt-3" data-en="Optimized prices" data-bs="Optimizovane cijene">Optimizovane cijene</h4>
-                        <p data-en="Our experienced analysts create prices for superior profits" data-bs="Naši iskusni analitičari stvaraju cijene za vrhunski profit">Naši iskusni analitičari stvaraju cijene za vrhunski profit</p>
+                        <h4 class="mt-3" data-en="Optimized prices" data-bs="Optimizovane cijene">Optimizacija cijena</h4>
+                        <p data-en="Our experienced analysts create prices for superior profits" data-bs="Pratimo najnovije trendove i primjenjujemo inovativna rješenja za poboljšanje
+                        konkurentnosti i profitabilnosti Vašeg smještaja.">Prilagođavamo cijene na osnovu analitičkih podataka i upotrebom specijaliziranh softvera,
+                        kako bismo osigurali maksimalnu zaradu za Vaš smještaj.</p>
                     </div>
                 </div>
                 <!-- Buttons container below the carousel -->
@@ -910,169 +1267,274 @@
         </div>
     </section>
 
+    <section class="packages py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="text-color-unique" data-bs="Paketi" data-en="Packages">Paketi</h2>
+        </div>
+        <div class="row">
+          <!-- Start Paket -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100 shadow border-0">
+              <div class="card-body">
+                <h4 class="card-title text-center" data-bs="Start Paket" data-en="Start Package">Start Paket</h4>
+                <ul class="list-unstyled mt-3">
+                  <li data-bs="Optimizacija cijena" data-en="Price Optimization">Optimizacija cijena</li>
+                  <li data-bs="Marketing" data-en="Marketing">Marketing</li>
+                  <li data-bs="Komunikacija s gostima" data-en="Guest Communication">Komunikacija s gostima</li>
+                  <li data-bs="Izvještaji i statistika" data-en="Reports and Statistics">Izvještaji i statistika</li>
+                  <li data-bs="Optimizacija smještaja" data-en="Accommodation Optimization">Optimizacija smještaja</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Bonus Paket -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100 shadow border-0">
+              <div class="card-body">
+                <h4 class="card-title text-center" data-bs="Bonus Paket" data-en="Bonus Package">Bonus Paket</h4>
+                <ul class="list-unstyled mt-3">
+                  <li data-bs="Sve usluge iz START paketa" data-en="All services from START package">Sve usluge iz START paketa</li>
+                  <li data-bs="Doček i ispraćaj gostiju" data-en="Guest Welcome and Send-Off">Doček i ispraćaj gostiju</li>
+                  <li data-bs="Dodatna komunikacija s gostima" data-en="Additional Guest Communication">Dodatna komunikacija s gostima</li>
+                  <li data-bs="24/7 podrška" data-en="24/7 Support">24/7 podrška</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Premium Paket -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100 shadow border-0">
+              <div class="card-body">
+                <h4 class="card-title text-center" data-bs="Premium Paket" data-en="Premium Package">Premium Paket</h4>
+                <ul class="list-unstyled mt-3">
+                  <li data-bs="Sve usluge iz BONUS paketa" data-en="All services from BONUS package">Sve usluge iz BONUS paketa</li>
+                  <li data-bs="Čišćenje i održavanje smještaja" data-en="Cleaning and Maintenance">Čišćenje i održavanje smještaja</li>
+                  <li data-bs="Pranje i održavanje tekstila" data-en="Laundry and Linen Maintenance">Pranje i održavanje tekstila</li>
+                  <li data-bs="Redovna zamjena" data-en="Regular Replacement">Redovna zamjena</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Personal Paket -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100 shadow border-0">
+              <div class="card-body">
+                <h4 class="card-title text-center" data-bs="Personal Paket" data-en="Personal Package">Personal Paket</h4>
+                <ul class="list-unstyled mt-3">
+                  <li data-bs="Paket po Vašim zahtjevima" data-en="Custom Package to Your Requirements">Paket po Vašim zahtjevima</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-4 text-center">
+          <p class="text-muted" data-bs="⚠️ Vlasnik smještaja zadržava pravo konačne odluke u svim pitanjima vezanim za upravljanje njegovom imovinom, a nijedna odluka neće biti donesena bez njegovog izričitog odobrenja." data-en="⚠️ The property owner reserves the final decision on all matters regarding the management of their property, and no decision will be made without their explicit consent.">
+            ⚠️ Vlasnik smještaja zadržava pravo konačne odluke u svim pitanjima vezanim za upravljanje njegovom imovinom, a nijedna odluka neće biti donesena bez njegovog izričitog odobrenja.
+          </p>
+        </div>
+      </div>
+    </section>
     
 
-
-     <!-- Footer -->
-     <footer class="footer" id="kontakt">
-        <div class="whiteoverlay"></div>
-        <div class="content container hidden">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h2 data-en="EXPERIENCE OUR BENEFITS" data-bs="ISKUSITE NAŠE POGODNOSTI">ISKUSITE NAŠE POGODNOSTI</h2>
-                    <p data-en="Find out how we've helped hundreds of our clients get the most from their properties" data-bs="Saznajte kako smo stotinama naših klijenata pomogli da dobiju najviše od svojih nekretnina">Saznajte kako smo stotinama naših klijenata pomogli da dobiju najviše od svojih nekretnina</p>
-                </div>
-                <div class="col-md-3">
-                    <div class="contact-form">
-                        <h4 data-en="Contact us" data-bs="Kontaktirajte nas">Kontaktirajte nas</h4>
-                        <form>
-                            <div class="mb-2">
-                                <input type="text" class="form-control" placeholder="Ime i prezime" data-bs="Ime i prezime" data-en="Full name" id="fullnametwo" name="fullnametwo">
-                            </div>
-                            <div class="mb-2">
-                                <input type="email" class="form-control" placeholder="E-mail" id="emailtwo" name="emailtwo">
-                            </div>
-                            <div class="mb-2">
-                                <input type="text" class="form-control" placeholder="Kontakt telefon" data-bs="Kontakt telefon" data-en="Contact number" id="contacttwo" name="contacttwo">
-                            </div>
-                            <div class="mb-2">
-                                <textarea class="form-control" rows="3" placeholder="Vaša poruka" data-en="Your message" data-bs="Vaša poruka"  id="messagetwo" name="messagetwo"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100" data-en="Submit" data-bs="Pošalji">Pošalji</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center">
-                    <p data-en="OR CALL US" data-bs="ILI NAS POZOVITE">ILI NAS POZOVITE</p>
-                    <a href="tel:+38761829914" class="btn-call">
-                        <button class="btn btn-call-action mt-3" data-bs="Pozovite nas na +387 61 829 914" data-en="Call us on +387 61 829 914">
-                            <i class="fas fa-phone-alt"></i> Pozovite nas
-                        </button>
-                    </a>
-                </div>
+  <section class="faq py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="text-plava" data-bs="Često postavljena pitanja" data-en="Frequently Asked Questions">Često postavljena pitanja</h2>
+      </div>
+      <div class="accordion" id="faqAccordion">
+        <!-- Pitanje 1 / Question 1 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeading1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+              <span data-bs="Gdje pružate svoje usluge?" data-en="Where do you provide your services?">Gdje pružate svoje usluge?</span>
+            </button>
+          </h2>
+          <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              <span data-bs="U Sarajevu pružamo sve naše usluge upravljanja nekretninama, dok usluge iz našeg START paketa nudimo na cijelom području Bosne i Hercegovine." data-en="We provide all our property management services in Sarajevo, while the services from our START package are available throughout Bosnia and Herzegovina.">U Sarajevu pružamo sve naše usluge upravljanja nekretninama, dok usluge iz našeg START paketa nudimo na cijelom području Bosne i Hercegovine.</span>
             </div>
-            <hr class="text-white">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <p class="mb-0 copyright">© Copyright Urbantopia 2024 -  <span>Made by Orhan Huseinbegović</span></p>
-                </div>
-                <div class="col-md-6 text-md-end social-icons">
-                    <a href="#"><i class="bi bi-facebook"></i></a>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                    <a href="tel:+38761611911"><i class="bi bi-telephone"></i></a>
-                </div>
+          </div>
+        </div>
+  
+        <!-- Pitanje 2 / Question 2 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeading2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+              <span data-bs="Šta tačno uključuju vaše usluge upravljanja nekretninama?" data-en="What exactly do your property management services include?">Šta tačno uključuju vaše usluge upravljanja nekretninama?</span>
+            </button>
+          </h2>
+          <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              <span data-bs="Naša agencija pruža sveobuhvatne usluge uključujući upravljanje nekretninama, održavanje, komunikaciju s gostima, optimizaciju vaših oglasa na svim relevantnim platformama kao i analizu podataka za poboljšanje performansi Vašeg smještaja." data-en="Our agency provides comprehensive services including property management, maintenance, guest communication, optimization of your ads on all relevant platforms, as well as data analysis to improve your accommodation's performance.">Naša agencija pruža sveobuhvatne usluge uključujući upravljanje nekretninama, održavanje, komunikaciju s gostima, optimizaciju vaših oglasa na svim relevantnim platformama kao i analizu podataka za poboljšanje performansi Vašeg smještaja.</span>
             </div>
+          </div>
         </div>
-    </footer>
-    <!--SLIKA: https://images.pexels.com/photos/189333/pexels-photo-189333.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 -->
-
-    <!-- Success message overlay -->
-    <div id="modal-overlay" class="modal-overlay modal-hidden">
-        <div class="modal-content">
-            <p>Form submitted successfully!</p>
-            <button id="modal-close-btn" class="modal-close-btn">Close</button>
+  
+        <!-- Pitanje 3 / Question 3 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeading3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+              <span data-bs="Koji su troškovi vaših usluga?" data-en="What are the costs of your services?">Koji su troškovi vaših usluga?</span>
+            </button>
+          </h2>
+          <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              <span data-bs="U zavisnosti od paketa usluga koje odaberete naša provizija pokriva sve usluge koje pružamo, a naša misija je omogućiti rast vašeg profita tako da trošak naše provizije bude potpuno pokriven kroz povećanje vaših prihoda. Na taj način naše usluge zapravo postaju besplatne za vas." data-en="Depending on the service package you choose, our commission covers all the services we provide, and our mission is to enable the growth of your profit so that the cost of our commission is fully covered through increased revenue. This way, our services actually become free for you.">U zavisnosti od paketa usluga koje odaberete naša provizija pokriva sve usluge koje pružamo, a naša misija je omogućiti rast vašeg profita tako da trošak naše provizije bude potpuno pokriven kroz povećanje vaših prihoda. Na taj način naše usluge zapravo postaju besplatne za vas.</span>
+            </div>
+          </div>
         </div>
+  
+        <!-- Pitanje 4 / Question 4 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeading4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+              <span data-bs="Mogu li prekinuti uslugu?" data-en="Can I cancel the service?">Mogu li prekinuti uslugu?</span>
+            </button>
+          </h2>
+          <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              <span data-bs="Da, uslugu je moguće prekinuti uz prethodnu najavu. Detalje o uslovima i periodu obavještenja možemo dogovoriti u skladu sa vašim potrebama i ugovorom." data-en="Yes, the service can be canceled with prior notice. The details about the terms and notification period can be arranged according to your needs and contract.">Da, uslugu je moguće prekinuti uz prethodnu najavu. Detalje o uslovima i periodu obavještenja možemo dogovoriti u skladu sa vašim potrebama i ugovorom.</span>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Pitanje 5 / Question 5 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeading5">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+              <span data-bs="Kako će biti upravljano s mojom nekretninom i odlukama vezanim za nju?" data-en="How will my property and decisions regarding it be managed?">Kako će biti upravljano s mojom nekretninom i odlukama vezanim za nju?</span>
+            </button>
+          </h2>
+          <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              <span data-bs="Svaka odluka koja se tiče vaše nekretnine biće donesena u saradnji s Vama. Ništa neće biti preduzeto bez vašeg izričitog odobrenja, jer je važno da vi kao vlasnik imate kontrolu nad svim aspektima upravljanja vašom nekretninom." data-en="Every decision regarding your property will be made in collaboration with you. Nothing will be done without your explicit approval, as it is important that you, as the owner, have control over all aspects of managing your property.">Svaka odluka koja se tiče vaše nekretnine biće donesena u saradnji s Vama. Ništa neće biti preduzeto bez vašeg izričitog odobrenja, jer je važno da vi kao vlasnik imate kontrolu nad svim aspektima upravljanja vašom nekretninom.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="text-center mt-4">
+        <a href="pitanja.html" class="btn btn-primary" data-bs="Ostala pitanja" data-en="Other questions">Ostala pitanja</a>
+      </div>
     </div>
+  </section>
+  
+  
+
+  <footer class="footer-section py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Lijeva strana -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <h2  data-en="TRY OUR SERVICES!" data-bs="ISPROBAJTE NAŠE USLUGE!">ISPROBAJTE NAŠE USLUGE!</h2>
+          <p class="mb-4" data-bs="Saznajte kako smo našim klijentima pomogli da maksimalno iskoriste potencijal svojih nekretnina i ostvare visok profit kroz našu stručnost u upravljanju, optimizaciji i pružanju vrhunskog gostoprimstva." data-en="Discover how we helped our clients unlock the potential of their properties and achieve high profits through our expertise in management, optimization, and top-notch hospitality.">
+            Saznajte kako smo našim klijentima pomogli da maksimalno iskoriste potencijal svojih nekretnina i ostvare visok profit kroz našu stručnost u upravljanju, optimizaciji i pružanju vrhunskog gostoprimstva.
+          </p>
+          <div class="partner-logos d-flex gap-4 justify-content-start">
+            <img src="assets/icons/booking.png" alt="Booking" class="img-fluid partner-logo">
+            <img src="assets/icons/airrbnb.png" alt="Airbnb" class="img-fluid partner-logo">
+            <img src="assets/icons/tripadvisor.png" alt="Tripadvisor" class="img-fluid partner-logo">
+            <img src="assets/icons/googlemaps.png" alt="Google Maps" class="img-fluid partner-logo">
+          </div>
+        </div>
+  
+        <!-- Desna strana -->
+        <div class="col-md-6">
+          <!-- Forma -->
+          <div class="unique-contact-form p-4 shadow-sm">
+            <h4 data-en="Contact Us" data-bs="Kontaktirajte nas">Kontaktirajte nas</h4>
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label" data-en="Name" data-bs="Ime">Ime</label>
+                <input type="text" class="form-control" id="name" placeholder="Unesite vaše ime" data-en="Enter your name" data-bs="Unesite svoje ime">
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label" data-en="Email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Unesite vaš email" data-en="Enter your email" data-bs="Unesite svoj email">
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label" data-en="Message" data-bs="Poruka">Poruka</label>
+                <textarea class="form-control" id="message" rows="3" placeholder="Vaša poruka" data-en="Your message" data-bs="Vaša poruka"></textarea>
+              </div>
+              <button type="submit" class="unique-submit-btn w-100" data-en="Send" data-bs="Pošalji">Pošalji</button>
+            </form>
+          </div>
+  
+          <!-- Kontakt podaci -->
+          <div class="contact-info mt-4 d-flex justify-content-between flex-wrap gap-3">
+            <a href="tel:+38761829914" class="text-light text-decoration-none" data-en="Phone" data-bs="Telefon">
+              <i class="bi bi-telephone-fill"></i> Telefon
+            </a>
+            <a href="https://wa.me/38761829914" target="_blank" class="text-light text-decoration-none" data-en="WhatsApp">
+              <i class="bi bi-whatsapp"></i> WhatsApp
+            </a>
+            <a href="mailto:info@urbantopia.ba" class="text-light text-decoration-none" data-en="Email">
+              <i class="bi bi-envelope-fill"></i> Email
+            </a>
+            <a href="https://www.instagram.com" target="_blank" class="text-light text-decoration-none" data-en="Instagram">
+              <i class="bi bi-instagram"></i> Instagram
+            </a>
+            <a href="https://www.facebook.com" target="_blank" class="text-light text-decoration-none" data-en="Facebook">
+              <i class="bi bi-facebook"></i> Facebook
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" class="text-light text-decoration-none" data-en="LinkedIn">
+              <i class="bi bi-linkedin"></i> LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Copyright -->
+      <div class="text-center mt-5 border-top pt-3">
+        <p class="mb-0" data-en="© 2024 Urbantopia.ba All rights reserved. Made by Orhan Huseinbegović" data-bs="© 2024 Urbantopia.ba Sva prava zadržana. Made by Orhan Huseinbegović">© 2024 Urbantopia.ba Sva prava zadržana. Orhan Huseinbegović</p>
+      </div>
+    </div>
+  </footer>
+  
+  
+  
+  
+  
 
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    /*--------------------- LANGUAGE CHANGE FUNCTION START ------------------------ */
+    const languageToggle = document.getElementById('languageToggle');
+    let currentLang = 'bs';
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.js"></script>
-    <script>
-        // Language toggle function
-        const languageToggle = document.getElementById('languageToggle');
-        let currentLang = 'bs';
+    function toggleLanguage() {
+      const elements = document.querySelectorAll('[data-bs][data-en]');
+      const heroContent = document.querySelector('.hero-content');
 
-        function toggleLanguage() {
-            // Toggle text content for language-specific elements
-            const elements = document.querySelectorAll('[data-bs][data-en]');
-            elements.forEach(el => {
-                if (el.hasAttribute('placeholder')) {
-                    // If the element has a placeholder, toggle it
-                    el.placeholder = currentLang === 'bs' ? el.getAttribute('data-en') : el.getAttribute('data-bs');
-                } else if (el.getAttribute('data-bs').includes('<br>')) {
-                    // If the element's data attributes contain <br>, handle each line separately
-                    const bsText = el.getAttribute('data-bs').split('<br>');
-                    const enText = el.getAttribute('data-en').split('<br>');
-                    // Join lines with <br> based on the current language
-                    el.innerHTML = currentLang === 'bs' ? enText.join('<br>') : bsText.join('<br>');
-                } else {
-                    // For elements without <br>, toggle text content directly
-                    el.textContent = currentLang === 'bs' ? el.getAttribute('data-en') : el.getAttribute('data-bs');
-                }
-            });
-
-            // Toggle flag icon and text
-            const flagIcon = document.getElementById('flagIcon');
-            const flagText = languageToggle.querySelector('span');
-            if (currentLang === 'bs') {
-                flagIcon.src = 'assets/icons/bosnia.png';
-                flagIcon.alt = 'Bosanski';
-                flagText.textContent = 'Bosanski';
-                currentLang = 'en';
-            } else {
-                flagIcon.src = 'assets/icons/usa.png';
-                flagIcon.alt = 'English';
-                flagText.textContent = 'English';
-                currentLang = 'bs';
-            }
+      elements.forEach(el => {
+        if (el.hasAttribute('placeholder')) {
+          el.placeholder = currentLang === 'bs' ? el.getAttribute('data-en') : el.getAttribute('data-bs');
+        } else if (el.tagName.toLowerCase() === 'li' || el.tagName.toLowerCase() === 'h3') {
+          el.innerHTML = currentLang === 'bs' ? el.getAttribute('data-en') : el.getAttribute('data-bs');
+        } else {
+          el.innerHTML = currentLang === 'bs' ? el.getAttribute('data-en') : el.getAttribute('data-bs');
         }
+      });
 
-        // Attach the unified event listener
-        languageToggle.addEventListener('click', toggleLanguage);
+      // Adjust text alignment and margin based on language
+      heroContent.setAttribute('data-lang', currentLang);
 
-        // Scroll and observer handlers
-        const elements = document.querySelectorAll('.hidden');
-        function scrollHandler() {
-            elements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-                if (elementTop < windowHeight - 290) {
-                    element.classList.add('show');
-                }
-            });
-        }
-        window.addEventListener('scroll', scrollHandler);
+      // Toggle the language
+      currentLang = currentLang === 'bs' ? 'en' : 'bs';
+    }
 
-        document.addEventListener("DOMContentLoaded", function() {
-            const clientCards = document.querySelectorAll(".client-card");
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("pop-up");
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-            clientCards.forEach(card => {
-                observer.observe(card);
-            });
-        });
+    // Attach the event listener
+    languageToggle.addEventListener('click', toggleLanguage);
+    /*--------------------- LANGUAGE CHANGE FUNCTION END ------------------------ */
 
-        document.addEventListener("DOMContentLoaded", function() {
-            const sectionTitle = document.querySelector(".clients-section h2");
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        sectionTitle.classList.add("glow");
-                    } else {
-                        sectionTitle.classList.remove("glow");
-                    }
-                });
-            }, { threshold: 0.1 });
-            observer.observe(sectionTitle);
-        });
 
-        window.addEventListener("scroll", function () {
-            const navbar = document.querySelector(".navbar-custom");
-            if (window.scrollY > 50) {
-                navbar.classList.add("scrolled");
-            } else {
-                navbar.classList.remove("scrolled");
-            }
-        });
-
-        document.getElementById('scroll-left').addEventListener('click', function() {
+    /*--------------------- SERVICES SECTION START ------------------------ */
+    document.getElementById('scroll-left').addEventListener('click', function() {
             document.querySelector('.services-carousel').scrollBy({
                 left: -260, // Adjust this value to control the scroll amount
                 behavior: 'smooth'
@@ -1085,43 +1547,8 @@
                 behavior: 'smooth'
             });
         });
+    /*--------------------- SERVICES SECTION START ------------------------ */
 
-        // Function to show modal message
-        function showModalMessage(message) {
-            const modalOverlay = document.getElementById('modal-overlay');
-            modalOverlay.querySelector('p').innerText = message;
-            modalOverlay.classList.remove('modal-hidden');
-        }
-
-        // Close modal on button click
-        document.getElementById('modal-close-btn').addEventListener('click', function () {
-            document.getElementById('modal-overlay').classList.add('modal-hidden');
-        });
-
-        // Function to handle form submission
-        function handleFormSubmit(formId, backendUrl) {
-            document.getElementById(formId).addEventListener('submit', function (event) {
-                event.preventDefault();
-
-                const formData = new FormData(this);
-
-                fetch(backendUrl, {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.text())
-                .then(data => {
-                    showModalMessage("Form submitted successfully!");
-                })
-                .catch(error => {
-                    document.getElementById('response-message').innerHTML = 'Došlo je do greške prilikom slanja poruke.';
-                });
-            });
-        }
-
-        // Initialize form event listeners
-        handleFormSubmit('formOne', '/backend/form.php');
-        handleFormSubmit('formTwo', '/backend/formTwo.php');
-    </script>
+  </script>
 </body>
 </html>
