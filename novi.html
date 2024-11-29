@@ -6,6 +6,10 @@
   <title>Urbantopia</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
+    .text-plava{
+      color: #122142;
+    }
+
     /* Apply Raleway to the body (everything else by default) */
     body {
       font-family: 'Raleway', sans-serif;
@@ -337,6 +341,50 @@ body {
     font-size: 1rem;
   }
 }
+
+/* Center Call Button */
+.hero-call-button {
+  margin-top: 2rem; /* Dodajte razmak ispod svih elemenata */
+  display: flex;
+  justify-content: center; /* Centriranje horizontalno */
+}
+
+.btn-call {
+  background: linear-gradient(90deg, #ffd700, #ff8c00);
+  color: #003366;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Shine Effect */
+.btn-call::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-45deg);
+  transition: left 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.btn-call:hover::before {
+  left: 100%; /* Prolazi preko dugmeta */
+}
+
+.btn-call:hover {
+  transform: scale(1.05); /* Blago povećanje */
+  background: linear-gradient(90deg, #ff8c00, #ffd700);
+}
+
 /*-------------- HERO SECTION END -----------------*/
 
 
@@ -353,92 +401,106 @@ body {
 
     /*---------------- PACKAGES SECTION START --------------------- */
 
-    .packages h2 {
-    font-weight: bold;
-    color: #f4f4f4; /* Deep blue */
-    font-size: 2rem; /* Slightly larger heading */
-    margin-bottom: 1.5rem;
-    letter-spacing: 1px; /* Small spacing for a more elegant feel */
-    text-transform: uppercase; /* Add emphasis for visual appeal */
+.packages {
+  background-color: #ffffff; /* White background for the section */
 }
 
-    .card {
-        border-radius: 15px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-        background-color: #122142; /* White background for clean look */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-        overflow: hidden; /* Ensure no content goes outside rounded corners */
-    }
+.packages h2 {
+  font-weight: bold;
+  color: #003366; /* Dark blue color */
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card {
+  background-color: #003366; /* Dark blue for the cards */
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
 
 .card:hover {
-    transform: scale(1.05); /* Slight zoom effect */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
-    background-color: #dbc621; /* Light blue background on hover */
-
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .card-body {
-    padding: 2rem; /* Increase padding for better content spacing */
-    text-align: center; /* Center text in the cards */
+  padding: 2rem;
 }
 
 .card h4 {
-    font-weight: bold;
-    font-size: 1.25rem; /* Increase font size for card titles */
-    color: #f4f4f4; /* Deep blue for consistency */
-    margin-bottom: 1rem;
-    text-transform: capitalize; /* Make the text more readable */
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #dbc621; /* Gold for titles */
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.card h4:hover {
+  color: #ffffff; /* White on hover */
 }
 
 .card ul {
-    padding-left: 1.5rem;
-    text-align: left;
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
 }
 
 .card ul li {
-    margin-bottom: 0.8rem;
-    font-size: 1rem; /* Larger text for easy readability */
-    line-height: 1.5; /* Improve line spacing */
-    color: #ffffff; /* Dark gray text for contrast */
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 1.5rem;
+  color: #ffffff;
 }
 
-.card ul li:last-child {
-    margin-bottom: 0; /* Remove margin from the last item */
+.card ul li::before {
+  content: "\2713"; /* Checkmark icon */
+  color: #dbc621; /* Gold color */
+  font-weight: bold;
+  position: absolute;
+  left: 0;
 }
 
 .text-muted {
-    font-size: 1rem; /* Increase font size for better readability */
-    line-height: 1.8;
-    color: #6c757d; /* Muted gray for subtlety */
-    margin-top: 2rem; /* Space out the text for better alignment */
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #6c757d;
+  margin-top: 2rem;
 }
 
 /* Responsive adjustments */
 @media (max-width: 992px) {
-    .card {
-        margin-bottom: 1.5rem; /* Add some space between cards for medium screens */
-    }
+  .card {
+    margin-bottom: 1.5rem;
+  }
 }
 
 @media (max-width: 576px) {
-    .card-body {
-        padding: 1.5rem; /* Decrease padding on small screens */
-    }
+  .card-body {
+    padding: 1.5rem;
+  }
 
-    .card h4 {
-        font-size: 1.1rem; /* Slightly smaller title on small screens */
-    }
+  .card h4 {
+    font-size: 1.3rem;
+  }
 
-    .card ul li {
-        font-size: 0.95rem; /* Decrease list item size on small screens */
-    }
+  .card ul li {
+    font-size: 0.95rem;
+  }
 
-    .text-muted {
-        font-size: 0.9rem; /* Reduce text size on small screens */
-    }
+  .text-muted {
+    font-size: 0.9rem;
+  }
 }
 
 /*---------------- PACKAGES SECTION END --------------------- */
+
 
 
 
@@ -472,14 +534,19 @@ body {
 
 /*---------------- FOOTER SECTION START --------------------- */
 .footer-section {
-  background-color: #003366; /* Tamno plava */
-  color: #ffffff;
+  background: linear-gradient(0deg, #505050 0%, rgba(102, 102, 102, 0.50) 91.7%),
+    url('https://images.pexels.com/photos/189333/pexels-photo-189333.jpeg'); /* URL pozadinske slike */
+  background-size: cover; /* Pokriva cijeli footer */
+  background-position: center; /* Fokusira sliku na sredinu */
+  background-repeat: no-repeat; /* Onemogućava ponavljanje slike */
+  color: #ffffff; /* Bijela boja za tekst radi kontrasta */
 }
 
 .footer-section h2, 
 .footer-section h4 {
-  color: #f1c40f; /* Žuta sa loga */
+  color: #f1c40f;
 }
+
 
 .footer-section a {
   color: #f1c40f;
@@ -490,12 +557,80 @@ body {
   text-decoration: underline;
 }
 
-.footer-section img {
-  filter: brightness(0) invert(1); /* Bijeli efekat na logotipove */
+.partner-logos img {
+  width: auto;
+  height: 80px;
+  transition: transform 0.3s ease;
 }
 
+.partner-logos img:hover {
+  transform: scale(1.1);
+}
+
+/* Unikatna forma */
+.unique-contact-form {
+  background-color: #003366;
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.unique-contact-form h4 {
+  color: #ffffff;
+}
+
+.unique-contact-form input,
+.unique-contact-form textarea {
+  border: 1px solid #003366;
+  color: #003366;
+}
+
+.unique-contact-form input::placeholder,
+.unique-contact-form textarea::placeholder {
+  color: #999999;
+}
+
+/* Unikatno dugme */
+.unique-submit-btn {
+  background-color: #ffffff;
+  color: #003366;
+  border: 1px solid #003366;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 10px;
+  height: 50px;
+}
+
+.unique-submit-btn:hover {
+  background-color: #f1c40f;
+  color: #003366;
+}
+
+/* Kontakt info */
+.contact-info a {
+  color: #003366;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.contact-info i {
+  font-size: 18px;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Copyright */
+footer .border-top {
+  border-color: rgba(255, 255, 255, 0.2);
+}
 
 /*---------------- FOOTER SECTION END --------------------- */
+
+
 
 /*---------------------- SERVICES SECTION START ----------------------- */
         
@@ -693,75 +828,66 @@ body {
         /*---------------------- BUTTON HERO SECTION END ----------------------- */
 
 
+        /*-----------------------CHALLENGES SECTION ----------------------- */
         /* General styling for both boxes */
 .challenge-box, .task-box {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff; /* White background for both */
 }
 
 .challenge-box:hover, .task-box:hover {
-  transform: translateY(-10px); /* Lift the box on hover */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+  transform: translateY(-10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
 }
 
-.challenge-box h3, .task-box h3 {
-  font-weight: bold;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.challenge-box ul, .task-box ul {
-  list-style-type: none;
-}
-
-.challenge-box li, .task-box li {
-  font-size: 1rem;
-  padding-left: 1.2rem;
-  position: relative;
-}
-
-.challenge-box li::before, .task-box li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  font-size: 1.5rem;
-  color: #007bff; /* Blue bullet point for the challenges */
-}
-
-.task-box li::before {
-  color: #ffc107; /* Yellow bullet point for the task section */
-}
-
-/* Color adjustments for each section */
+/* Styling for "Vaše poteškoće" */
 .challenge-box {
   background-color: #f8f9fa; /* Light gray background */
   border: 1px solid #ddd;
 }
 
+.challenge-box h3 {
+  color: #dc3545; /* Red for emphasis */
+}
+
+.challenge-box li {
+  position: relative;
+  font-size: 1rem;
+  padding-left: 2rem;
+  color: #6c757d; /* Muted gray text */
+}
+
+.challenge-box li::before {
+  content: "\2716"; /* X symbol */
+  position: absolute;
+  left: 0;
+  font-size: 1.5rem;
+  color: #dc3545; /* Red icon for challenges */
+}
+
+/* Styling for "Naš zadatak" */
 .task-box {
-  background-color: #343a40; /* Dark background */
-  background: linear-gradient(to right, #007bff, #ffc107); /* Gradient from blue to yellow */
-  border: 1px solid #444;
+  background-color: #122142; /* Blue background */
+  border: 1px solid #0056b3;
 }
 
-/* Text and background color adjustments */
-.text-primary {
-  color: #007bff !important;
+.task-box h3 {
+  color: #ffffff; /* Green for success */
 }
 
-.text-warning {
-  color: #ffc107 !important;
+.task-box li {
+  position: relative;
+  font-size: 1rem;
+  padding-left: 2rem;
+  color: #ffffff; /* White text */
 }
 
-.text-white {
-  color: white !important;
-}
-
-.bg-light {
-  background-color: #f8f9fa !important;
-}
-
-.bg-dark {
-  background-color: #343a40 !important;
+.task-box li::before {
+  content: "\2714"; /* Checkmark symbol */
+  position: absolute;
+  left: 0;
+  font-size: 1.5rem;
+  color: #28a745; /* Green icon for tasks */
 }
 
 /* Responsive layout */
@@ -774,6 +900,33 @@ body {
     margin-bottom: 20px;
   }
 }
+/*-----------------------CHALLENGES SECTION END----------------------- */
+
+
+/* Sprečavanje horizontalnog prelijevanja */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Osiguravanje elemenata da ne prelaze okvir */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Specifična ispravka za hero sekciju */
+.hero-section {
+  overflow: hidden;
+}
+
+/* Sprečavanje širine većih elemenata */
+.steps, .contact-form {
+  box-sizing: border-box;
+}
+
+
+
 
 
 
@@ -870,7 +1023,7 @@ body {
             <button type="submit" class="btn btn-primary w-100" data-en="Submit" data-bs="Pošalji">Pošalji</button>
             </form>
           </div>
-          <div class="text-center mt-5">
+          <div class="hero-call-button text-center">
             <a href="tel:+387xxxxxxxxx" class="btn btn-call">
               Pozovite nas na ... <!-- You can replace with your actual phone number -->
             </a>
@@ -885,8 +1038,8 @@ body {
       <div class="row">
         <!-- Vaše poteškoće -->
         <div class="col-lg-6 mb-4">
-          <div class="p-4 shadow-lg rounded bg-light challenge-box" data-bs="Vaše poteškoće" data-en="Your challenges">
-            <h3 class="text-primary mb-3" data-bs="Vaše poteškoće" data-en="Your challenges">Vaše poteškoće</h3>
+          <div class="p-4 shadow-lg rounded challenge-box" data-bs="Vaše poteškoće" data-en="Your challenges">
+            <h3 class="text-danger mb-3" data-bs="Vaše poteškoće" data-en="Your challenges">Vaše poteškoće</h3>
             <ul class="list-unstyled">
               <li class="mb-2" data-bs="Nedostatak vremena" data-en="Lack of time">Nedostatak vremena</li>
               <li class="mb-2" data-bs="Nedostupnost ili odsutnost" data-en="Inaccessibility or absence">Nedostupnost ili odsutnost</li>
@@ -900,8 +1053,8 @@ body {
   
         <!-- Naš zadatak -->
         <div class="col-lg-6">
-          <div class="p-4 shadow-lg rounded bg-gradient-to-r from-primary to-warning text-white task-box" data-bs="Naš zadatak" data-en="Our task">
-            <h3 class="text-warning mb-3" data-bs="Naš zadatak" data-en="Our task">Naš zadatak</h3>
+          <div class="p-4 shadow-lg rounded task-box" data-bs="Naš zadatak" data-en="Our task">
+            <h3 class="text-success mb-3" data-bs="Naš zadatak" data-en="Our task">Naš zadatak</h3>
             <ul class="list-unstyled">
               <li class="mb-2" data-bs="Vaša bezbrižnost" data-en="Your peace of mind">Vaša bezbrižnost</li>
               <li class="mb-2" data-bs="Zadovoljni gosti" data-en="Happy guests">Zadovoljni gosti</li>
@@ -915,6 +1068,7 @@ body {
       </div>
     </div>
   </section>
+  
   
 
 
@@ -988,82 +1142,83 @@ body {
         </div>
     </section>
 
-  <section class="packages py-5">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="text-primary">Paketi</h2>
+    <section class="packages py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="text-primary" data-bs="Paketi" data-en="Packages">Paketi</h2>
+        </div>
+        <div class="row">
+          <!-- Start Paket -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100 shadow border-0">
+              <div class="card-body">
+                <h4 class="card-title text-center" data-bs="Start Paket" data-en="Start Package">Start Paket</h4>
+                <ul class="list-unstyled mt-3">
+                  <li data-bs="Optimizacija cijena" data-en="Price Optimization">Optimizacija cijena</li>
+                  <li data-bs="Marketing" data-en="Marketing">Marketing</li>
+                  <li data-bs="Komunikacija s gostima" data-en="Guest Communication">Komunikacija s gostima</li>
+                  <li data-bs="Izvještaji i statistika" data-en="Reports and Statistics">Izvještaji i statistika</li>
+                  <li data-bs="Optimizacija smještaja" data-en="Accommodation Optimization">Optimizacija smještaja</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Bonus Paket -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100 shadow border-0">
+              <div class="card-body">
+                <h4 class="card-title text-center" data-bs="Bonus Paket" data-en="Bonus Package">Bonus Paket</h4>
+                <ul class="list-unstyled mt-3">
+                  <li data-bs="Sve usluge iz START paketa" data-en="All services from START package">Sve usluge iz START paketa</li>
+                  <li data-bs="Doček i ispraćaj gostiju" data-en="Guest Welcome and Send-Off">Doček i ispraćaj gostiju</li>
+                  <li data-bs="Dodatna komunikacija s gostima" data-en="Additional Guest Communication">Dodatna komunikacija s gostima</li>
+                  <li data-bs="24/7 podrška" data-en="24/7 Support">24/7 podrška</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Premium Paket -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100 shadow border-0">
+              <div class="card-body">
+                <h4 class="card-title text-center" data-bs="Premium Paket" data-en="Premium Package">Premium Paket</h4>
+                <ul class="list-unstyled mt-3">
+                  <li data-bs="Sve usluge iz BONUS paketa" data-en="All services from BONUS package">Sve usluge iz BONUS paketa</li>
+                  <li data-bs="Čišćenje i održavanje smještaja" data-en="Cleaning and Maintenance">Čišćenje i održavanje smještaja</li>
+                  <li data-bs="Pranje i održavanje tekstila" data-en="Laundry and Linen Maintenance">Pranje i održavanje tekstila</li>
+                  <li data-bs="Redovna zamjena" data-en="Regular Replacement">Redovna zamjena</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Personal Paket -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100 shadow border-0">
+              <div class="card-body">
+                <h4 class="card-title text-center" data-bs="Personal Paket" data-en="Personal Package">Personal Paket</h4>
+                <ul class="list-unstyled mt-3">
+                  <li data-bs="Paket po Vašim zahtjevima" data-en="Custom Package to Your Requirements">Paket po Vašim zahtjevima</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-4 text-center">
+          <p class="text-muted" data-bs="Vlasnik smještaja zadržava pravo konačne odluke u svim pitanjima vezanim za upravljanje njegovom imovinom, a nijedna odluka neće biti donesena bez njegovog izričitog odobrenja." data-en="The property owner reserves the final decision on all matters regarding the management of their property, and no decision will be made without their explicit consent.">
+            Vlasnik smještaja zadržava pravo konačne odluke u svim pitanjima vezanim za upravljanje njegovom imovinom, a nijedna odluka neće biti donesena bez njegovog izričitog odobrenja.
+          </p>
+        </div>
       </div>
-      <div class="row">
-        <!-- Start Paket -->
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card h-100 shadow border-0">
-            <div class="card-body">
-              <h4 class="card-title text-dark text-center">Start Paket</h4>
-              <ul class="list-unstyled mt-3">
-                <li>Optimizacija cijena</li>
-                <li>Marketing</li>
-                <li>Komunikacija s gostima</li>
-                <li>Izvještaji i statistika</li>
-                <li>Optimizacija smještaja</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Bonus Paket -->
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card h-100 shadow border-0">
-            <div class="card-body">
-              <h4 class="card-title text-dark text-center">Bonus Paket</h4>
-              <ul class="list-unstyled mt-3">
-                <li>Sve usluge iz START paketa</li>
-                <li>Doček i ispraćaj gostiju</li>
-                <li>Dodatna komunikacija s gostima</li>
-                <li>24/7 podrška</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Premium Paket -->
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card h-100 shadow border-0">
-            <div class="card-body">
-              <h4 class="card-title text-dark text-center">Premium Paket</h4>
-              <ul class="list-unstyled mt-3">
-                <li>Sve usluge iz BONUS paketa</li>
-                <li>Čišćenje i održavanje smještaja</li>
-                <li>Pranje i održavanje tekstila</li>
-                <li>Redovna zamjena</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Personal Paket -->
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card h-100 shadow border-0">
-            <div class="card-body">
-              <h4 class="card-title text-dark text-center">Personal Paket</h4>
-              <ul class="list-unstyled mt-3">
-                <li>Paket po Vašim zahtjevima</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="mt-4 text-center">
-        <p class="text-muted">
-          Vlasnik smještaja zadržava pravo konačne odluke u svim pitanjima vezanim za upravljanje njegovom imovinom, a nijedna odluka neće biti donesena bez njegovog izričitog odobrenja.
-        </p>
-      </div>
-    </div>
-  </section>
+    </section>
+    
 
   <section class="faq py-5 bg-light">
     <div class="container">
       <div class="text-center mb-4">
-        <h2 class="text-primary" data-bs="Često postavljena pitanja" data-en="Frequently Asked Questions">Često postavljena pitanja</h2>
+        <h2 class="text-plava" data-bs="Često postavljena pitanja" data-en="Frequently Asked Questions">Često postavljena pitanja</h2>
       </div>
       <div class="accordion" id="faqAccordion">
         <!-- Pitanje 1 / Question 1 -->
@@ -1145,56 +1300,77 @@ body {
   
   
 
-  <footer class="footer-section py-5 bg-dark text-light">
+  <footer class="footer-section py-5">
     <div class="container">
       <div class="row align-items-center">
         <!-- Lijeva strana -->
         <div class="col-md-6 mb-4 mb-md-0">
-          <h2 class="text-primary">ISPROBAJTE NAŠE USLUGE!</h2>
-          <p class="mb-4">
+          <h2  data-en="TRY OUR SERVICES!" data-bs="ISPROBAJTE NAŠE USLUGE!">ISPROBAJTE NAŠE USLUGE!</h2>
+          <p class="mb-4" data-bs="Saznajte kako smo našim klijentima pomogli da maksimalno iskoriste potencijal svojih nekretnina i ostvare visok profit kroz našu stručnost u upravljanju, optimizaciji i pružanju vrhunskog gostoprimstva." data-en="Discover how we helped our clients unlock the potential of their properties and achieve high profits through our expertise in management, optimization, and top-notch hospitality.">
             Saznajte kako smo našim klijentima pomogli da maksimalno iskoriste potencijal svojih nekretnina i ostvare visok profit kroz našu stručnost u upravljanju, optimizaciji i pružanju vrhunskog gostoprimstva.
           </p>
-          <!-- Logo partnera -->
-          <div class="d-flex gap-3">
-            <img src="assets/icons/booking.png" alt="Booking" class="img-fluid" style="width: 80px; height: auto;">
-            <img src="assets/icons/airrbnb.png" alt="Airbnb" class="img-fluid" style="width: 80px; height: auto;">
-            <img src="assets/icons/tripadvisor.png" alt="Tripadvisor" class="img-fluid" style="width: 80px; height: auto;">
-            <img src="assets/icons/googlemaps.jpg" alt="Google Maps" class="img-fluid" style="width: 80px; height: auto;">
+          <div class="partner-logos d-flex gap-4 justify-content-start">
+            <img src="assets/icons/booking.png" alt="Booking" class="img-fluid partner-logo">
+            <img src="assets/icons/airrbnb.png" alt="Airbnb" class="img-fluid partner-logo">
+            <img src="assets/icons/tripadvisor.png" alt="Tripadvisor" class="img-fluid partner-logo">
+            <img src="assets/icons/googlemaps.png" alt="Google Maps" class="img-fluid partner-logo">
           </div>
         </div>
   
         <!-- Desna strana -->
         <div class="col-md-6">
-          <h4>Kontaktirajte nas</h4>
-          <form class="mb-4">
-            <div class="mb-3">
-              <label for="name" class="form-label">Ime</label>
-              <input type="text" class="form-control" id="name" placeholder="Unesite vaše ime">
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="Unesite vaš email">
-            </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">Poruka</label>
-              <textarea class="form-control" id="message" rows="3" placeholder="Vaša poruka"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Pošalji</button>
-          </form>
+          <!-- Forma -->
+          <div class="unique-contact-form p-4 shadow-sm">
+            <h4 data-en="Contact Us" data-bs="Kontaktirajte nas">Kontaktirajte nas</h4>
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label" data-en="Name" data-bs="Ime">Ime</label>
+                <input type="text" class="form-control" id="name" placeholder="Unesite vaše ime" data-en="Enter your name" data-bs="Unesite svoje ime">
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label" data-en="Email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Unesite vaš email" data-en="Enter your email" data-bs="Unesite svoj email">
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label" data-en="Message" data-bs="Poruka">Poruka</label>
+                <textarea class="form-control" id="message" rows="3" placeholder="Vaša poruka" data-en="Your message" data-bs="Vaša poruka"></textarea>
+              </div>
+              <button type="submit" class="unique-submit-btn w-100" data-en="Send" data-bs="Pošalji">Pošalji</button>
+            </form>
+          </div>
   
           <!-- Kontakt podaci -->
-          <ul class="list-unstyled">
-            <li><strong>Telefon:</strong> <a href="tel:+123456789" class="text-light text-decoration-none">+123 456 789</a></li>
-            <li><strong>WhatsApp:</strong> <a href="https://wa.me/123456789" target="_blank" class="text-light text-decoration-none">Kliknite ovdje</a></li>
-            <li><strong>Email:</strong> <a href="mailto:info@urbantopia.ba" class="text-light text-decoration-none">info@urbantopia.ba</a></li>
-            <li><strong>Instagram:</strong> <a href="https://www.instagram.com" target="_blank" class="text-light text-decoration-none">@Urbantopia</a></li>
-            <li><strong>Facebook:</strong> <a href="https://www.facebook.com" target="_blank" class="text-light text-decoration-none">Urban Topia</a></li>
-            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com" target="_blank" class="text-light text-decoration-none">Urban Topia</a></li>
-          </ul>
+          <div class="contact-info mt-4 d-flex justify-content-between flex-wrap gap-3">
+            <a href="tel:+123456789" class="text-light text-decoration-none" data-en="Phone" data-bs="Telefon">
+              <i class="bi bi-telephone-fill"></i> Telefon
+            </a>
+            <a href="https://wa.me/123456789" target="_blank" class="text-light text-decoration-none" data-en="WhatsApp">
+              <i class="bi bi-whatsapp"></i> WhatsApp
+            </a>
+            <a href="mailto:info@urbantopia.ba" class="text-light text-decoration-none" data-en="Email">
+              <i class="bi bi-envelope-fill"></i> Email
+            </a>
+            <a href="https://www.instagram.com" target="_blank" class="text-light text-decoration-none" data-en="Instagram">
+              <i class="bi bi-instagram"></i> Instagram
+            </a>
+            <a href="https://www.facebook.com" target="_blank" class="text-light text-decoration-none" data-en="Facebook">
+              <i class="bi bi-facebook"></i> Facebook
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" class="text-light text-decoration-none" data-en="LinkedIn">
+              <i class="bi bi-linkedin"></i> LinkedIn
+            </a>
+          </div>
         </div>
+      </div>
+  
+      <!-- Copyright -->
+      <div class="text-center mt-5 border-top pt-3">
+        <p class="mb-0" data-en="© 2024 Urbantopia.ba All rights reserved. Made by Orhan Huseinbegović" data-bs="© 2024 Urbantopia.ba Sva prava zadržana. Made by Orhan Huseinbegović">© 2024 Urbantopia.ba Sva prava zadržana. Orhan Huseinbegović</p>
       </div>
     </div>
   </footer>
+  
+  
   
   
   
