@@ -397,7 +397,7 @@ body {
 /* HERO SECTION START */
 .hero-section {
   position: relative;
-  background: url('assets/pictures/bg.png') center center/cover no-repeat;
+  background: url('assets/pictures/firstbg.jpg') center center/cover no-repeat;
   color: #fff;
   min-height: 100vh;
   padding-top: 5rem;
@@ -1088,6 +1088,61 @@ body, html {
   background-color: #122142;
 }
 
+/*---------------------- RESPONSE SECTION START ----------------------- */
+                /* Modal overlay styles */
+                .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        /* Hidden initially */
+        .modal-hidden {
+            display: none;
+        }
+
+        /* Content inside the modal overlay */
+        .modal-content {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            max-width: 90%;
+            width: 400px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+            font-family: Arial, sans-serif;
+        }
+
+        /* Success message text */
+        .modal-content p {
+            font-size: 20px;
+            color: #122142;
+            margin-bottom: 20px;
+        }
+
+        /* Close button styles */
+        .modal-close-btn {
+            background-color: #b79722;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .modal-close-btn:hover {
+            background-color: #745f11;
+        }
+
+        /*---------------------- RESPONSE SECTION  ----------------------- */
 
 
 
@@ -1167,18 +1222,18 @@ body, html {
         </div>
         <div class="contact-form">
           <h3 class="contact-heading" data-bs="Kontaktirajte nas" data-en="Contact us">Kontaktirajte nas</h3>
-          <form action="submit-form.php" method="POST">
+          <form id="formOne" method="POST">
             <div class="mb-2">
-              <input type="text" class="form-control" placeholder="Ime i prezime" data-bs="Ime i prezime" data-en="Full name" id="fullnametwo" name="fullnametwo">
+              <input type="text" class="form-control" placeholder="Ime i prezime" data-bs="Ime i prezime" data-en="Full name" id="fullname" name="fullname">
             </div>
             <div class="mb-2">
-              <input type="email" class="form-control" placeholder="E-mail" id="emailtwo" name="emailtwo">
+              <input type="email" class="form-control" placeholder="E-mail" id="email" name="email">
             </div>
             <div class="mb-2">
-              <input type="text" class="form-control" placeholder="Kontakt telefon" data-bs="Kontakt telefon" data-en="Contact number" id="contacttwo" name="contacttwo">
+              <input type="tel" class="form-control" placeholder="Kontakt telefon" data-bs="Kontakt telefon" data-en="Contact number" id="phone" name="phone">
             </div>
             <div class="mb-2">
-              <textarea class="form-control" rows="3" placeholder="Vaša poruka" data-en="Your message" data-bs="Vaša poruka" id="messagetwo" name="messagetwo"></textarea>
+              <textarea class="form-control" rows="3" placeholder="Vaša poruka" data-en="Your message" data-bs="Vaša poruka" id="message" name="message"></textarea>
             </div>
             <button type="submit" class="btn btn-primary w-100 buttoncolorinform" data-en="Submit" data-bs="Pošalji">Pošalji</button>
           </form>
@@ -1194,7 +1249,64 @@ body, html {
 
 
 
+  <section class="unique-section container">
+    <div class="row">
+        <div class="col-md-5 mb-4 mt-4">
+            <div class="card red-card">
+                <h2 data-bs="Vaše poteškoće" data-en="Your challenges">Vaše poteškoće</h2>
+                <p class="paragraph red" data-bs="✘ Nedostatak vremena" data-en="✘ Lack of time">
+                    <span class="icon">✘</span> Nedostatak vremena
+                </p>
+                <p class="paragraph red" data-bs="✘ Nedostupnost ili odsutnost" data-en="✘ Unavailability or absence">
+                    <span class="icon">✘</span> Nedostupnost ili odsutnost
+                </p>
+                <p class="paragraph red" data-bs="✘ Slaba popunjenost" data-en="✘ Low occupancy">
+                    <span class="icon">✘</span> Slaba popunjenost
+                </p>
+                <p class="paragraph red" data-bs="✘ Slaba zarada" data-en="✘ Low revenue">
+                    <span class="icon">✘</span> Slaba zarada
+                </p>
+                <p class="paragraph red" data-bs="✘ Jezičke barijere" data-en="✘ Language barriers">
+                    <span class="icon">✘</span> Jezičke barijere
+                </p>
+                <p class="paragraph red" data-bs="✘ Poteškoće u čišćenju i održavanju smještaja" data-en="✘ Difficulties in cleaning and maintaining the accommodation">
+                    <span class="icon">✘</span> Poteškoće u čišćenju i održavanju smještaja
+                </p>
+            </div>
+        </div>
+        <div class="col-md-5 mb-4 mt-4">
+            <div class="card blue-card">
+                <h2 data-bs="Naš zadatak" data-en="Our task">Naš zadatak</h2>
+                <p class="paragraph green" data-bs="✔ Vaša bezbrižnost" data-en="✔ Your peace of mind">
+                    <span class="icon">✔</span> Vaša bezbrižnost
+                </p>
+                <p class="paragraph green" data-bs="✔ Zadovoljni gosti" data-en="✔ Satisfied guests">
+                    <span class="icon">✔</span> Zadovoljni gosti
+                </p>
+                <p class="paragraph green" data-bs="✔ Maksimalna popunjenost" data-en="✔ Maximum occupancy">
+                    <span class="icon">✔</span> Maksimalna popunjenost
+                </p>
+                <p class="paragraph green" data-bs="✔ Maksimalni profit" data-en="✔ Maximum profit">
+                    <span class="icon">✔</span> Maksimalni profit
+                </p>
+                <p class="paragraph green" data-bs="✔ Podrška Vama i gostima 24/7" data-en="✔ 24/7 support for you and your guests">
+                    <span class="icon">✔</span> Podrška Vama i gostima 24/7
+                </p>
+                <p class="paragraph green" data-bs="✔ Besprijekorna briga o Vašem smještaju" data-en="✔ Impeccable care for your accommodation">
+                    <span class="icon">✔</span> Besprijekorna briga o Vašem smještaju
+                </p>
+            </div>
+        </div>
+      </div>
+</section>
   
+<!-- Success message overlay -->
+<div id="modal-overlay" class="modal-overlay modal-hidden">
+  <div class="modal-content">
+      <p data-bs="Forma uspješno poslana!" data-en="Form submitted successfully!">Forma uspješno poslana</p>
+      <button id="modal-close-btn" class="modal-close-btn" data-bs="Zatvori" data-en="Close">Zatvori</button>
+  </div>
+</div>
 
 
   <!--OVJDE IDU USLUGE-->
@@ -1447,18 +1559,22 @@ body, html {
           <!-- Forma -->
           <div class="unique-contact-form p-4 shadow-sm">
             <h4 data-en="Contact Us" data-bs="Kontaktirajte nas">Kontaktirajte nas</h4>
-            <form>
+            <form id="formTwo" method="post">
               <div class="mb-3">
                 <label for="name" class="form-label" data-en="Name" data-bs="Ime">Ime</label>
-                <input type="text" class="form-control" id="name" placeholder="Unesite vaše ime" data-en="Enter your name" data-bs="Unesite svoje ime">
+                <input type="text" class="form-control" id="fullnametwo" name="fullnametwo" placeholder="Unesite vaše ime" data-en="Enter your name" data-bs="Unesite svoje ime">
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label" data-en="Email">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Unesite vaš email" data-en="Enter your email" data-bs="Unesite svoj email">
+                <input type="email" class="form-control" id="emailtwo" name="emailtwo" placeholder="Unesite vaš email" data-en="Enter your email" data-bs="Unesite svoj email">
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label" data-en="Phone" data-bs="Telefon">Telefon</label>
+                <input type="phone" class="form-control" id="contacttwo" name="contacttwo" placeholder="Vaš broj telefona" data-en="Enter your phone number" data-bs="Unesite svoj broj telefona">
               </div>
               <div class="mb-3">
                 <label for="message" class="form-label" data-en="Message" data-bs="Poruka">Poruka</label>
-                <textarea class="form-control" id="message" rows="3" placeholder="Vaša poruka" data-en="Your message" data-bs="Vaša poruka"></textarea>
+                <textarea class="form-control" id="message" rows="3" placeholder="Vaša poruka" data-en="Your message" data-bs="Vaša poruka" id="messagetwo" name="messagetwo"></textarea>
               </div>
               <button type="submit" class="unique-submit-btn w-100" data-en="Send" data-bs="Pošalji">Pošalji</button>
             </form>
@@ -1490,7 +1606,7 @@ body, html {
   
       <!-- Copyright -->
       <div class="text-center mt-5 border-top pt-3">
-        <p class="mb-0" data-en="© 2024 Urbantopia.ba All rights reserved. Made by Orhan Huseinbegović" data-bs="© 2024 Urbantopia.ba Sva prava zadržana. Made by Orhan Huseinbegović">© 2024 Urbantopia.ba Sva prava zadržana. Orhan Huseinbegović</p>
+        <p class="mb-0" data-en="© 2024 Urbantopia.ba All rights reserved. Made by " data-bs="© 2024 Urbantopia.ba Sva prava zadržana. Made by ">© 2024 Urbantopia.ba Sva prava zadržana. Made by</p> <a href="https://www.linkedin.com/in/orhan-huseinbegovi%C4%87-72a47b1ba/"> Orhan Huseinbegović</a>
       </div>
     </div>
   </footer>
@@ -1548,6 +1664,48 @@ body, html {
             });
         });
     /*--------------------- SERVICES SECTION START ------------------------ */
+
+
+    /*--------------------- FORMS  START ------------------------ */
+            // Function to show modal message
+            function showModalMessage(message) {
+            const modalOverlay = document.getElementById('modal-overlay');
+            modalOverlay.querySelector('p').innerText = message;
+            modalOverlay.classList.remove('modal-hidden');
+        }
+
+        // Close modal on button click
+        document.getElementById('modal-close-btn').addEventListener('click', function () {
+            document.getElementById('modal-overlay').classList.add('modal-hidden');
+        });
+
+        // Function to handle form submission
+        function handleFormSubmit(formId, backendUrl) {
+            document.getElementById(formId).addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const formData = new FormData(this);
+
+                fetch(backendUrl, {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(data => {
+                    showModalMessage("Form submitted successfully!");
+                })
+                .catch(error => {
+                    document.getElementById('response-message').innerHTML = 'Došlo je do greške prilikom slanja poruke.';
+                });
+            });
+        }
+
+        // Initialize form event listeners
+        handleFormSubmit('formOne', '/backend/form.php');
+        handleFormSubmit('formTwo', '/backend/formTwo.php');
+
+        /*--------------------- FORMS  START ------------------------ */
+
 
   </script>
 </body>
