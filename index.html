@@ -1693,6 +1693,7 @@ body, html {
                 .then(response => response.text())
                 .then(data => {
                     showModalMessage("Form submitted successfully!");
+                    document.getElementById(formId).reset();
                 })
                 .catch(error => {
                     document.getElementById('response-message').innerHTML = 'Došlo je do greške prilikom slanja poruke.';

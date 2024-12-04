@@ -1,0 +1,217 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7fa;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .text-primary {
+    color: #122142; /* Dark Blue */
+  }
+  
+  .text-light {
+    color: #ffffff;
+  }
+  
+  .bg-primary {
+    background-color: #122142; /* Dark Blue */
+  }
+  
+  .bg-light {
+    background-color: #f8f9fa;
+  }
+  
+  .bg-dark {
+    background-color: #343a40;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    background: #122142;
+    background-size: cover;
+    padding: 5rem 0;
+    margin-top: 75px;
+  }
+  
+  .hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  
+  .hero-section p {
+    font-size: 1.2rem;
+  }
+  
+  /* Sadržaj stranice */
+  .about-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .about-section .col-md-6 {
+    flex: 1;
+    padding: 1rem;
+  }
+  
+  .about-section h2 {
+    font-size: 2rem;
+    color: #122142; /* Dark Blue */
+    font-weight: 700;
+  }
+  
+  .about-section p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Ensuring both sections are aligned in a row */
+  @media (max-width: 768px) {
+    .about-section .row {
+      flex-direction: column;
+    }
+  }
+  
+  
+  /* Services Section */
+  .services-section {
+    padding: 5rem 0;
+  }
+  
+  .services-section h2 {
+    font-size: 2rem;
+    color: #122142;
+    font-weight: 700;
+  }
+  
+  .services-section .card {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .services-section .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .services-section .card-title {
+    color: #122142;
+    font-weight: 600;
+  }
+  
+  .services-section .card-text {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Trust Section */
+  .trust-section {
+    background-color: #122142;
+    padding: 5rem 0;
+  }
+  
+  .trust-section h2 {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 700;
+  }
+  
+  .trust-section p {
+    font-size: 1rem;
+    color: #f1f1f1;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  /* Footer Section */
+  footer {
+    background-color: #343a40;
+    color: #f1f1f1;
+    padding: 1rem 0;
+    font-size: 1rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-section h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero-section p {
+      font-size: 1rem;
+    }
+  
+    .about-section, .vision-section, .services-section, .trust-section {
+      padding: 3rem 0;
+    }
+  
+    .services-section .card {
+      margin-bottom: 1rem;
+    }
+  
+    .services-section .card-body {
+      padding: 1.5rem;
+    }
+  
+    .about-section p {
+      font-size: 0.9rem;
+    }
+  
+    .vision-section p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Buttons */
+  .btn-primary {
+    background-color: #f1c40f; /* Yellow */
+    border-color: #f1c40f;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #e1b40e;
+    transform: translateY(-2px);
+  }
+  
+  /* Card Hover Effect */
+  .card {
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  
+  /* Scroll Animation */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fadeInUp {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  
+  
+  
+  
