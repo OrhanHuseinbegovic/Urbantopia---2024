@@ -1,0 +1,124 @@
+/* Navbar */
+.navbar {
+    background-color: #f8f9fa;
+    /* Light gray background */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    padding: 10px 0;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+/* Adjust logo size */
+.logo-img {
+    height: 55px;
+    /* Increase logo height */
+    max-width: 140px;
+    /* Ensure it doesn't overflow */
+    object-fit: contain;
+    /* Maintain aspect ratio */
+    margin-right: 15px;
+    /* Space between logo and text */
+}
+
+/* Adjust Sarajevo text */
+.logo-text {
+    font-size: 1.6rem;
+    /* Match size with logo */
+    font-weight: bold;
+    color: #122142;
+    /* Dark gray text color */
+    line-height: 1;
+    /* Align vertically */
+}
+
+/* Navigation links */
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    color: #555;
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #b79722;
+}
+
+/* English option */
+.navbar-nav .nav-link.english {
+    font-weight: bold;
+    margin-left: 20px;
+    color: #b79722;
+}
+
+.navbar-nav .nav-link.english:hover {
+    color: #ff9900;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .navbar-brand .logo-img {
+        height: 45px;
+        /* Reduce height for smaller screens */
+    }
+
+    .navbar-nav .nav-link {
+        margin: 5px 0;
+    }
+}
+
+
+
+
+
+/*-------------- NAVBAR SECTION START -----------------*/
+
+
+
+/*-------------- NAVBAR BUTTON START -----------------*/
+
+/* Centering and styling the button */
+#languageToggle {
+    font-size: 0.9rem;
+    /* Slightly smaller font size for neatness */
+    padding: 8px 20px;
+    /* Adds padding to the button */
+    background-color: #122142;
+    /* Bootstrap primary color */
+    color: white;
+    /* Text color */
+    border: none;
+    /* No border */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: all 0.3s ease-in-out;
+    /* Smooth transition for hover */
+}
+
+#languageToggle:hover {
+    background-color: #b79722;
+    /* Darker blue on hover */
+    color: #122142;
+    /* Keep text color consistent */
+}
+
+#languageToggle:focus {
+    outline: none;
+    /* Remove focus outline */
+}
+
+/* Center the button with other list items */
+.navbar-nav .nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .nav-item:last-child {
+    margin-left: 10px;
+    /* Add spacing from other links */
+}
+
+/*-------------- NAVBAR BUTTON END -----------------*/

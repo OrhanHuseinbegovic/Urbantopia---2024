@@ -1,0 +1,302 @@
+/*-------------- NAVBAR SECTION START -----------------*/
+.navbar {
+    background-color: #f8f9fa;
+    /* Light gray background */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    padding: 10px 0;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+/* Adjust logo size */
+.logo-img {
+    height: 55px;
+    /* Increase logo height */
+    max-width: 140px;
+    /* Ensure it doesn't overflow */
+    object-fit: contain;
+    /* Maintain aspect ratio */
+    margin-right: 15px;
+    /* Space between logo and text */
+}
+
+/* Adjust Sarajevo text */
+.logo-text {
+    font-size: 1.6rem;
+    /* Match size with logo */
+    font-weight: bold;
+    color: #122142;
+    /* Dark gray text color */
+    line-height: 1;
+    /* Align vertically */
+}
+
+/* Navigation links */
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    color: #555;
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #b79722;
+}
+
+/* English option */
+.navbar-nav .nav-link.english {
+    font-weight: bold;
+    margin-left: 20px;
+    color: #b79722;
+}
+
+.navbar-nav .nav-link.english:hover {
+    color: #ff9900;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .navbar-brand .logo-img {
+        height: 45px;
+        /* Reduce height for smaller screens */
+    }
+
+    .navbar-nav .nav-link {
+        margin: 5px 0;
+    }
+}
+
+/*-------------- NAVBAR SECTION END -----------------*/
+
+
+/*-------------- NAVBAR BUTTON START -----------------*/
+#languageToggle {
+    font-size: 0.9rem;
+    /* Slightly smaller font size for neatness */
+    padding: 8px 20px;
+    /* Adds padding to the button */
+    background-color: #122142;
+    /* Bootstrap primary color */
+    color: white;
+    /* Text color */
+    border: none;
+    /* No border */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: all 0.3s ease-in-out;
+    /* Smooth transition for hover */
+}
+
+#languageToggle:hover {
+    background-color: #b79722;
+    /* Darker blue on hover */
+    color: #122142;
+    /* Keep text color consistent */
+}
+
+#languageToggle:focus {
+    outline: none;
+    /* Remove focus outline */
+}
+
+/* Center the button with other list items */
+.navbar-nav .nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .nav-item:last-child {
+    margin-left: 10px;
+    /* Add spacing from other links */
+}
+
+/*-------------- NAVBAR BUTTON END -----------------*/
+
+
+/*---------------- FOOTER SECTION START --------------------- */
+.footer-section {
+    background: linear-gradient(0deg, #505050 0%, rgba(102, 102, 102, 0.50) 91.7%),
+        url('https://images.pexels.com/photos/189333/pexels-photo-189333.jpeg');
+    /* URL pozadinske slike */
+    background-size: cover;
+    /* Pokriva cijeli footer */
+    background-position: center;
+    /* Fokusira sliku na sredinu */
+    background-repeat: no-repeat;
+    /* Onemogućava ponavljanje slike */
+    color: #ffffff;
+    /* Bijela boja za tekst radi kontrasta */
+    margin-top: 75px;
+}
+
+.footer-section h2,
+.footer-section h4 {
+    color: #f1c40f;
+}
+
+
+.footer-section a {
+    color: #f1c40f;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.partner-logos img {
+    width: auto;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.partner-logos img:hover {
+    transform: scale(1.1);
+}
+
+/* Unikatna forma */
+.unique-contact-form {
+    background-color: #122142;
+    border-radius: 8px;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.unique-contact-form h4 {
+    color: #ffffff;
+}
+
+.unique-contact-form input,
+.unique-contact-form textarea {
+    border: 1px solid #003366;
+    color: #003366;
+}
+
+.unique-contact-form input::placeholder,
+.unique-contact-form textarea::placeholder {
+    color: #999999;
+}
+
+/* Unikatno dugme */
+.unique-submit-btn {
+    background-color: #b79722;
+    color: #f8f9fa;
+    border: 1px solid #b79722;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 10px;
+    height: 50px;
+}
+
+.unique-submit-btn:hover {
+    background-color: #f1c40f;
+    color: #f8f9fa;
+}
+
+/* Kontakt info */
+.contact-info a {
+    color: #003366;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.contact-info i {
+    font-size: 18px;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Copyright */
+footer .border-top {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.navbar-collapse {
+    width: 100%;
+}
+
+.footer-section {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/*---------------- FOOTER SECTION END --------------------- */
+
+
+/*---------------------- RESPONSE SECTION START ----------------------- */
+/* Modal overlay styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    /* Dark semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Hidden initially */
+.modal-hidden {
+    display: none;
+}
+
+/* Content inside the modal overlay */
+.modal-content {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 90%;
+    width: 400px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    font-family: Arial, sans-serif;
+}
+
+/* Success message text */
+.modal-content p {
+    font-size: 20px;
+    color: #122142;
+    margin-bottom: 20px;
+}
+
+/* Close button styles */
+.modal-close-btn {
+    background-color: #b79722;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-close-btn:hover {
+    background-color: #745f11;
+}
+
+/*---------------------- RESPONSE SECTION  ----------------------- */
