@@ -1,6 +1,7 @@
 /*--------------------- LANGUAGE CHANGE FUNCTION START ------------------------ */
+/*
 const languageToggle = document.getElementById('languageToggle');
-let currentLang = 'bs';
+//let currentLang = 'bs';
 
 function toggleLanguage() {
     const elements = document.querySelectorAll('[data-bs][data-en]');
@@ -14,8 +15,7 @@ function toggleLanguage() {
     });
 
     // Toggle the button text
-    languageToggle.innerHTML = currentLang === 'bs' ? languageToggle.getAttribute('data-en') : languageToggle
-        .getAttribute('data-bs');
+    languageToggle.innerHTML = currentLang === 'bs' ? languageToggle.getAttribute('data-en') : languageToggle.getAttribute('data-bs');
 
     // Toggle the language
     currentLang = currentLang === 'bs' ? 'en' : 'bs';
@@ -23,6 +23,7 @@ function toggleLanguage() {
 
 // Attach the event listener
 languageToggle.addEventListener('click', toggleLanguage);
+*/
 /*--------------------- LANGUAGE CHANGE FUNCTION END ------------------------ */
 
 /*--------------------- FORMS  START ------------------------ */

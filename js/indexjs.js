@@ -1,6 +1,7 @@
 /*--------------------- LANGUAGE CHANGE FUNCTION START ------------------------ */
+/*
 const languageToggle = document.getElementById('languageToggle');
-let currentLang = 'bs';
+//let currentLang = 'bs';
 
 function toggleLanguage() {
     const elements = document.querySelectorAll('[data-bs][data-en]');
@@ -25,6 +26,7 @@ function toggleLanguage() {
 
 // Attach the event listener
 languageToggle.addEventListener('click', toggleLanguage);
+*/
 /*--------------------- LANGUAGE CHANGE FUNCTION END ------------------------ */
 
 

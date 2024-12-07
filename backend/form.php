@@ -5,6 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = htmlspecialchars($_POST['email']);
     $phone = htmlspecialchars($_POST['phone']);
     $message = htmlspecialchars($_POST['message']);
+    $langauge = htmlspecialchars($_POST['language']);
     
     // Postavite primaoca i naslov
     $to = "info@urbantopia.ba"; // Zamijenite s vašom email adresom
