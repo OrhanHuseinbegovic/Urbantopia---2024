@@ -1,15 +1,26 @@
-Urbantopia
+# Urbantopia 🌆
 
-Hi! This is a website for our client, made using:
-1. Vanilla HTML
-2. Vanilla CSS
-3. Vanilla JS
-4. Vanilla PHP 
-5. Bootstrap for responsivness
+Welcome to Urbantopia!  
 
-Also, website is fully SEO optimized.
+This project is a website for our client, crafted with attention to detail and functionality.
 
-Upon completition, the website will be deployed on the link ->  www.urbantopia.ba
-Until then, you can check out the version in production on www.urbantopia.ba/ApartmaniMak/
+## Technologies Used
+- **HTML**: For structuring the content.
+- **CSS**: For styling and enhancing visual appeal.
+- **JavaScript**: For interactivity and dynamic features.
+- **PHP**: For backend processing and server-side logic.
+- **Bootstrap**: For responsive design, ensuring the website looks great on all devices.
 
-Thank you for checking out this project!
+## Features
+- Fully **SEO optimized** for better visibility and ranking on search engines.
+- **Responsive design**, providing a seamless experience across desktop, tablet, and mobile devices.
+
+## Deployment
+- Once completed, the website will be live at:  
+  [www.urbantopia.ba](http://www.urbantopia.ba)  
+- Until then, you can explore the current production version here:  
+  [www.urbantopia.ba/ApartmaniMak/](http://www.urbantopia.ba/ApartmaniMak/)
+
+---
+
+Thank you for taking the time to check out this project! 
