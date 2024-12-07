@@ -41,10 +41,22 @@ document.getElementById('modal-close-btn').addEventListener('click', function ()
 
 // Function to handle form submission
 function handleFormSubmit(formId, backendUrl) {
-    document.getElementById(formId).addEventListener('submit', function (event) {
-        event.preventDefault();
+    const form = document.getElementById(formId);
+    if (!form) {
+        console.error(`Form with id '${formId}' not found.`);
+        return;
+    }
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Stop default form submission
+        console.log("Submit event triggered for", formId);
 
         const formData = new FormData(this);
+        if(localStorage.getItem("currentLang") == "en"){
+            formData.set("language", "en");
+          }else{
+            formData.set("language", "bs");
+        }
 
         fetch(backendUrl, {
                 method: 'POST',
@@ -53,7 +65,7 @@ function handleFormSubmit(formId, backendUrl) {
             .then(response => response.text())
             .then(data => {
                 showModalMessage("Form submitted successfully!");
-                document.getElementById(formId).reset();
+                form.reset();
             })
             .catch(error => {
                 document.getElementById('response-message').innerHTML = 'Došlo je do greške prilikom slanja poruke.';
@@ -62,5 +74,7 @@ function handleFormSubmit(formId, backendUrl) {
 }
 
 // Initialize form event listeners
-handleFormSubmit('formOne', 'backend/form.php');
-handleFormSubmit('formTwo', 'backend/formTwo.php');
+document.addEventListener('DOMContentLoaded', function () {
+    handleFormSubmit('formOne', 'backend/form.php');
+    handleFormSubmit('formTwo', 'backend/formTwo.php');
+});
