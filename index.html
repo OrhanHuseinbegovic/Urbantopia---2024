@@ -235,38 +235,28 @@
 
     /* Hero Section Styling */
     .hero-section {
-      position: relative;
-      background: url('assets/pictures/bg.png') center center/cover no-repeat;
-      color: #fff;
-      min-height: 100vh;
-      padding-top: 5rem;
-      /* Prevent overlap from navbar */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+    position: relative;
+    background: url('your-background-image.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
 
-    .hero-overlay {
-      background: linear-gradient(0deg, #303030 0%, rgba(51, 51, 51, 0.75) 100%);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-    }
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #303030 0%, rgba(51,51,51,0.75) 100%);
+    z-index: 1;
+  }
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      padding: 2rem;
-      max-width: 1200px;
-      /* Restrict max width for readability */
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      margin: 0 auto;
-    }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+
 
     .hero-title {
       font-size: 2.8rem;
@@ -320,7 +310,7 @@
       background: #f8f9fa;
       border-radius: 15px;
       padding: 2rem;
-      color: #122142;
+      color: #f8f9fa;
       box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
       position: relative;
       margin-top: 2rem;
@@ -343,7 +333,7 @@
       font-weight: 700;
       margin-bottom: 1.5rem;
       text-align: center;
-      color: #b79722;
+      color: #f8f9fa;
     }
 
     .steps ul {
@@ -362,7 +352,7 @@
     .steps ul li::before {
       content: "✔";
       font-size: 1.3rem;
-      color: #b79722;
+      color: #f8f9fa;
       margin-right: 0.8rem;
     }
 
@@ -691,7 +681,7 @@
     /*---------------- FOOTER SECTION START --------------------- */
     .footer-section {
       background: linear-gradient(0deg, #505050 0%, rgba(102, 102, 102, 0.50) 91.7%),
-        url('https://images.pexels.com/photos/189333/pexels-photo-189333.jpeg');
+        url('assets/pictures/footerBg.jpeg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -1310,10 +1300,21 @@
     .modal-close-btn-en:hover {
       background-color: #745f11;
     }
+    
+    .glass{
+      background: rgba( 255, 255, 255, 0.5 );
+      box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+      backdrop-filter: blur( 0.5px );
+      -webkit-backdrop-filter: blur( 0.5px );
+      border-radius: 10px;
+      border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
 
     /*---------------------- RESPONSE SECTION  ----------------------- */
 
     /*---------------------- RESPONSE SECTION  ----------------------- */
+    
+
   </style>
   
 </head>
@@ -1354,97 +1355,54 @@
   <section class="hero-section">
     <!-- Overlay -->
     <div class="hero-overlay"></div>
-
+  
     <!-- Hero Content -->
-    <div class="container hero-content d-flex flex-column flex-lg-row justify-content-between align-items-center">
-      <!-- Left Side -->
-      <div class="text-white">
-        <h1 class="hero-title" data-bs="Urbantopia - Agencija za kratkoročni najam"
-          data-en="Urbantopia - Short-term Rental Agency">
-          Urbantopia - Agencija za kratkoročni najam
-        </h1>
-        <p class="hero-text"
-          data-bs="Posjedujete nekretninu, a nemate vremena ili iskustva kad je u pitanju iznajmljivanje i briga oko gostiju?"
-          data-en="Do you own a property but don't have the time or experience when it comes to renting and taking care of guests?">
-          <strong>Posjedujete nekretninu, a nemate vremena ili iskustva kad je u pitanju iznajmljivanje i briga oko
-            gostiju?</strong>
-        </p>
-        <p class="hero-text"
-          data-bs="Prepustite sve nama! Naša agencija specijalizirana je za cjelokupno upravljanje nekretninama za kratkoročni najam."
-          data-en="Leave it all to us! Our agency specializes in complete property management for short-term rentals.">
-          Prepustite sve nama! Naša agencija specijalizirana je za cjelokupno upravljanje nekretninama za kratkoročni
-          najam.
-        </p>
-        <!--
-        <p class="hero-slogan" data-bs="Povećajte prihod, smanjite obaveze"
-          data-en="Increase income, reduce obligations">
-          Povećajte prihod, smanjite obaveze
-        </p>
-        <p class="hero-text"
-          data-bs="<b>Urbantopia</b> je agencija specijalizirana za kratkoročni najam nekretnina, pružajući sveobuhvatne usluge iz oblasti menadžmenta nekretnina, ugostiteljstva, marketinga i analize podataka."
-          data-en="<b>Urbantopia</b> is an agency specializing in short-term property rentals, offering comprehensive services in property management, hospitality, marketing, and data analysis.">
-          <b>Urbantopia</b> je agencija specijalizirana za kratkoročni najam nekretnina, pružajući sveobuhvatne usluge
-          iz oblasti menadžmenta nekretnina, ugostiteljstva, marketinga i analize podataka.
-        </p>
-        <p class="hero-text"
-          data-bs="<b>Naša misija</b> je omogućiti rast Vašeg profita koji u potpunosti pokriva trošak naše provizije, čime naše usluge postaju besplatne."
-          data-en="<b>Our mission</b> is to enable the growth of your profit, fully covering our commission cost, making our services essentially free.">
-          <b>Naša misija</b> je omogućiti rast Vašeg profita koji u potpunosti pokriva trošak naše provizije, čime naše
-          usluge postaju besplatne.
-        </p>
-        <p class="hero-text"
-          data-bs="<b>Naša vizija</b> je kreiranje nezaboravnih doživljaja za goste, uz istovremeno osiguravanje održivih i dugoročnih rješenja za naše klijente."
-          data-en="<b>Our vision</b> is to create unforgettable experiences for guests while ensuring sustainable and long-term solutions for our clients.">
-          <b>Naša vizija</b> je kreiranje nezaboravnih doživljaja za goste, uz istovremeno osiguravanje održivih i
-          dugoročnih rješenja za naše klijente.
-        </p>
-        -->
-      </div>
-
-      <!-- Right Side -->
-      <div class="text-dark mt-4 mt-lg-0">
-        <div class="steps mb-4">
-          <h4 data-en="Fast and efficient deal" data-bs="Brz i efikasan dogovor">Brz i efikasan dogovor</h4>
-          <ul>
-            <li data-en="Contact us" data-bs="Kontaktirate nas">Kontaktirate nas</li>
-            <li data-en="We check your apartment" data-bs="Pregledamo Vaš smještaj">Pregledamo Vaš smještaj</li>
-            <li data-en="We are negotiating the details of cooperation" data-bs="Ugovaramo detalje saradnje">Ugovaramo
-              detalje saradnje</li>
-          </ul>
+    <div class="container hero-content">
+      <div class="row align-items-center">
+        <!-- Left Side -->
+        <div class="col-lg-4 text-white">
+          <h1 class="hero-title" data-bs="Urbantopia - Agencija za kratkoročni najam"
+            data-en="Urbantopia - Short-term Rental Agency">
+            Urbantopia - Agencija za kratkoročni najam
+          </h1>
+          <p class="hero-text"
+            data-bs="Posjedujete nekretninu, a nemate vremena ili iskustva kad je u pitanju iznajmljivanje i briga oko gostiju?"
+            data-en="Do you own a property but don't have the time or experience when it comes to renting and taking care of guests?">
+            <strong>Posjedujete nekretninu, a nemate vremena ili iskustva kad je u pitanju iznajmljivanje i briga oko gostiju?</strong>
+          </p>
+          <p class="hero-text"
+            data-bs="Prepustite sve nama! Naša agencija specijalizirana je za cjelokupno upravljanje nekretninama za kratkoročni najam."
+            data-en="Leave it all to us! Our agency specializes in complete property management for short-term rentals.">
+            Prepustite sve nama! Naša agencija specijalizirana je za cjelokupno upravljanje nekretninama za kratkoročni najam.
+          </p>
         </div>
-        <!--
-        <div class="contact-form">
-          <h3 class="contact-heading" data-bs="Kontaktirajte nas" data-en="Contact us">Kontaktirajte nas</h3>
-          <form id="formOne" method="POST">
-            <div class="mb-2">
-              <input type="text" class="form-control" placeholder="Ime i prezime" data-bs="Ime i prezime"
-                data-en="Full name" id="fullname" name="fullname">
-            </div>
-            <div class="mb-2">
-              <input type="email" class="form-control" placeholder="E-mail" id="email" name="email">
-            </div>
-            <div class="mb-2">
-              <input type="tel" class="form-control" placeholder="Kontakt telefon" data-bs="Kontakt telefon"
-                data-en="Contact number" id="phone" name="phone">
-            </div>
-            <div class="mb-2">
-              <textarea class="form-control" rows="3" placeholder="Vaša poruka" data-en="Your message"
-                data-bs="Vaša poruka" id="message" name="message"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary w-100 buttoncolorinform" data-en="Submit"
-              data-bs="Pošalji">Pošalji</button>
-          </form>
+  
+        <!-- Middle Section -->
+        <div class="col-lg-4 text-center text-white">
+          <h3 data-en="Increase the profit and enjoy your time" data-bs="Povećajte prihod, smanjite obaveze">Povećajte prihod, smanjite obaveze</h3>
         </div>
-        -->
+  
+        <!-- Right Side -->
+        <div class="col-lg-4 text-dark">
+          <div class="steps glass mb-4">
+            <h4 data-en="Fast and efficient deal" data-bs="Brz i efikasan dogovor">Brz i efikasan dogovor</h4>
+            <ul>
+              <li data-en="Contact us" data-bs="Kontaktirate nas">Kontaktirate nas</li>
+              <li data-en="We check your apartment" data-bs="Pregledamo Vaš smještaj">Pregledamo Vaš smještaj</li>
+              <li data-en="We are negotiating the details of cooperation" data-bs="Ugovaramo detalje saradnje">Ugovaramo detalje saradnje</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
-
+  
     <!-- Call Button Below -->
     <div class="hero-call-button-wrapper">
       <a href="tel:+38761829914" class="btn btn-call herobutton w-100" data-en="Call us on +38761829914"
         data-bs="Pozovite nas na +38761829914">Pozovite nas na +38761829914</a>
     </div>
   </section>
+  
 
 
 
@@ -1585,27 +1543,40 @@
       </div>
     </div>
 
-    <div class="mt-4 text-center">
-      <p class="hero-slogan text-plava" data-bs="Povećajte prihod, smanjite obaveze" data-en="Increase income, reduce obligations">
-        Povećajte prihod, smanjite obaveze
-      </p>
-      <p class="hero-text-plava"
-        data-bs="<b>Urbantopia</b> je agencija specijalizirana za kratkoročni najam nekretnina, pružajući sveobuhvatne usluge iz oblasti menadžmenta nekretnina, ugostiteljstva, marketinga i analize podataka."
-        data-en="<b>Urbantopia</b> is an agency specializing in short-term property rentals, offering comprehensive services in property management, hospitality, marketing, and data analysis.">
-        <b>Urbantopia</b> je agencija specijalizirana za kratkoročni najam nekretnina, pružajući sveobuhvatne usluge iz oblasti menadžmenta nekretnina, ugostiteljstva, marketinga i analize podataka.
-      </p>
-      <p class="hero-text-plava"
-        data-bs="<b>Naša misija</b> je omogućiti rast Vašeg profita koji u potpunosti pokriva trošak naše provizije, čime naše usluge postaju besplatne."
-        data-en="<b>Our mission</b> is to enable the growth of your profit, fully covering our commission cost, making our services essentially free.">
-        <b>Naša misija</b> je omogućiti rast Vašeg profita koji u potpunosti pokriva trošak naše provizije, čime naše usluge postaju besplatne.
-      </p>
-      <p class="hero-text-plava"
-        data-bs="<b>Naša vizija</b> je kreiranje nezaboravnih doživljaja za goste, uz istovremeno osiguravanje održivih i dugoročnih rješenja za naše klijente."
-        data-en="<b>Our vision</b> is to create unforgettable experiences for guests while ensuring sustainable and long-term solutions for our clients.">
-        <b>Naša vizija</b> je kreiranje nezaboravnih doživljaja za goste, uz istovremeno osiguravanje održivih i dugoročnih rješenja za naše klijente.
-      </p>
-    </div>
+    
   </section>
+
+  <div class="mt-4 text-center container">
+    <div class="row">
+      <div class="col-12">
+        <p class="hero-slogan text-plava" data-bs="Povećajte prihod, smanjite obaveze" data-en="Increase income, reduce obligations">
+          Povećajte prihod, smanjite obaveze
+        </p>
+      </div>
+      <div class="col-12">
+        <p class="hero-text-plava"
+          data-bs="<b>Urbantopia</b> je agencija specijalizirana za kratkoročni najam nekretnina, pružajući sveobuhvatne usluge iz oblasti menadžmenta nekretnina, ugostiteljstva, marketinga i analize podataka."
+          data-en="<b>Urbantopia</b> is an agency specializing in short-term property rentals, offering comprehensive services in property management, hospitality, marketing, and data analysis.">
+          <b>Urbantopia</b> je agencija specijalizirana za kratkoročni najam nekretnina, pružajući sveobuhvatne usluge iz oblasti menadžmenta nekretnina, ugostiteljstva, marketinga i analize podataka.
+        </p>
+      </div>
+      <div class="col-12">
+        <p class="hero-text-plava"
+          data-bs="<b>Naša misija</b> je omogućiti rast Vašeg profita koji u potpunosti pokriva trošak naše provizije, čime naše usluge postaju besplatne."
+          data-en="<b>Our mission</b> is to enable the growth of your profit, fully covering our commission cost, making our services essentially free.">
+          <b>Naša misija</b> je omogućiti rast Vašeg profita koji u potpunosti pokriva trošak naše provizije, čime naše usluge postaju besplatne.
+        </p>
+      </div>
+      <div class="col-12">
+        <p class="hero-text-plava"
+          data-bs="<b>Naša vizija</b> je kreiranje nezaboravnih doživljaja za goste, uz istovremeno osiguravanje održivih i dugoročnih rješenja za naše klijente."
+          data-en="<b>Our vision</b> is to create unforgettable experiences for guests while ensuring sustainable and long-term solutions for our clients.">
+          <b>Naša vizija</b> je kreiranje nezaboravnih doživljaja za goste, uz istovremeno osiguravanje održivih i dugoročnih rješenja za naše klijente.
+        </p>
+      </div>
+    </div>
+  </div>
+  
 
 
   <!--
@@ -1714,8 +1685,8 @@
             <div class="card-body">
               <h4 class="card-title text-center" data-bs="Bonus model" data-en="Bonus model">Bonus model</h4>
               <ul class="list-unstyled mt-3">
-                <li data-bs="Sve usluge iz START paketa" data-en="All services from START package">Sve usluge iz START
-                  paketa</li>
+                <li data-bs="Sve usluge iz Osnovnog modela" data-en="All services from Primary model">Sve usluge iz Osnovnog
+                  modela</li>
                 <li data-bs="Doček i ispraćaj gostiju" data-en="Guest Welcome and Send-Off">Doček i ispraćaj gostiju
                 </li>
                 <li data-bs="Dodatna komunikacija s gostima" data-en="Additional Guest Communication">Dodatna
@@ -1732,8 +1703,8 @@
             <div class="card-body">
               <h4 class="card-title text-center" data-bs="Komfort model" data-en="Comfort model">Comfort Paket</h4>
               <ul class="list-unstyled mt-3">
-                <li data-bs="Sve usluge iz BONUS paketa" data-en="All services from BONUS package">Sve usluge iz BONUS
-                  paketa</li>
+                <li data-bs="Sve usluge iz Bonus modela" data-en="All services from Bonus model">Sve usluge iz Bonus
+                  modela</li>
                 <li data-bs="Čišćenje i održavanje smještaja" data-en="Cleaning and Maintenance">Čišćenje i održavanje
                   smještaja</li>
                 <li data-bs="Pranje i održavanje tekstila" data-en="Laundry and Linen Maintenance">Pranje i održavanje
@@ -1983,8 +1954,8 @@
 
       <!-- Copyright -->
       <div class="text-center mt-5 border-top pt-3">
-        <p class="mb-0" data-en="© 2024 Urbantopia.ba All rights reserved. Made by"
-          data-bs="© 2024 Urbantopia.ba Sva prava zadržana. Made by">© 2024 Urbantopia.ba Sva prava zadržana. Made by
+        <p class="mb-0" data-en="© 2025 Urbantopia.ba All rights reserved. Made by"
+          data-bs="© 2025 Urbantopia.ba Sva prava zadržana. Made by">© 2025 Urbantopia.ba Sva prava zadržana. Made by
         </p>
         <a href="https://www.linkedin.com/in/orhan-huseinbegovi%C4%87-72a47b1ba/"> - Orhan Huseinbegović</a>
       </div>

@@ -121,7 +121,7 @@
   margin-top: 70px;
   padding-bottom: 100px;
   background: linear-gradient(0deg, #505050 0%, rgba(102, 102, 102, 0.50) 91.7%),
-    url('https://images.pexels.com/photos/189333/pexels-photo-189333.jpeg');
+    url('../assets/pictures/footerBg.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
