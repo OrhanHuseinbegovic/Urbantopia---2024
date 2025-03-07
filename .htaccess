@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www.urbantopia.ba$
+RewriteRule ^(.*)$ https://www.urbantopia.ba/$1 [R=301,L]
